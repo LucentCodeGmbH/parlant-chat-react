@@ -191,7 +191,7 @@ const Chat = ({server, sessionId, agentId, agentName, agentAvatar, components, a
 			!!messages.length && lastStatusEventStatus === 'processing'
 				? `${(lastStatusEvent?.data as any)?.data?.stage || 'Thinking'}...`
 				: lastStatusEventStatus === 'typing'
-				? 'Typing...'
+				? 'Tippt...'
 				: ''
 		);
 	}, [data, pendingMessage, withStatusMessages, correlationsMap]);

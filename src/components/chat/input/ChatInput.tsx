@@ -139,7 +139,7 @@ const ChatInput = ({
       <Textarea
         role="textbox"
         ref={textareaRef}
-        placeholder="Message..."
+        placeholder="Nachricht..."
         value={message}
         onKeyDown={handleTextareaKeydown}
         onChange={(e) => setMessage(e.target.value)}
