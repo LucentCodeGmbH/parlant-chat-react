@@ -18,7 +18,6 @@ const useStyles = createUseStyles({
 		height: 'min(48.75rem,70vh)',
 		borderRadius: '20px',
 		display: 'flex',
-		fontFamily: 'Inter',
 		flexDirection: 'column',
 		transition: 'all 0.3s ease-in-out',
 		width: '27.75rem',

@@ -15,7 +15,6 @@ import { EventCreationParams } from 'parlant-client/src/api';
 
 const useStyles = createUseStyles({
 	root: {
-		fontFamily: 'Inter',
 		'& .fixed-scroll': {
 			scrollbarWidth: 'thin',
 			scrollbarColor: '#ebecf0 transparent',

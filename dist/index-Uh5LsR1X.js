@@ -36234,7 +36234,7 @@ const sw = [
     Vd(g, c);
   }
   return l;
-}, Nne = lS(() => import("./index-BuOtDz-9.js")), Ine = () => {
+}, Nne = lS(() => import("./index-BwUNQk4Q.js")), Ine = () => {
   zn(() => {
     Promise.resolve({           });
   }, []);
@@ -36585,7 +36585,6 @@ const sw = [
     paddingInline: "0.75rem",
     paddingBlock: "0.5rem",
     fontSize: "0.875rem",
-    fontFamily: "Inter !important",
     outline: "none"
   }
 }), ZE = C.forwardRef(
@@ -36632,7 +36631,6 @@ const Gne = Hn({
     minHeight: "unset",
     padding: "0",
     whiteSpace: "nowrap",
-    fontFamily: "Inter",
     fontSize: "1rem",
     lineHeight: "52px",
     backgroundColor: "white",
@@ -36812,7 +36810,6 @@ const Gne = Hn({
     height: "min(48.75rem,70vh)",
     borderRadius: "20px",
     display: "flex",
-    fontFamily: "Inter",
     flexDirection: "column",
     transition: "all 0.3s ease-in-out",
     width: "27.75rem"
@@ -39861,7 +39858,6 @@ const Foe = Hn({
 YO.displayName = XO.displayName;
 const Voe = Hn({
   root: {
-    fontFamily: "Inter",
     "& .fixed-scroll": {
       scrollbarWidth: "thin",
       scrollbarColor: "#ebecf0 transparent"
@@ -39953,4 +39949,4 @@ export {
   lE as v,
   Zoe as w
 };
-//# sourceMappingURL=index-FyoJcMta.js.map
+//# sourceMappingURL=index-Uh5LsR1X.js.map

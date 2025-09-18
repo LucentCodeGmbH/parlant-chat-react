@@ -44,7 +44,6 @@ const useStyles = createUseStyles({
     minHeight: 'unset',
     padding: '0',
     whiteSpace: 'nowrap',
-    fontFamily: 'Inter',
     fontSize: '1rem',
     lineHeight: '52px',
     backgroundColor: 'white',
