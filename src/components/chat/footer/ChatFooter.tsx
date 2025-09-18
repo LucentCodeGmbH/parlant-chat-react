@@ -66,7 +66,7 @@ const ChatFooter = ({ showInfo, className }: ChatFooterProps): JSX.Element => {
       </div>
       <div className={classes.poweredBy}>
         <div className={classes.poweredByContainer}>
-          Powered by open-source
+          Unterstützt durch open-source
           <a href="https://parlant.io" target="_blank" style={{width: 'max-content'}}>
             <img 
               src={ParlantLogoFull} 

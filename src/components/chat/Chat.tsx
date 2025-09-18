@@ -11,7 +11,6 @@ import ChatHeader from '@/components/chat/header/ChatHeader';
 import MessageList from '@/components/chat/message-list/MessageList';
 import ChatInput from '@/components/chat/input/ChatInput';
 import ChatFooter from '@/components/chat/footer/ChatFooter';
-import { messageSound } from '@/utils/utils';
 
 const useStyles = createUseStyles({
 	chatbox: {
@@ -140,7 +139,6 @@ const Chat = ({server, sessionId, agentId, agentName, agentAvatar, components, a
 		
 		if (sessionId) {
 			await parlantClient.sessions.createEvent(sessionId, message);
-			// messageSound();
 		} else createSession(message);
 	};
 
@@ -180,9 +178,6 @@ const Chat = ({server, sessionId, agentId, agentName, agentAvatar, components, a
 			}
 
 			const newMessages = mergedMessages.filter((message): message is MessageInterface => !!message);
-			// if (currentMessages.length && newMessages.length > currentMessages.length && newMessages[newMessages.length - 1].source === 'ai_agent') {
-			// 	messageSound(true);
-			// }
 			return newMessages;
 		});
 
@@ -209,7 +204,7 @@ const Chat = ({server, sessionId, agentId, agentName, agentAvatar, components, a
 		<div className={clsx(classes.chatbox, isExpanded && classes.expandedChatbox, classNames?.chatbox)}>
 			{(!sessionId && !agentId) ? 
 			<div className='flex justify-center mt-[20px] h-full text-[20px] font-medium'>
-				<h1>Either sessionId or agentId is required</h1>
+				<h1>Entweder sessionId oder agentId muss gesetzt sein</h1>
 			</div>
 			:
 			<>

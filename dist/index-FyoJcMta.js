@@ -1,4 +1,4 @@
-import { jsx as q, jsxs as yt, Fragment as cS } from "react/jsx-runtime";
+import { jsx as q, jsxs as mn, Fragment as cS } from "react/jsx-runtime";
 import * as C from "react";
 import ia, { forwardRef as xw, createElement as Kf, createContext as Aw, useRef as Fi, useContext as _p, useMemo as Zo, useDebugValue as bp, useEffect as zn, useLayoutEffect as Nw, lazy as lS, useState as ut, Suspense as uS, useCallback as fS } from "react";
 import * as Iw from "react-dom";
@@ -34,7 +34,7 @@ function Dw(e, a) {
 function qi(e, a) {
   return typeof e == "function" ? e(a) : e;
 }
-function mn(e, a) {
+function bn(e, a) {
   return typeof e == "function" ? e(a) : e;
 }
 function mp(e, a) {
@@ -439,7 +439,7 @@ var qe = vS(), Fw = class {
   }
   isActive() {
     return this.observers.some(
-      (e) => mn(e.options.enabled, this) !== !1
+      (e) => bn(e.options.enabled, this) !== !1
     );
   }
   isDisabled() {
@@ -1337,7 +1337,7 @@ var zS = class {
   }
   setOptions(e, a) {
     const o = this.options, n = this.#e;
-    if (this.options = this.#t.defaultQueryOptions(e), this.options.enabled !== void 0 && typeof this.options.enabled != "boolean" && typeof this.options.enabled != "function" && typeof mn(this.options.enabled, this.#e) != "boolean")
+    if (this.options = this.#t.defaultQueryOptions(e), this.options.enabled !== void 0 && typeof this.options.enabled != "boolean" && typeof this.options.enabled != "function" && typeof bn(this.options.enabled, this.#e) != "boolean")
       throw new Error(
         "Expected enabled to be a boolean or a callback that returns a boolean"
       );
@@ -1352,9 +1352,9 @@ var zS = class {
       n,
       this.options,
       o
-    ) && this.#f(), this.updateResult(a), i && (this.#e !== n || mn(this.options.enabled, this.#e) !== mn(o.enabled, this.#e) || qi(this.options.staleTime, this.#e) !== qi(o.staleTime, this.#e)) && this.#h();
+    ) && this.#f(), this.updateResult(a), i && (this.#e !== n || bn(this.options.enabled, this.#e) !== bn(o.enabled, this.#e) || qi(this.options.staleTime, this.#e) !== qi(o.staleTime, this.#e)) && this.#h();
     const t = this.#_();
-    i && (this.#e !== n || mn(this.options.enabled, this.#e) !== mn(o.enabled, this.#e) || t !== this.#c) && this.#b(t);
+    i && (this.#e !== n || bn(this.options.enabled, this.#e) !== bn(o.enabled, this.#e) || t !== this.#c) && this.#b(t);
   }
   getOptimisticResult(e) {
     const a = this.#t.getQueryCache().build(this.#t, e), o = this.createResult(a, e);
@@ -1419,7 +1419,7 @@ var zS = class {
     return (typeof this.options.refetchInterval == "function" ? this.options.refetchInterval(this.#e) : this.options.refetchInterval) ?? !1;
   }
   #b(e) {
-    this.#w(), this.#c = e, !(ki || mn(this.options.enabled, this.#e) === !1 || !Hf(this.#c) || this.#c === 0) && (this.#u = setInterval(() => {
+    this.#w(), this.#c = e, !(ki || bn(this.options.enabled, this.#e) === !1 || !Hf(this.#c) || this.#c === 0) && (this.#u = setInterval(() => {
       (this.options.refetchIntervalInBackground || kd.isFocused()) && this.#f();
     }, this.#c));
   }
@@ -1565,23 +1565,23 @@ var zS = class {
   }
 };
 function TS(e, a) {
-  return mn(a.enabled, e) !== !1 && e.state.data === void 0 && !(e.state.status === "error" && a.retryOnMount === !1);
+  return bn(a.enabled, e) !== !1 && e.state.data === void 0 && !(e.state.status === "error" && a.retryOnMount === !1);
 }
 function Sp(e, a) {
   return TS(e, a) || e.state.data !== void 0 && ed(e, a, a.refetchOnMount);
 }
 function ed(e, a, o) {
-  if (mn(a.enabled, e) !== !1) {
+  if (bn(a.enabled, e) !== !1) {
     const n = typeof o == "function" ? o(e) : o;
     return n === "always" || n !== !1 && Ed(e, a);
   }
   return !1;
 }
 function Pp(e, a, o, n) {
-  return (e !== a || mn(n.enabled, e) === !1) && (!o.suspense || e.state.status !== "error") && Ed(e, o);
+  return (e !== a || bn(n.enabled, e) === !1) && (!o.suspense || e.state.status !== "error") && Ed(e, o);
 }
 function Ed(e, a) {
-  return mn(a.enabled, e) !== !1 && e.isStaleByTime(qi(a.staleTime, e));
+  return bn(a.enabled, e) !== !1 && e.isStaleByTime(qi(a.staleTime, e));
 }
 function MS(e, a) {
   return !Yf(e.getCurrentResult(), a);
@@ -2138,7 +2138,7 @@ function uP() {
     Object.defineProperty(e, "__esModule", { value: !0 }), o(e1(), e), o(t1(), e), o(r1(), e), o(n1(), e), o(a1(), e), o(i1(), e), o(o1(), e), o(s1(), e), o(c1(), e), o(l1(), e), o(u1(), e), o(f1(), e), o(d1(), e), o(p1(), e), o(g1(), e), o(y1(), e), o(h1(), e), o(_1(), e), o(b1(), e), o(m1(), e), o(v1(), e), o(w1(), e), o(k1(), e), o(E1(), e), o(O1(), e), o(S1(), e), o(P1(), e), o(R1(), e), o(z1(), e), o(C1(), e), o(T1(), e), o(M1(), e), o(j1(), e), o(x1(), e), o(A1(), e), o(N1(), e), o(I1(), e), o(D1(), e), o(U1(), e), o(L1(), e), o(B1(), e), o($1(), e), o(F1(), e), o(q1(), e), o(G1(), e), o(V1(), e), o(W1(), e), o(K1(), e), o(H1(), e), o(X1(), e), o(Y1(), e), o(Q1(), e), o(Z1(), e), o(J1(), e), o(eP(), e), o(tP(), e), o(rP(), e), o(nP(), e), o(aP(), e), o(iP(), e), o(oP(), e), o(sP(), e), o(cP(), e), o(lP(), e);
   }(Ea)), Ea;
 }
-var Oa = {}, vt = {}, Il = {}, go = {}, qg;
+var Oa = {}, mt = {}, Il = {}, go = {}, qg;
 function fP() {
   if (qg) return go;
   qg = 1, Object.defineProperty(go, "__esModule", { value: !0 }), go.ParlantError = void 0;
@@ -2182,8 +2182,43 @@ function at() {
 }
 var Wg;
 function pP() {
-  if (Wg) return vt;
+  if (Wg) return mt;
   Wg = 1;
+  var e = mt && mt.__createBinding || (Object.create ? function(t, r, s, c) {
+    c === void 0 && (c = s);
+    var l = Object.getOwnPropertyDescriptor(r, s);
+    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
+      return r[s];
+    } }), Object.defineProperty(t, c, l);
+  } : function(t, r, s, c) {
+    c === void 0 && (c = s), t[c] = r[s];
+  }), a = mt && mt.__setModuleDefault || (Object.create ? function(t, r) {
+    Object.defineProperty(t, "default", { enumerable: !0, value: r });
+  } : function(t, r) {
+    t.default = r;
+  }), o = mt && mt.__importStar || function(t) {
+    if (t && t.__esModule) return t;
+    var r = {};
+    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
+    return a(r, t), r;
+  };
+  Object.defineProperty(mt, "__esModule", { value: !0 }), mt.UnprocessableEntityError = void 0;
+  const n = o(at());
+  let i = class Yw extends n.ParlantError {
+    constructor(r) {
+      super({
+        message: "UnprocessableEntityError",
+        statusCode: 422,
+        body: r
+      }), Object.setPrototypeOf(this, Yw.prototype);
+    }
+  };
+  return mt.UnprocessableEntityError = i, mt;
+}
+var vt = {}, Kg;
+function gP() {
+  if (Kg) return vt;
+  Kg = 1;
   var e = vt && vt.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
@@ -2202,23 +2237,23 @@ function pP() {
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(vt, "__esModule", { value: !0 }), vt.UnprocessableEntityError = void 0;
+  Object.defineProperty(vt, "__esModule", { value: !0 }), vt.NotFoundError = void 0;
   const n = o(at());
-  let i = class Yw extends n.ParlantError {
+  let i = class Qw extends n.ParlantError {
     constructor(r) {
       super({
-        message: "UnprocessableEntityError",
-        statusCode: 422,
+        message: "NotFoundError",
+        statusCode: 404,
         body: r
-      }), Object.setPrototypeOf(this, Yw.prototype);
+      }), Object.setPrototypeOf(this, Qw.prototype);
     }
   };
-  return vt.UnprocessableEntityError = i, vt;
+  return vt.NotFoundError = i, vt;
 }
-var wt = {}, Kg;
-function gP() {
-  if (Kg) return wt;
-  Kg = 1;
+var wt = {}, Hg;
+function yP() {
+  if (Hg) return wt;
+  Hg = 1;
   var e = wt && wt.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
@@ -2237,23 +2272,23 @@ function gP() {
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(wt, "__esModule", { value: !0 }), wt.NotFoundError = void 0;
+  Object.defineProperty(wt, "__esModule", { value: !0 }), wt.GatewayTimeoutError = void 0;
   const n = o(at());
-  let i = class Qw extends n.ParlantError {
+  let i = class Zw extends n.ParlantError {
     constructor(r) {
       super({
-        message: "NotFoundError",
-        statusCode: 404,
+        message: "GatewayTimeoutError",
+        statusCode: 504,
         body: r
-      }), Object.setPrototypeOf(this, Qw.prototype);
+      }), Object.setPrototypeOf(this, Zw.prototype);
     }
   };
-  return wt.NotFoundError = i, wt;
+  return wt.GatewayTimeoutError = i, wt;
 }
-var kt = {}, Hg;
-function yP() {
-  if (Hg) return kt;
-  Hg = 1;
+var kt = {}, Xg;
+function hP() {
+  if (Xg) return kt;
+  Xg = 1;
   var e = kt && kt.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
@@ -2272,42 +2307,7 @@ function yP() {
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(kt, "__esModule", { value: !0 }), kt.GatewayTimeoutError = void 0;
-  const n = o(at());
-  let i = class Zw extends n.ParlantError {
-    constructor(r) {
-      super({
-        message: "GatewayTimeoutError",
-        statusCode: 504,
-        body: r
-      }), Object.setPrototypeOf(this, Zw.prototype);
-    }
-  };
-  return kt.GatewayTimeoutError = i, kt;
-}
-var Et = {}, Xg;
-function hP() {
-  if (Xg) return Et;
-  Xg = 1;
-  var e = Et && Et.__createBinding || (Object.create ? function(t, r, s, c) {
-    c === void 0 && (c = s);
-    var l = Object.getOwnPropertyDescriptor(r, s);
-    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
-      return r[s];
-    } }), Object.defineProperty(t, c, l);
-  } : function(t, r, s, c) {
-    c === void 0 && (c = s), t[c] = r[s];
-  }), a = Et && Et.__setModuleDefault || (Object.create ? function(t, r) {
-    Object.defineProperty(t, "default", { enumerable: !0, value: r });
-  } : function(t, r) {
-    t.default = r;
-  }), o = Et && Et.__importStar || function(t) {
-    if (t && t.__esModule) return t;
-    var r = {};
-    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
-    return a(r, t), r;
-  };
-  Object.defineProperty(Et, "__esModule", { value: !0 }), Et.ServiceUnavailableError = void 0;
+  Object.defineProperty(kt, "__esModule", { value: !0 }), kt.ServiceUnavailableError = void 0;
   const n = o(at());
   let i = class Jw extends n.ParlantError {
     constructor(r) {
@@ -2318,7 +2318,7 @@ function hP() {
       }), Object.setPrototypeOf(this, Jw.prototype);
     }
   };
-  return Et.ServiceUnavailableError = i, Et;
+  return kt.ServiceUnavailableError = i, kt;
 }
 var Yg;
 function _P() {
@@ -2337,7 +2337,7 @@ function _P() {
     Object.defineProperty(e, "__esModule", { value: !0 }), o(pP(), e), o(gP(), e), o(yP(), e), o(hP(), e);
   }(Oa)), Oa;
 }
-var Ot = {}, Sa = {}, Pa = {}, Dl = {}, Qg;
+var Et = {}, Sa = {}, Pa = {}, Dl = {}, Qg;
 function ek() {
   return Qg || (Qg = 1, Object.defineProperty(Dl, "__esModule", { value: !0 })), Dl;
 }
@@ -2682,7 +2682,7 @@ function NP() {
 var Oy;
 function IP() {
   return Oy || (Oy = 1, function(e) {
-    var a = Ot && Ot.__createBinding || (Object.create ? function(t, r, s, c) {
+    var a = Et && Et.__createBinding || (Object.create ? function(t, r, s, c) {
       c === void 0 && (c = s);
       var l = Object.getOwnPropertyDescriptor(r, s);
       (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -2690,20 +2690,20 @@ function IP() {
       } }), Object.defineProperty(t, c, l);
     } : function(t, r, s, c) {
       c === void 0 && (c = s), t[c] = r[s];
-    }), o = Ot && Ot.__setModuleDefault || (Object.create ? function(t, r) {
+    }), o = Et && Et.__setModuleDefault || (Object.create ? function(t, r) {
       Object.defineProperty(t, "default", { enumerable: !0, value: r });
     } : function(t, r) {
       t.default = r;
-    }), n = Ot && Ot.__importStar || function(t) {
+    }), n = Et && Et.__importStar || function(t) {
       if (t && t.__esModule) return t;
       var r = {};
       if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && a(r, t, s);
       return o(r, t), r;
-    }, i = Ot && Ot.__exportStar || function(t, r) {
+    }, i = Et && Et.__exportStar || function(t, r) {
       for (var s in t) s !== "default" && !Object.prototype.hasOwnProperty.call(r, s) && a(r, t, s);
     };
     Object.defineProperty(e, "__esModule", { value: !0 }), e.customers = e.tags = e.services = e.evaluations = e.sessions = e.contextVariables = e.glossary = e.guidelines = e.agents = void 0, e.agents = n(mP()), e.guidelines = n(wP()), e.glossary = n(EP()), e.contextVariables = n(SP()), e.sessions = n(RP()), e.evaluations = n(CP()), e.services = n(MP()), e.tags = n(xP()), e.customers = n(NP()), i(ek(), e), i(tk(), e), i(rk(), e), i(nk(), e), i(ak(), e), i(ik(), e), i(ok(), e), i(sk(), e), i(ck(), e);
-  }(Ot)), Ot;
+  }(Et)), Et;
 }
 var Sy;
 function Tn() {
@@ -2722,7 +2722,7 @@ function Tn() {
     Object.defineProperty(e, "__esModule", { value: !0 }), o(uP(), e), o(_P(), e), o(IP(), e);
   }(ka)), ka;
 }
-var ho = {}, We = {}, St = {}, Wl = {}, Dn = {}, qa = {}, Kl, Py;
+var ho = {}, We = {}, Ot = {}, Wl = {}, Dn = {}, qa = {}, Kl, Py;
 function Xi() {
   return Py || (Py = 1, Kl = TypeError), Kl;
 }
@@ -2765,8 +2765,8 @@ function pc() {
       throw new TypeError('option "quoteStyle" must be "single" or "double"');
     if (Ne(ye, "maxStringLength") && (typeof ye.maxStringLength == "number" ? ye.maxStringLength < 0 && ye.maxStringLength !== 1 / 0 : ye.maxStringLength !== null))
       throw new TypeError('option "maxStringLength", if provided, must be a positive integer, Infinity, or `null`');
-    var _t = Ne(ye, "customInspect") ? ye.customInspect : !0;
-    if (typeof _t != "boolean" && _t !== "symbol")
+    var ht = Ne(ye, "customInspect") ? ye.customInspect : !0;
+    if (typeof ht != "boolean" && ht !== "symbol")
       throw new TypeError("option \"customInspect\", if provided, must be `true`, `false`, or `'symbol'`");
     if (Ne(ye, "indent") && ye.indent !== null && ye.indent !== "	" && !(parseInt(ye.indent, 10) === ye.indent && ye.indent > 0))
       throw new TypeError('option "indent" must be "\\t", an integer > 0, or `null`');
@@ -2797,14 +2797,14 @@ function pc() {
     var ue = Cc(ye, Ee);
     if (typeof Se > "u")
       Se = [];
-    else if (ht(Se, x) >= 0)
+    else if (yt(Se, x) >= 0)
       return "[Circular]";
     function ve(ea, Ti, Tc) {
       if (Ti && (Se = M.call(Se), Se.push(Ti)), Tc) {
-        var bt = {
+        var _t = {
           depth: ye.depth
         };
-        return Ne(ye, "quoteStyle") && (bt.quoteStyle = ye.quoteStyle), T(ea, bt, Ee + 1, Se);
+        return Ne(ye, "quoteStyle") && (_t.quoteStyle = ye.quoteStyle), T(ea, _t, Ee + 1, Se);
       }
       return T(ea, ye, Ee + 1, Se);
     }
@@ -2831,10 +2831,10 @@ function pc() {
       var ma = zi(x, ve);
       return !("cause" in Error.prototype) && "cause" in x && !j.call(x, "cause") ? "{ [" + String(x) + "] " + R.call(E.call("[cause]: " + ve(x.cause), ma), ", ") + " }" : ma.length === 0 ? "[" + String(x) + "]" : "{ [" + String(x) + "] " + R.call(ma, ", ") + " }";
     }
-    if (typeof x == "object" && _t) {
+    if (typeof x == "object" && ht) {
       if (U && typeof x[U] == "function" && $)
         return $(x, { depth: H - Ee });
-      if (_t !== "symbol" && typeof x.inspect == "function")
+      if (ht !== "symbol" && typeof x.inspect == "function")
         return x.inspect();
     }
     if (ot(x)) {
@@ -2941,7 +2941,7 @@ function pc() {
     var x = b.call(_.call(T), /^function\s*([\w$]+)/);
     return x ? x[1] : null;
   }
-  function ht(T, x) {
+  function yt(T, x) {
     if (T.indexOf)
       return T.indexOf(x);
     for (var be = 0, Ee = T.length; be < Ee; be++)
@@ -3053,7 +3053,7 @@ function pc() {
   }
   function zc(T) {
     for (var x = 0; x < T.length; x++)
-      if (ht(T[x], `
+      if (yt(T[x], `
 `) >= 0)
         return !1;
     return !0;
@@ -3086,14 +3086,14 @@ function pc() {
       for (var Se = 0; Se < T.length; Se++)
         Ee[Se] = Ne(T, Se) ? x(T[Se], T) : "";
     }
-    var ye = typeof D == "function" ? D(T) : [], _t;
+    var ye = typeof D == "function" ? D(T) : [], ht;
     if (V) {
-      _t = {};
+      ht = {};
       for (var rt = 0; rt < ye.length; rt++)
-        _t["$" + ye[rt]] = ye[rt];
+        ht["$" + ye[rt]] = ye[rt];
     }
     for (var O in T)
-      Ne(T, O) && (be && String(Number(O)) === O && O < T.length || V && _t["$" + O] instanceof Symbol || (h.call(/[^\w$]/, O) ? Ee.push(x(O, T) + ": " + x(T[O], T)) : Ee.push(O + ": " + x(T[O], T))));
+      Ne(T, O) && (be && String(Number(O)) === O && O < T.length || V && ht["$" + O] instanceof Symbol || (h.call(/[^\w$]/, O) ? Ee.push(x(O, T) + ": " + x(T[O], T)) : Ee.push(O + ": " + x(T[O], T))));
     if (typeof D == "function")
       for (var N = 0; N < ye.length; N++)
         j.call(T, ye[N]) && Ee.push("[" + x(ye[N]) + "]: " + x(T[ye[N]], T));
@@ -3649,11 +3649,11 @@ function Sd() {
       throw new r("`%` may not be present anywhere but at the beginning and end of the intrinsic name");
     var L = re(Q), he = L.length > 0 ? L[0] : "", Ce = se("%" + he + "%", pe), Ue = Ce.name, fe = Ce.value, Ne = !1, De = Ce.alias;
     De && (he = De[0], U(L, z([0, 1], De)));
-    for (var kn = 1, ht = !0; kn < L.length; kn += 1) {
+    for (var kn = 1, yt = !0; kn < L.length; kn += 1) {
       var ot = L[kn], Qn = Y(ot, 0, 1), xn = Y(ot, -1);
       if ((Qn === '"' || Qn === "'" || Qn === "`" || xn === '"' || xn === "'" || xn === "`") && Qn !== xn)
         throw new r("property names with quotes must have matching quotes");
-      if ((ot === "constructor" || !ht) && (Ne = !0), he += "." + ot, Ue = "%" + he + "%", $(V, Ue))
+      if ((ot === "constructor" || !yt) && (Ne = !0), he += "." + ot, Ue = "%" + he + "%", $(V, Ue))
         fe = V[Ue];
       else if (fe != null) {
         if (!(ot in fe)) {
@@ -3663,10 +3663,10 @@ function Sd() {
         }
         if (m && kn + 1 >= L.length) {
           var tt = m(fe, ot);
-          ht = !!tt, ht && "get" in tt && !("originalValue" in tt.get) ? fe = tt.get : fe = fe[ot];
+          yt = !!tt, yt && "get" in tt && !("originalValue" in tt.get) ? fe = tt.get : fe = fe[ot];
         } else
-          ht = $(fe, ot), fe = fe[ot];
-        ht && !Ne && (V[Ue] = fe);
+          yt = $(fe, ot), fe = fe[ot];
+        yt && !Ne && (V[Ue] = fe);
       }
     }
     return fe;
@@ -6965,7 +6965,7 @@ function lz() {
 var x_;
 function B() {
   return x_ || (x_ = 1, function(e) {
-    var a = St && St.__createBinding || (Object.create ? function(t, r, s, c) {
+    var a = Ot && Ot.__createBinding || (Object.create ? function(t, r, s, c) {
       c === void 0 && (c = s);
       var l = Object.getOwnPropertyDescriptor(r, s);
       (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -6973,20 +6973,20 @@ function B() {
       } }), Object.defineProperty(t, c, l);
     } : function(t, r, s, c) {
       c === void 0 && (c = s), t[c] = r[s];
-    }), o = St && St.__setModuleDefault || (Object.create ? function(t, r) {
+    }), o = Ot && Ot.__setModuleDefault || (Object.create ? function(t, r) {
       Object.defineProperty(t, "default", { enumerable: !0, value: r });
     } : function(t, r) {
       t.default = r;
-    }), n = St && St.__exportStar || function(t, r) {
+    }), n = Ot && Ot.__exportStar || function(t, r) {
       for (var s in t) s !== "default" && !Object.prototype.hasOwnProperty.call(r, s) && a(r, t, s);
-    }, i = St && St.__importStar || function(t) {
+    }, i = Ot && Ot.__importStar || function(t) {
       if (t && t.__esModule) return t;
       var r = {};
       if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && a(r, t, s);
       return o(r, t), r;
     };
     Object.defineProperty(e, "__esModule", { value: !0 }), e.serialization = void 0, n(MR(), e), n(Rd(), e), e.serialization = i(lz());
-  }(St)), St;
+  }(Ot)), Ot;
 }
 var Xs = { exports: {} }, uz = Xs.exports, A_;
 function Wn() {
@@ -7023,11 +7023,11 @@ function Wn() {
     });
   }(Xs)), Xs.exports;
 }
-var ai = {}, ii = {}, Pt = {}, N_;
+var ai = {}, ii = {}, St = {}, N_;
 function jk() {
-  if (N_) return Pt;
+  if (N_) return St;
   N_ = 1;
-  var e = Pt && Pt.__createBinding || (Object.create ? function(i, t, r, s) {
+  var e = St && St.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
     (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
@@ -7035,30 +7035,59 @@ function jk() {
     } }), Object.defineProperty(i, s, c);
   } : function(i, t, r, s) {
     s === void 0 && (s = r), i[s] = t[r];
-  }), a = Pt && Pt.__setModuleDefault || (Object.create ? function(i, t) {
+  }), a = St && St.__setModuleDefault || (Object.create ? function(i, t) {
     Object.defineProperty(i, "default", { enumerable: !0, value: t });
   } : function(i, t) {
     i.default = t;
-  }), o = Pt && Pt.__importStar || function(i) {
+  }), o = St && St.__importStar || function(i) {
     if (i && i.__esModule) return i;
     var t = {};
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Pt, "__esModule", { value: !0 }), Pt.Agent = void 0;
+  Object.defineProperty(St, "__esModule", { value: !0 }), St.Agent = void 0;
   const n = o(B());
-  return Pt.Agent = n.serialization.object({
+  return St.Agent = n.serialization.object({
     id: n.serialization.string(),
     name: n.serialization.string(),
     description: n.serialization.string().optional(),
     creationUtc: n.serialization.property("creation_utc", n.serialization.date()),
     maxEngineIterations: n.serialization.property("max_engine_iterations", n.serialization.number())
-  }), Pt;
+  }), St;
 }
-var Rt = {}, zt = {}, I_;
+var Pt = {}, Rt = {}, I_;
 function xk() {
-  if (I_) return zt;
+  if (I_) return Rt;
   I_ = 1;
+  var e = Rt && Rt.__createBinding || (Object.create ? function(i, t, r, s) {
+    s === void 0 && (s = r);
+    var c = Object.getOwnPropertyDescriptor(t, r);
+    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
+      return t[r];
+    } }), Object.defineProperty(i, s, c);
+  } : function(i, t, r, s) {
+    s === void 0 && (s = r), i[s] = t[r];
+  }), a = Rt && Rt.__setModuleDefault || (Object.create ? function(i, t) {
+    Object.defineProperty(i, "default", { enumerable: !0, value: t });
+  } : function(i, t) {
+    i.default = t;
+  }), o = Rt && Rt.__importStar || function(i) {
+    if (i && i.__esModule) return i;
+    var t = {};
+    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
+    return a(t, i), t;
+  };
+  Object.defineProperty(Rt, "__esModule", { value: !0 }), Rt.CoherenceCheckKindDto = void 0;
+  const n = o(B());
+  return Rt.CoherenceCheckKindDto = n.serialization.enum_([
+    "contradiction_with_existing_guideline",
+    "contradiction_with_another_evaluated_guideline"
+  ]), Rt;
+}
+var zt = {}, D_;
+function _c() {
+  if (D_) return zt;
+  D_ = 1;
   var e = zt && zt.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -7077,47 +7106,18 @@ function xk() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(zt, "__esModule", { value: !0 }), zt.CoherenceCheckKindDto = void 0;
+  Object.defineProperty(zt, "__esModule", { value: !0 }), zt.GuidelineContent = void 0;
   const n = o(B());
-  return zt.CoherenceCheckKindDto = n.serialization.enum_([
-    "contradiction_with_existing_guideline",
-    "contradiction_with_another_evaluated_guideline"
-  ]), zt;
-}
-var Ct = {}, D_;
-function _c() {
-  if (D_) return Ct;
-  D_ = 1;
-  var e = Ct && Ct.__createBinding || (Object.create ? function(i, t, r, s) {
-    s === void 0 && (s = r);
-    var c = Object.getOwnPropertyDescriptor(t, r);
-    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
-      return t[r];
-    } }), Object.defineProperty(i, s, c);
-  } : function(i, t, r, s) {
-    s === void 0 && (s = r), i[s] = t[r];
-  }), a = Ct && Ct.__setModuleDefault || (Object.create ? function(i, t) {
-    Object.defineProperty(i, "default", { enumerable: !0, value: t });
-  } : function(i, t) {
-    i.default = t;
-  }), o = Ct && Ct.__importStar || function(i) {
-    if (i && i.__esModule) return i;
-    var t = {};
-    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
-    return a(t, i), t;
-  };
-  Object.defineProperty(Ct, "__esModule", { value: !0 }), Ct.GuidelineContent = void 0;
-  const n = o(B());
-  return Ct.GuidelineContent = n.serialization.object({
+  return zt.GuidelineContent = n.serialization.object({
     condition: n.serialization.string(),
     action: n.serialization.string()
-  }), Ct;
+  }), zt;
 }
 var U_;
 function Ak() {
-  if (U_) return Rt;
+  if (U_) return Pt;
   U_ = 1;
-  var e = Rt && Rt.__createBinding || (Object.create ? function(r, s, c, l) {
+  var e = Pt && Pt.__createBinding || (Object.create ? function(r, s, c, l) {
     l === void 0 && (l = c);
     var g = Object.getOwnPropertyDescriptor(s, c);
     (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
@@ -7125,30 +7125,86 @@ function Ak() {
     } }), Object.defineProperty(r, l, g);
   } : function(r, s, c, l) {
     l === void 0 && (l = c), r[l] = s[c];
-  }), a = Rt && Rt.__setModuleDefault || (Object.create ? function(r, s) {
+  }), a = Pt && Pt.__setModuleDefault || (Object.create ? function(r, s) {
     Object.defineProperty(r, "default", { enumerable: !0, value: s });
   } : function(r, s) {
     r.default = s;
-  }), o = Rt && Rt.__importStar || function(r) {
+  }), o = Pt && Pt.__importStar || function(r) {
     if (r && r.__esModule) return r;
     var s = {};
     if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
     return a(s, r), s;
   };
-  Object.defineProperty(Rt, "__esModule", { value: !0 }), Rt.CoherenceCheck = void 0;
+  Object.defineProperty(Pt, "__esModule", { value: !0 }), Pt.CoherenceCheck = void 0;
   const n = o(B()), i = xk(), t = _c();
-  return Rt.CoherenceCheck = n.serialization.object({
+  return Pt.CoherenceCheck = n.serialization.object({
     kind: i.CoherenceCheckKindDto,
     first: t.GuidelineContent,
     second: t.GuidelineContent,
     issue: n.serialization.string(),
     severity: n.serialization.number()
-  }), Rt;
+  }), Pt;
 }
-var Tt = {}, Mt = {}, L_;
+var Ct = {}, Tt = {}, L_;
 function Nk() {
-  if (L_) return Mt;
+  if (L_) return Tt;
   L_ = 1;
+  var e = Tt && Tt.__createBinding || (Object.create ? function(i, t, r, s) {
+    s === void 0 && (s = r);
+    var c = Object.getOwnPropertyDescriptor(t, r);
+    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
+      return t[r];
+    } }), Object.defineProperty(i, s, c);
+  } : function(i, t, r, s) {
+    s === void 0 && (s = r), i[s] = t[r];
+  }), a = Tt && Tt.__setModuleDefault || (Object.create ? function(i, t) {
+    Object.defineProperty(i, "default", { enumerable: !0, value: t });
+  } : function(i, t) {
+    i.default = t;
+  }), o = Tt && Tt.__importStar || function(i) {
+    if (i && i.__esModule) return i;
+    var t = {};
+    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
+    return a(t, i), t;
+  };
+  Object.defineProperty(Tt, "__esModule", { value: !0 }), Tt.ConnectionPropositionKindDto = void 0;
+  const n = o(B());
+  return Tt.ConnectionPropositionKindDto = n.serialization.enum_(["connection_with_existing_guideline", "connection_with_another_evaluated_guideline"]), Tt;
+}
+var B_;
+function Ik() {
+  if (B_) return Ct;
+  B_ = 1;
+  var e = Ct && Ct.__createBinding || (Object.create ? function(r, s, c, l) {
+    l === void 0 && (l = c);
+    var g = Object.getOwnPropertyDescriptor(s, c);
+    (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
+      return s[c];
+    } }), Object.defineProperty(r, l, g);
+  } : function(r, s, c, l) {
+    l === void 0 && (l = c), r[l] = s[c];
+  }), a = Ct && Ct.__setModuleDefault || (Object.create ? function(r, s) {
+    Object.defineProperty(r, "default", { enumerable: !0, value: s });
+  } : function(r, s) {
+    r.default = s;
+  }), o = Ct && Ct.__importStar || function(r) {
+    if (r && r.__esModule) return r;
+    var s = {};
+    if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
+    return a(s, r), s;
+  };
+  Object.defineProperty(Ct, "__esModule", { value: !0 }), Ct.ConnectionProposition = void 0;
+  const n = o(B()), i = Nk(), t = _c();
+  return Ct.ConnectionProposition = n.serialization.object({
+    checkKind: n.serialization.property("check_kind", i.ConnectionPropositionKindDto),
+    source: t.GuidelineContent,
+    target: t.GuidelineContent
+  }), Ct;
+}
+var Mt = {}, $_;
+function Dk() {
+  if ($_) return Mt;
+  $_ = 1;
   var e = Mt && Mt.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -7167,44 +7223,16 @@ function Nk() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Mt, "__esModule", { value: !0 }), Mt.ConnectionPropositionKindDto = void 0;
+  Object.defineProperty(Mt, "__esModule", { value: !0 }), Mt.ConsumptionOffsets = void 0;
   const n = o(B());
-  return Mt.ConnectionPropositionKindDto = n.serialization.enum_(["connection_with_existing_guideline", "connection_with_another_evaluated_guideline"]), Mt;
+  return Mt.ConsumptionOffsets = n.serialization.object({
+    client: n.serialization.number().optional()
+  }), Mt;
 }
-var B_;
-function Ik() {
-  if (B_) return Tt;
-  B_ = 1;
-  var e = Tt && Tt.__createBinding || (Object.create ? function(r, s, c, l) {
-    l === void 0 && (l = c);
-    var g = Object.getOwnPropertyDescriptor(s, c);
-    (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
-      return s[c];
-    } }), Object.defineProperty(r, l, g);
-  } : function(r, s, c, l) {
-    l === void 0 && (l = c), r[l] = s[c];
-  }), a = Tt && Tt.__setModuleDefault || (Object.create ? function(r, s) {
-    Object.defineProperty(r, "default", { enumerable: !0, value: s });
-  } : function(r, s) {
-    r.default = s;
-  }), o = Tt && Tt.__importStar || function(r) {
-    if (r && r.__esModule) return r;
-    var s = {};
-    if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
-    return a(s, r), s;
-  };
-  Object.defineProperty(Tt, "__esModule", { value: !0 }), Tt.ConnectionProposition = void 0;
-  const n = o(B()), i = Nk(), t = _c();
-  return Tt.ConnectionProposition = n.serialization.object({
-    checkKind: n.serialization.property("check_kind", i.ConnectionPropositionKindDto),
-    source: t.GuidelineContent,
-    target: t.GuidelineContent
-  }), Tt;
-}
-var jt = {}, $_;
-function Dk() {
-  if ($_) return jt;
-  $_ = 1;
+var jt = {}, F_;
+function Uk() {
+  if (F_) return jt;
+  F_ = 1;
   var e = jt && jt.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -7223,16 +7251,16 @@ function Dk() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(jt, "__esModule", { value: !0 }), jt.ConsumptionOffsets = void 0;
+  Object.defineProperty(jt, "__esModule", { value: !0 }), jt.ConsumptionOffsetsUpdateParams = void 0;
   const n = o(B());
-  return jt.ConsumptionOffsets = n.serialization.object({
+  return jt.ConsumptionOffsetsUpdateParams = n.serialization.object({
     client: n.serialization.number().optional()
   }), jt;
 }
-var xt = {}, F_;
-function Uk() {
-  if (F_) return xt;
-  F_ = 1;
+var xt = {}, q_;
+function Lk() {
+  if (q_) return xt;
+  q_ = 1;
   var e = xt && xt.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -7251,49 +7279,21 @@ function Uk() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(xt, "__esModule", { value: !0 }), xt.ConsumptionOffsetsUpdateParams = void 0;
+  Object.defineProperty(xt, "__esModule", { value: !0 }), xt.ContextVariableAndValue = void 0;
   const n = o(B());
-  return xt.ConsumptionOffsetsUpdateParams = n.serialization.object({
-    client: n.serialization.number().optional()
-  }), xt;
-}
-var At = {}, q_;
-function Lk() {
-  if (q_) return At;
-  q_ = 1;
-  var e = At && At.__createBinding || (Object.create ? function(i, t, r, s) {
-    s === void 0 && (s = r);
-    var c = Object.getOwnPropertyDescriptor(t, r);
-    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
-      return t[r];
-    } }), Object.defineProperty(i, s, c);
-  } : function(i, t, r, s) {
-    s === void 0 && (s = r), i[s] = t[r];
-  }), a = At && At.__setModuleDefault || (Object.create ? function(i, t) {
-    Object.defineProperty(i, "default", { enumerable: !0, value: t });
-  } : function(i, t) {
-    i.default = t;
-  }), o = At && At.__importStar || function(i) {
-    if (i && i.__esModule) return i;
-    var t = {};
-    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
-    return a(t, i), t;
-  };
-  Object.defineProperty(At, "__esModule", { value: !0 }), At.ContextVariableAndValue = void 0;
-  const n = o(B());
-  return At.ContextVariableAndValue = n.serialization.object({
+  return xt.ContextVariableAndValue = n.serialization.object({
     id: n.serialization.string(),
     name: n.serialization.string(),
     description: n.serialization.string(),
     key: n.serialization.string(),
     value: n.serialization.unknown()
-  }), At;
+  }), xt;
 }
-var Nt = {}, It = {}, G_;
+var At = {}, Nt = {}, G_;
 function Yi() {
-  if (G_) return It;
+  if (G_) return Nt;
   G_ = 1;
-  var e = It && It.__createBinding || (Object.create ? function(i, t, r, s) {
+  var e = Nt && Nt.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
     (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
@@ -7301,28 +7301,28 @@ function Yi() {
     } }), Object.defineProperty(i, s, c);
   } : function(i, t, r, s) {
     s === void 0 && (s = r), i[s] = t[r];
-  }), a = It && It.__setModuleDefault || (Object.create ? function(i, t) {
+  }), a = Nt && Nt.__setModuleDefault || (Object.create ? function(i, t) {
     Object.defineProperty(i, "default", { enumerable: !0, value: t });
   } : function(i, t) {
     i.default = t;
-  }), o = It && It.__importStar || function(i) {
+  }), o = Nt && Nt.__importStar || function(i) {
     if (i && i.__esModule) return i;
     var t = {};
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(It, "__esModule", { value: !0 }), It.ToolId = void 0;
+  Object.defineProperty(Nt, "__esModule", { value: !0 }), Nt.ToolId = void 0;
   const n = o(B());
-  return It.ToolId = n.serialization.object({
+  return Nt.ToolId = n.serialization.object({
     serviceName: n.serialization.property("service_name", n.serialization.string()),
     toolName: n.serialization.property("tool_name", n.serialization.string())
-  }), It;
+  }), Nt;
 }
 var V_;
 function zd() {
-  if (V_) return Nt;
+  if (V_) return At;
   V_ = 1;
-  var e = Nt && Nt.__createBinding || (Object.create ? function(t, r, s, c) {
+  var e = At && At.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
     (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -7330,30 +7330,89 @@ function zd() {
     } }), Object.defineProperty(t, c, l);
   } : function(t, r, s, c) {
     c === void 0 && (c = s), t[c] = r[s];
-  }), a = Nt && Nt.__setModuleDefault || (Object.create ? function(t, r) {
+  }), a = At && At.__setModuleDefault || (Object.create ? function(t, r) {
     Object.defineProperty(t, "default", { enumerable: !0, value: r });
   } : function(t, r) {
     t.default = r;
-  }), o = Nt && Nt.__importStar || function(t) {
+  }), o = At && At.__importStar || function(t) {
     if (t && t.__esModule) return t;
     var r = {};
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(Nt, "__esModule", { value: !0 }), Nt.ContextVariable = void 0;
+  Object.defineProperty(At, "__esModule", { value: !0 }), At.ContextVariable = void 0;
   const n = o(B()), i = Yi();
-  return Nt.ContextVariable = n.serialization.object({
+  return At.ContextVariable = n.serialization.object({
     id: n.serialization.string(),
     name: n.serialization.string(),
     description: n.serialization.string().optional(),
     toolId: n.serialization.property("tool_id", i.ToolId.optional()),
     freshnessRules: n.serialization.property("freshness_rules", n.serialization.string().optional())
-  }), Nt;
+  }), At;
 }
-var Dt = {}, Ut = {}, W_;
+var It = {}, Dt = {}, W_;
 function Bk() {
-  if (W_) return Ut;
+  if (W_) return Dt;
   W_ = 1;
+  var e = Dt && Dt.__createBinding || (Object.create ? function(i, t, r, s) {
+    s === void 0 && (s = r);
+    var c = Object.getOwnPropertyDescriptor(t, r);
+    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
+      return t[r];
+    } }), Object.defineProperty(i, s, c);
+  } : function(i, t, r, s) {
+    s === void 0 && (s = r), i[s] = t[r];
+  }), a = Dt && Dt.__setModuleDefault || (Object.create ? function(i, t) {
+    Object.defineProperty(i, "default", { enumerable: !0, value: t });
+  } : function(i, t) {
+    i.default = t;
+  }), o = Dt && Dt.__importStar || function(i) {
+    if (i && i.__esModule) return i;
+    var t = {};
+    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
+    return a(t, i), t;
+  };
+  Object.defineProperty(Dt, "__esModule", { value: !0 }), Dt.ContextVariableValue = void 0;
+  const n = o(B());
+  return Dt.ContextVariableValue = n.serialization.object({
+    id: n.serialization.string(),
+    lastModified: n.serialization.property("last_modified", n.serialization.date()),
+    data: n.serialization.unknown()
+  }), Dt;
+}
+var K_;
+function fz() {
+  if (K_) return It;
+  K_ = 1;
+  var e = It && It.__createBinding || (Object.create ? function(r, s, c, l) {
+    l === void 0 && (l = c);
+    var g = Object.getOwnPropertyDescriptor(s, c);
+    (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
+      return s[c];
+    } }), Object.defineProperty(r, l, g);
+  } : function(r, s, c, l) {
+    l === void 0 && (l = c), r[l] = s[c];
+  }), a = It && It.__setModuleDefault || (Object.create ? function(r, s) {
+    Object.defineProperty(r, "default", { enumerable: !0, value: s });
+  } : function(r, s) {
+    r.default = s;
+  }), o = It && It.__importStar || function(r) {
+    if (r && r.__esModule) return r;
+    var s = {};
+    if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
+    return a(s, r), s;
+  };
+  Object.defineProperty(It, "__esModule", { value: !0 }), It.ContextVariableReadResult = void 0;
+  const n = o(B()), i = zd(), t = Bk();
+  return It.ContextVariableReadResult = n.serialization.object({
+    contextVariable: n.serialization.property("context_variable", i.ContextVariable),
+    keyValuePairs: n.serialization.property("key_value_pairs", n.serialization.record(n.serialization.string(), t.ContextVariableValue.optional()).optional())
+  }), It;
+}
+var Ut = {}, H_;
+function $k() {
+  if (H_) return Ut;
+  H_ = 1;
   var e = Ut && Ut.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -7372,47 +7431,20 @@ function Bk() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Ut, "__esModule", { value: !0 }), Ut.ContextVariableValue = void 0;
+  Object.defineProperty(Ut, "__esModule", { value: !0 }), Ut.Customer = void 0;
   const n = o(B());
-  return Ut.ContextVariableValue = n.serialization.object({
+  return Ut.Customer = n.serialization.object({
     id: n.serialization.string(),
-    lastModified: n.serialization.property("last_modified", n.serialization.date()),
-    data: n.serialization.unknown()
+    creationUtc: n.serialization.property("creation_utc", n.serialization.date()),
+    name: n.serialization.string(),
+    extra: n.serialization.record(n.serialization.string(), n.serialization.string()),
+    tags: n.serialization.list(n.serialization.string())
   }), Ut;
 }
-var K_;
-function fz() {
-  if (K_) return Dt;
-  K_ = 1;
-  var e = Dt && Dt.__createBinding || (Object.create ? function(r, s, c, l) {
-    l === void 0 && (l = c);
-    var g = Object.getOwnPropertyDescriptor(s, c);
-    (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
-      return s[c];
-    } }), Object.defineProperty(r, l, g);
-  } : function(r, s, c, l) {
-    l === void 0 && (l = c), r[l] = s[c];
-  }), a = Dt && Dt.__setModuleDefault || (Object.create ? function(r, s) {
-    Object.defineProperty(r, "default", { enumerable: !0, value: s });
-  } : function(r, s) {
-    r.default = s;
-  }), o = Dt && Dt.__importStar || function(r) {
-    if (r && r.__esModule) return r;
-    var s = {};
-    if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
-    return a(s, r), s;
-  };
-  Object.defineProperty(Dt, "__esModule", { value: !0 }), Dt.ContextVariableReadResult = void 0;
-  const n = o(B()), i = zd(), t = Bk();
-  return Dt.ContextVariableReadResult = n.serialization.object({
-    contextVariable: n.serialization.property("context_variable", i.ContextVariable),
-    keyValuePairs: n.serialization.property("key_value_pairs", n.serialization.record(n.serialization.string(), t.ContextVariableValue.optional()).optional())
-  }), Dt;
-}
-var Lt = {}, H_;
-function $k() {
-  if (H_) return Lt;
-  H_ = 1;
+var Lt = {}, X_;
+function Fk() {
+  if (X_) return Lt;
+  X_ = 1;
   var e = Lt && Lt.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -7431,20 +7463,17 @@ function $k() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Lt, "__esModule", { value: !0 }), Lt.Customer = void 0;
+  Object.defineProperty(Lt, "__esModule", { value: !0 }), Lt.CustomerExtraUpdateParams = void 0;
   const n = o(B());
-  return Lt.Customer = n.serialization.object({
-    id: n.serialization.string(),
-    creationUtc: n.serialization.property("creation_utc", n.serialization.date()),
-    name: n.serialization.string(),
-    extra: n.serialization.record(n.serialization.string(), n.serialization.string()),
-    tags: n.serialization.list(n.serialization.string())
+  return Lt.CustomerExtraUpdateParams = n.serialization.object({
+    add: n.serialization.record(n.serialization.string(), n.serialization.string().optional()).optional(),
+    remove: n.serialization.list(n.serialization.string()).optional()
   }), Lt;
 }
-var Bt = {}, X_;
-function Fk() {
-  if (X_) return Bt;
-  X_ = 1;
+var Bt = {}, Y_;
+function qk() {
+  if (Y_) return Bt;
+  Y_ = 1;
   var e = Bt && Bt.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -7463,47 +7492,18 @@ function Fk() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Bt, "__esModule", { value: !0 }), Bt.CustomerExtraUpdateParams = void 0;
+  Object.defineProperty(Bt, "__esModule", { value: !0 }), Bt.CustomerTagUpdateParams = void 0;
   const n = o(B());
-  return Bt.CustomerExtraUpdateParams = n.serialization.object({
-    add: n.serialization.record(n.serialization.string(), n.serialization.string().optional()).optional(),
+  return Bt.CustomerTagUpdateParams = n.serialization.object({
+    add: n.serialization.list(n.serialization.string()).optional(),
     remove: n.serialization.list(n.serialization.string()).optional()
   }), Bt;
 }
-var $t = {}, Y_;
-function qk() {
-  if (Y_) return $t;
-  Y_ = 1;
-  var e = $t && $t.__createBinding || (Object.create ? function(i, t, r, s) {
-    s === void 0 && (s = r);
-    var c = Object.getOwnPropertyDescriptor(t, r);
-    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
-      return t[r];
-    } }), Object.defineProperty(i, s, c);
-  } : function(i, t, r, s) {
-    s === void 0 && (s = r), i[s] = t[r];
-  }), a = $t && $t.__setModuleDefault || (Object.create ? function(i, t) {
-    Object.defineProperty(i, "default", { enumerable: !0, value: t });
-  } : function(i, t) {
-    i.default = t;
-  }), o = $t && $t.__importStar || function(i) {
-    if (i && i.__esModule) return i;
-    var t = {};
-    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
-    return a(t, i), t;
-  };
-  Object.defineProperty($t, "__esModule", { value: !0 }), $t.CustomerTagUpdateParams = void 0;
-  const n = o(B());
-  return $t.CustomerTagUpdateParams = n.serialization.object({
-    add: n.serialization.list(n.serialization.string()).optional(),
-    remove: n.serialization.list(n.serialization.string()).optional()
-  }), $t;
-}
-var Ft = {}, qt = {}, Q_;
+var $t = {}, Ft = {}, Q_;
 function Gk() {
-  if (Q_) return qt;
+  if (Q_) return Ft;
   Q_ = 1;
-  var e = qt && qt.__createBinding || (Object.create ? function(i, t, r, s) {
+  var e = Ft && Ft.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
     (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
@@ -7511,25 +7511,25 @@ function Gk() {
     } }), Object.defineProperty(i, s, c);
   } : function(i, t, r, s) {
     s === void 0 && (s = r), i[s] = t[r];
-  }), a = qt && qt.__setModuleDefault || (Object.create ? function(i, t) {
+  }), a = Ft && Ft.__setModuleDefault || (Object.create ? function(i, t) {
     Object.defineProperty(i, "default", { enumerable: !0, value: t });
   } : function(i, t) {
     i.default = t;
-  }), o = qt && qt.__importStar || function(i) {
+  }), o = Ft && Ft.__importStar || function(i) {
     if (i && i.__esModule) return i;
     var t = {};
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(qt, "__esModule", { value: !0 }), qt.EvaluationStatusDto = void 0;
+  Object.defineProperty(Ft, "__esModule", { value: !0 }), Ft.EvaluationStatusDto = void 0;
   const n = o(B());
-  return qt.EvaluationStatusDto = n.serialization.enum_(["pending", "running", "completed", "failed"]), qt;
+  return Ft.EvaluationStatusDto = n.serialization.enum_(["pending", "running", "completed", "failed"]), Ft;
 }
-var Gt = {}, Vt = {}, Wt = {}, Z_;
+var qt = {}, Gt = {}, Vt = {}, Z_;
 function Vk() {
-  if (Z_) return Wt;
+  if (Z_) return Vt;
   Z_ = 1;
-  var e = Wt && Wt.__createBinding || (Object.create ? function(i, t, r, s) {
+  var e = Vt && Vt.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
     (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
@@ -7537,25 +7537,25 @@ function Vk() {
     } }), Object.defineProperty(i, s, c);
   } : function(i, t, r, s) {
     s === void 0 && (s = r), i[s] = t[r];
-  }), a = Wt && Wt.__setModuleDefault || (Object.create ? function(i, t) {
+  }), a = Vt && Vt.__setModuleDefault || (Object.create ? function(i, t) {
     Object.defineProperty(i, "default", { enumerable: !0, value: t });
   } : function(i, t) {
     i.default = t;
-  }), o = Wt && Wt.__importStar || function(i) {
+  }), o = Vt && Vt.__importStar || function(i) {
     if (i && i.__esModule) return i;
     var t = {};
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Wt, "__esModule", { value: !0 }), Wt.PayloadKindDto = void 0;
+  Object.defineProperty(Vt, "__esModule", { value: !0 }), Vt.PayloadKindDto = void 0;
   const n = o(B());
-  return Wt.PayloadKindDto = n.serialization.stringLiteral("guideline"), Wt;
+  return Vt.PayloadKindDto = n.serialization.stringLiteral("guideline"), Vt;
 }
-var Kt = {}, Ht = {}, J_;
+var Wt = {}, Kt = {}, J_;
 function Wk() {
-  if (J_) return Ht;
+  if (J_) return Kt;
   J_ = 1;
-  var e = Ht && Ht.__createBinding || (Object.create ? function(i, t, r, s) {
+  var e = Kt && Kt.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
     (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
@@ -7563,25 +7563,25 @@ function Wk() {
     } }), Object.defineProperty(i, s, c);
   } : function(i, t, r, s) {
     s === void 0 && (s = r), i[s] = t[r];
-  }), a = Ht && Ht.__setModuleDefault || (Object.create ? function(i, t) {
+  }), a = Kt && Kt.__setModuleDefault || (Object.create ? function(i, t) {
     Object.defineProperty(i, "default", { enumerable: !0, value: t });
   } : function(i, t) {
     i.default = t;
-  }), o = Ht && Ht.__importStar || function(i) {
+  }), o = Kt && Kt.__importStar || function(i) {
     if (i && i.__esModule) return i;
     var t = {};
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Ht, "__esModule", { value: !0 }), Ht.GuidelinePayloadOperationDto = void 0;
+  Object.defineProperty(Kt, "__esModule", { value: !0 }), Kt.GuidelinePayloadOperationDto = void 0;
   const n = o(B());
-  return Ht.GuidelinePayloadOperationDto = n.serialization.enum_(["add", "update"]), Ht;
+  return Kt.GuidelinePayloadOperationDto = n.serialization.enum_(["add", "update"]), Kt;
 }
 var eb;
 function Kk() {
-  if (eb) return Kt;
+  if (eb) return Wt;
   eb = 1;
-  var e = Kt && Kt.__createBinding || (Object.create ? function(r, s, c, l) {
+  var e = Wt && Wt.__createBinding || (Object.create ? function(r, s, c, l) {
     l === void 0 && (l = c);
     var g = Object.getOwnPropertyDescriptor(s, c);
     (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
@@ -7589,116 +7589,30 @@ function Kk() {
     } }), Object.defineProperty(r, l, g);
   } : function(r, s, c, l) {
     l === void 0 && (l = c), r[l] = s[c];
-  }), a = Kt && Kt.__setModuleDefault || (Object.create ? function(r, s) {
+  }), a = Wt && Wt.__setModuleDefault || (Object.create ? function(r, s) {
     Object.defineProperty(r, "default", { enumerable: !0, value: s });
   } : function(r, s) {
     r.default = s;
-  }), o = Kt && Kt.__importStar || function(r) {
+  }), o = Wt && Wt.__importStar || function(r) {
     if (r && r.__esModule) return r;
     var s = {};
     if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
     return a(s, r), s;
   };
-  Object.defineProperty(Kt, "__esModule", { value: !0 }), Kt.GuidelinePayload = void 0;
+  Object.defineProperty(Wt, "__esModule", { value: !0 }), Wt.GuidelinePayload = void 0;
   const n = o(B()), i = _c(), t = Wk();
-  return Kt.GuidelinePayload = n.serialization.object({
+  return Wt.GuidelinePayload = n.serialization.object({
     content: i.GuidelineContent,
     operation: t.GuidelinePayloadOperationDto,
     updatedId: n.serialization.property("updated_id", n.serialization.string().optional()),
     coherenceCheck: n.serialization.property("coherence_check", n.serialization.boolean()),
     connectionProposition: n.serialization.property("connection_proposition", n.serialization.boolean())
-  }), Kt;
+  }), Wt;
 }
 var tb;
 function Cd() {
-  if (tb) return Vt;
+  if (tb) return Gt;
   tb = 1;
-  var e = Vt && Vt.__createBinding || (Object.create ? function(r, s, c, l) {
-    l === void 0 && (l = c);
-    var g = Object.getOwnPropertyDescriptor(s, c);
-    (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
-      return s[c];
-    } }), Object.defineProperty(r, l, g);
-  } : function(r, s, c, l) {
-    l === void 0 && (l = c), r[l] = s[c];
-  }), a = Vt && Vt.__setModuleDefault || (Object.create ? function(r, s) {
-    Object.defineProperty(r, "default", { enumerable: !0, value: s });
-  } : function(r, s) {
-    r.default = s;
-  }), o = Vt && Vt.__importStar || function(r) {
-    if (r && r.__esModule) return r;
-    var s = {};
-    if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
-    return a(s, r), s;
-  };
-  Object.defineProperty(Vt, "__esModule", { value: !0 }), Vt.Payload = void 0;
-  const n = o(B()), i = Vk(), t = Kk();
-  return Vt.Payload = n.serialization.object({
-    kind: i.PayloadKindDto,
-    guideline: t.GuidelinePayload.optional()
-  }), Vt;
-}
-var Xt = {}, Yt = {}, rb;
-function Hk() {
-  if (rb) return Yt;
-  rb = 1;
-  var e = Yt && Yt.__createBinding || (Object.create ? function(r, s, c, l) {
-    l === void 0 && (l = c);
-    var g = Object.getOwnPropertyDescriptor(s, c);
-    (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
-      return s[c];
-    } }), Object.defineProperty(r, l, g);
-  } : function(r, s, c, l) {
-    l === void 0 && (l = c), r[l] = s[c];
-  }), a = Yt && Yt.__setModuleDefault || (Object.create ? function(r, s) {
-    Object.defineProperty(r, "default", { enumerable: !0, value: s });
-  } : function(r, s) {
-    r.default = s;
-  }), o = Yt && Yt.__importStar || function(r) {
-    if (r && r.__esModule) return r;
-    var s = {};
-    if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
-    return a(s, r), s;
-  };
-  Object.defineProperty(Yt, "__esModule", { value: !0 }), Yt.GuidelineInvoiceData = void 0;
-  const n = o(B()), i = Ak(), t = Ik();
-  return Yt.GuidelineInvoiceData = n.serialization.object({
-    coherenceChecks: n.serialization.property("coherence_checks", n.serialization.list(i.CoherenceCheck)),
-    connectionPropositions: n.serialization.property("connection_propositions", n.serialization.list(t.ConnectionProposition).optional())
-  }), Yt;
-}
-var nb;
-function Xk() {
-  if (nb) return Xt;
-  nb = 1;
-  var e = Xt && Xt.__createBinding || (Object.create ? function(t, r, s, c) {
-    c === void 0 && (c = s);
-    var l = Object.getOwnPropertyDescriptor(r, s);
-    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
-      return r[s];
-    } }), Object.defineProperty(t, c, l);
-  } : function(t, r, s, c) {
-    c === void 0 && (c = s), t[c] = r[s];
-  }), a = Xt && Xt.__setModuleDefault || (Object.create ? function(t, r) {
-    Object.defineProperty(t, "default", { enumerable: !0, value: r });
-  } : function(t, r) {
-    t.default = r;
-  }), o = Xt && Xt.__importStar || function(t) {
-    if (t && t.__esModule) return t;
-    var r = {};
-    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
-    return a(r, t), r;
-  };
-  Object.defineProperty(Xt, "__esModule", { value: !0 }), Xt.InvoiceData = void 0;
-  const n = o(B()), i = Hk();
-  return Xt.InvoiceData = n.serialization.object({
-    guideline: i.GuidelineInvoiceData.optional()
-  }), Xt;
-}
-var ab;
-function Td() {
-  if (ab) return Gt;
-  ab = 1;
   var e = Gt && Gt.__createBinding || (Object.create ? function(r, s, c, l) {
     l === void 0 && (l = c);
     var g = Object.getOwnPropertyDescriptor(s, c);
@@ -7717,21 +7631,18 @@ function Td() {
     if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
     return a(s, r), s;
   };
-  Object.defineProperty(Gt, "__esModule", { value: !0 }), Gt.Invoice = void 0;
-  const n = o(B()), i = Cd(), t = Xk();
-  return Gt.Invoice = n.serialization.object({
-    payload: i.Payload,
-    checksum: n.serialization.string(),
-    approved: n.serialization.boolean(),
-    data: t.InvoiceData.optional(),
-    error: n.serialization.string().optional()
+  Object.defineProperty(Gt, "__esModule", { value: !0 }), Gt.Payload = void 0;
+  const n = o(B()), i = Vk(), t = Kk();
+  return Gt.Payload = n.serialization.object({
+    kind: i.PayloadKindDto,
+    guideline: t.GuidelinePayload.optional()
   }), Gt;
 }
-var ib;
-function dz() {
-  if (ib) return Ft;
-  ib = 1;
-  var e = Ft && Ft.__createBinding || (Object.create ? function(r, s, c, l) {
+var Ht = {}, Xt = {}, rb;
+function Hk() {
+  if (rb) return Xt;
+  rb = 1;
+  var e = Xt && Xt.__createBinding || (Object.create ? function(r, s, c, l) {
     l === void 0 && (l = c);
     var g = Object.getOwnPropertyDescriptor(s, c);
     (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
@@ -7739,31 +7650,153 @@ function dz() {
     } }), Object.defineProperty(r, l, g);
   } : function(r, s, c, l) {
     l === void 0 && (l = c), r[l] = s[c];
-  }), a = Ft && Ft.__setModuleDefault || (Object.create ? function(r, s) {
+  }), a = Xt && Xt.__setModuleDefault || (Object.create ? function(r, s) {
     Object.defineProperty(r, "default", { enumerable: !0, value: s });
   } : function(r, s) {
     r.default = s;
-  }), o = Ft && Ft.__importStar || function(r) {
+  }), o = Xt && Xt.__importStar || function(r) {
     if (r && r.__esModule) return r;
     var s = {};
     if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
     return a(s, r), s;
   };
-  Object.defineProperty(Ft, "__esModule", { value: !0 }), Ft.Evaluation = void 0;
+  Object.defineProperty(Xt, "__esModule", { value: !0 }), Xt.GuidelineInvoiceData = void 0;
+  const n = o(B()), i = Ak(), t = Ik();
+  return Xt.GuidelineInvoiceData = n.serialization.object({
+    coherenceChecks: n.serialization.property("coherence_checks", n.serialization.list(i.CoherenceCheck)),
+    connectionPropositions: n.serialization.property("connection_propositions", n.serialization.list(t.ConnectionProposition).optional())
+  }), Xt;
+}
+var nb;
+function Xk() {
+  if (nb) return Ht;
+  nb = 1;
+  var e = Ht && Ht.__createBinding || (Object.create ? function(t, r, s, c) {
+    c === void 0 && (c = s);
+    var l = Object.getOwnPropertyDescriptor(r, s);
+    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
+      return r[s];
+    } }), Object.defineProperty(t, c, l);
+  } : function(t, r, s, c) {
+    c === void 0 && (c = s), t[c] = r[s];
+  }), a = Ht && Ht.__setModuleDefault || (Object.create ? function(t, r) {
+    Object.defineProperty(t, "default", { enumerable: !0, value: r });
+  } : function(t, r) {
+    t.default = r;
+  }), o = Ht && Ht.__importStar || function(t) {
+    if (t && t.__esModule) return t;
+    var r = {};
+    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
+    return a(r, t), r;
+  };
+  Object.defineProperty(Ht, "__esModule", { value: !0 }), Ht.InvoiceData = void 0;
+  const n = o(B()), i = Hk();
+  return Ht.InvoiceData = n.serialization.object({
+    guideline: i.GuidelineInvoiceData.optional()
+  }), Ht;
+}
+var ab;
+function Td() {
+  if (ab) return qt;
+  ab = 1;
+  var e = qt && qt.__createBinding || (Object.create ? function(r, s, c, l) {
+    l === void 0 && (l = c);
+    var g = Object.getOwnPropertyDescriptor(s, c);
+    (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
+      return s[c];
+    } }), Object.defineProperty(r, l, g);
+  } : function(r, s, c, l) {
+    l === void 0 && (l = c), r[l] = s[c];
+  }), a = qt && qt.__setModuleDefault || (Object.create ? function(r, s) {
+    Object.defineProperty(r, "default", { enumerable: !0, value: s });
+  } : function(r, s) {
+    r.default = s;
+  }), o = qt && qt.__importStar || function(r) {
+    if (r && r.__esModule) return r;
+    var s = {};
+    if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
+    return a(s, r), s;
+  };
+  Object.defineProperty(qt, "__esModule", { value: !0 }), qt.Invoice = void 0;
+  const n = o(B()), i = Cd(), t = Xk();
+  return qt.Invoice = n.serialization.object({
+    payload: i.Payload,
+    checksum: n.serialization.string(),
+    approved: n.serialization.boolean(),
+    data: t.InvoiceData.optional(),
+    error: n.serialization.string().optional()
+  }), qt;
+}
+var ib;
+function dz() {
+  if (ib) return $t;
+  ib = 1;
+  var e = $t && $t.__createBinding || (Object.create ? function(r, s, c, l) {
+    l === void 0 && (l = c);
+    var g = Object.getOwnPropertyDescriptor(s, c);
+    (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
+      return s[c];
+    } }), Object.defineProperty(r, l, g);
+  } : function(r, s, c, l) {
+    l === void 0 && (l = c), r[l] = s[c];
+  }), a = $t && $t.__setModuleDefault || (Object.create ? function(r, s) {
+    Object.defineProperty(r, "default", { enumerable: !0, value: s });
+  } : function(r, s) {
+    r.default = s;
+  }), o = $t && $t.__importStar || function(r) {
+    if (r && r.__esModule) return r;
+    var s = {};
+    if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
+    return a(s, r), s;
+  };
+  Object.defineProperty($t, "__esModule", { value: !0 }), $t.Evaluation = void 0;
   const n = o(B()), i = Gk(), t = Td();
-  return Ft.Evaluation = n.serialization.object({
+  return $t.Evaluation = n.serialization.object({
     id: n.serialization.string(),
     status: i.EvaluationStatusDto,
     progress: n.serialization.number(),
     creationUtc: n.serialization.property("creation_utc", n.serialization.date()),
     error: n.serialization.string().optional(),
     invoices: n.serialization.list(t.Invoice)
-  }), Ft;
+  }), $t;
 }
-var Qt = {}, Zt = {}, ob;
+var Yt = {}, Qt = {}, ob;
 function Md() {
-  if (ob) return Zt;
+  if (ob) return Qt;
   ob = 1;
+  var e = Qt && Qt.__createBinding || (Object.create ? function(i, t, r, s) {
+    s === void 0 && (s = r);
+    var c = Object.getOwnPropertyDescriptor(t, r);
+    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
+      return t[r];
+    } }), Object.defineProperty(i, s, c);
+  } : function(i, t, r, s) {
+    s === void 0 && (s = r), i[s] = t[r];
+  }), a = Qt && Qt.__setModuleDefault || (Object.create ? function(i, t) {
+    Object.defineProperty(i, "default", { enumerable: !0, value: t });
+  } : function(i, t) {
+    i.default = t;
+  }), o = Qt && Qt.__importStar || function(i) {
+    if (i && i.__esModule) return i;
+    var t = {};
+    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
+    return a(t, i), t;
+  };
+  Object.defineProperty(Qt, "__esModule", { value: !0 }), Qt.EventSourceDto = void 0;
+  const n = o(B());
+  return Qt.EventSourceDto = n.serialization.enum_([
+    "customer",
+    "customer_ui",
+    "human_agent",
+    "human_agent_on_behalf_of_ai_agent",
+    "ai_agent",
+    "system"
+  ]), Qt;
+}
+var Zt = {}, sb;
+function jd() {
+  if (sb) return Zt;
+  sb = 1;
   var e = Zt && Zt.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -7782,48 +7815,15 @@ function Md() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Zt, "__esModule", { value: !0 }), Zt.EventSourceDto = void 0;
+  Object.defineProperty(Zt, "__esModule", { value: !0 }), Zt.EventKindDto = void 0;
   const n = o(B());
-  return Zt.EventSourceDto = n.serialization.enum_([
-    "customer",
-    "customer_ui",
-    "human_agent",
-    "human_agent_on_behalf_of_ai_agent",
-    "ai_agent",
-    "system"
-  ]), Zt;
-}
-var Jt = {}, sb;
-function jd() {
-  if (sb) return Jt;
-  sb = 1;
-  var e = Jt && Jt.__createBinding || (Object.create ? function(i, t, r, s) {
-    s === void 0 && (s = r);
-    var c = Object.getOwnPropertyDescriptor(t, r);
-    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
-      return t[r];
-    } }), Object.defineProperty(i, s, c);
-  } : function(i, t, r, s) {
-    s === void 0 && (s = r), i[s] = t[r];
-  }), a = Jt && Jt.__setModuleDefault || (Object.create ? function(i, t) {
-    Object.defineProperty(i, "default", { enumerable: !0, value: t });
-  } : function(i, t) {
-    i.default = t;
-  }), o = Jt && Jt.__importStar || function(i) {
-    if (i && i.__esModule) return i;
-    var t = {};
-    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
-    return a(t, i), t;
-  };
-  Object.defineProperty(Jt, "__esModule", { value: !0 }), Jt.EventKindDto = void 0;
-  const n = o(B());
-  return Jt.EventKindDto = n.serialization.enum_(["message", "tool", "status", "custom"]), Jt;
+  return Zt.EventKindDto = n.serialization.enum_(["message", "tool", "status", "custom"]), Zt;
 }
 var cb;
 function xd() {
-  if (cb) return Qt;
+  if (cb) return Yt;
   cb = 1;
-  var e = Qt && Qt.__createBinding || (Object.create ? function(r, s, c, l) {
+  var e = Yt && Yt.__createBinding || (Object.create ? function(r, s, c, l) {
     l === void 0 && (l = c);
     var g = Object.getOwnPropertyDescriptor(s, c);
     (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
@@ -7831,19 +7831,19 @@ function xd() {
     } }), Object.defineProperty(r, l, g);
   } : function(r, s, c, l) {
     l === void 0 && (l = c), r[l] = s[c];
-  }), a = Qt && Qt.__setModuleDefault || (Object.create ? function(r, s) {
+  }), a = Yt && Yt.__setModuleDefault || (Object.create ? function(r, s) {
     Object.defineProperty(r, "default", { enumerable: !0, value: s });
   } : function(r, s) {
     r.default = s;
-  }), o = Qt && Qt.__importStar || function(r) {
+  }), o = Yt && Yt.__importStar || function(r) {
     if (r && r.__esModule) return r;
     var s = {};
     if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
     return a(s, r), s;
   };
-  Object.defineProperty(Qt, "__esModule", { value: !0 }), Qt.Event = void 0;
+  Object.defineProperty(Yt, "__esModule", { value: !0 }), Yt.Event = void 0;
   const n = o(B()), i = Md(), t = jd();
-  return Qt.Event = n.serialization.object({
+  return Yt.Event = n.serialization.object({
     id: n.serialization.string(),
     source: i.EventSourceDto,
     kind: t.EventKindDto,
@@ -7852,13 +7852,13 @@ function xd() {
     correlationId: n.serialization.property("correlation_id", n.serialization.string()),
     data: n.serialization.unknown(),
     deleted: n.serialization.boolean()
-  }), Qt;
+  }), Yt;
 }
-var er = {}, tr = {}, rr = {}, nr = {}, lb;
+var Jt = {}, er = {}, tr = {}, rr = {}, lb;
 function Yk() {
-  if (lb) return nr;
+  if (lb) return rr;
   lb = 1;
-  var e = nr && nr.__createBinding || (Object.create ? function(i, t, r, s) {
+  var e = rr && rr.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
     (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
@@ -7866,28 +7866,28 @@ function Yk() {
     } }), Object.defineProperty(i, s, c);
   } : function(i, t, r, s) {
     s === void 0 && (s = r), i[s] = t[r];
-  }), a = nr && nr.__setModuleDefault || (Object.create ? function(i, t) {
+  }), a = rr && rr.__setModuleDefault || (Object.create ? function(i, t) {
     Object.defineProperty(i, "default", { enumerable: !0, value: t });
   } : function(i, t) {
     i.default = t;
-  }), o = nr && nr.__importStar || function(i) {
+  }), o = rr && rr.__importStar || function(i) {
     if (i && i.__esModule) return i;
     var t = {};
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(nr, "__esModule", { value: !0 }), nr.ToolResult = void 0;
+  Object.defineProperty(rr, "__esModule", { value: !0 }), rr.ToolResult = void 0;
   const n = o(B());
-  return nr.ToolResult = n.serialization.object({
+  return rr.ToolResult = n.serialization.object({
     data: n.serialization.unknown(),
     metadata: n.serialization.record(n.serialization.string(), n.serialization.unknown())
-  }), nr;
+  }), rr;
 }
 var ub;
 function Ad() {
-  if (ub) return rr;
+  if (ub) return tr;
   ub = 1;
-  var e = rr && rr.__createBinding || (Object.create ? function(t, r, s, c) {
+  var e = tr && tr.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
     (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -7895,29 +7895,29 @@ function Ad() {
     } }), Object.defineProperty(t, c, l);
   } : function(t, r, s, c) {
     c === void 0 && (c = s), t[c] = r[s];
-  }), a = rr && rr.__setModuleDefault || (Object.create ? function(t, r) {
+  }), a = tr && tr.__setModuleDefault || (Object.create ? function(t, r) {
     Object.defineProperty(t, "default", { enumerable: !0, value: r });
   } : function(t, r) {
     t.default = r;
-  }), o = rr && rr.__importStar || function(t) {
+  }), o = tr && tr.__importStar || function(t) {
     if (t && t.__esModule) return t;
     var r = {};
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(rr, "__esModule", { value: !0 }), rr.ToolCall = void 0;
+  Object.defineProperty(tr, "__esModule", { value: !0 }), tr.ToolCall = void 0;
   const n = o(B()), i = Yk();
-  return rr.ToolCall = n.serialization.object({
+  return tr.ToolCall = n.serialization.object({
     toolId: n.serialization.property("tool_id", n.serialization.string()),
     arguments: n.serialization.record(n.serialization.string(), n.serialization.unknown()),
     result: i.ToolResult
-  }), rr;
+  }), tr;
 }
-var ar = {}, ir = {}, or = {}, fb;
+var nr = {}, ar = {}, ir = {}, fb;
 function Qk() {
-  if (fb) return or;
+  if (fb) return ir;
   fb = 1;
-  var e = or && or.__createBinding || (Object.create ? function(i, t, r, s) {
+  var e = ir && ir.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
     (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
@@ -7925,59 +7925,28 @@ function Qk() {
     } }), Object.defineProperty(i, s, c);
   } : function(i, t, r, s) {
     s === void 0 && (s = r), i[s] = t[r];
-  }), a = or && or.__setModuleDefault || (Object.create ? function(i, t) {
+  }), a = ir && ir.__setModuleDefault || (Object.create ? function(i, t) {
     Object.defineProperty(i, "default", { enumerable: !0, value: t });
   } : function(i, t) {
     i.default = t;
-  }), o = or && or.__importStar || function(i) {
+  }), o = ir && ir.__importStar || function(i) {
     if (i && i.__esModule) return i;
     var t = {};
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(or, "__esModule", { value: !0 }), or.UsageInfo = void 0;
+  Object.defineProperty(ir, "__esModule", { value: !0 }), ir.UsageInfo = void 0;
   const n = o(B());
-  return or.UsageInfo = n.serialization.object({
+  return ir.UsageInfo = n.serialization.object({
     inputTokens: n.serialization.property("input_tokens", n.serialization.number()),
     outputTokens: n.serialization.property("output_tokens", n.serialization.number()),
     extra: n.serialization.record(n.serialization.string(), n.serialization.number().optional()).optional()
-  }), or;
+  }), ir;
 }
 var db;
 function bc() {
-  if (db) return ir;
+  if (db) return ar;
   db = 1;
-  var e = ir && ir.__createBinding || (Object.create ? function(t, r, s, c) {
-    c === void 0 && (c = s);
-    var l = Object.getOwnPropertyDescriptor(r, s);
-    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
-      return r[s];
-    } }), Object.defineProperty(t, c, l);
-  } : function(t, r, s, c) {
-    c === void 0 && (c = s), t[c] = r[s];
-  }), a = ir && ir.__setModuleDefault || (Object.create ? function(t, r) {
-    Object.defineProperty(t, "default", { enumerable: !0, value: r });
-  } : function(t, r) {
-    t.default = r;
-  }), o = ir && ir.__importStar || function(t) {
-    if (t && t.__esModule) return t;
-    var r = {};
-    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
-    return a(r, t), r;
-  };
-  Object.defineProperty(ir, "__esModule", { value: !0 }), ir.GenerationInfo = void 0;
-  const n = o(B()), i = Qk();
-  return ir.GenerationInfo = n.serialization.object({
-    schemaName: n.serialization.property("schema_name", n.serialization.string()),
-    model: n.serialization.string(),
-    duration: n.serialization.number(),
-    usage: i.UsageInfo
-  }), ir;
-}
-var pb;
-function Zk() {
-  if (pb) return ar;
-  pb = 1;
   var e = ar && ar.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
@@ -7996,18 +7965,20 @@ function Zk() {
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(ar, "__esModule", { value: !0 }), ar.MessageGenerationInspection = void 0;
-  const n = o(B()), i = bc();
-  return ar.MessageGenerationInspection = n.serialization.object({
-    generation: i.GenerationInfo,
-    messages: n.serialization.list(n.serialization.string().optional())
+  Object.defineProperty(ar, "__esModule", { value: !0 }), ar.GenerationInfo = void 0;
+  const n = o(B()), i = Qk();
+  return ar.GenerationInfo = n.serialization.object({
+    schemaName: n.serialization.property("schema_name", n.serialization.string()),
+    model: n.serialization.string(),
+    duration: n.serialization.number(),
+    usage: i.UsageInfo
   }), ar;
 }
-var sr = {}, cr = {}, lr = {}, gb;
-function Jk() {
-  if (gb) return lr;
-  gb = 1;
-  var e = lr && lr.__createBinding || (Object.create ? function(t, r, s, c) {
+var pb;
+function Zk() {
+  if (pb) return nr;
+  pb = 1;
+  var e = nr && nr.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
     (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -8015,28 +7986,57 @@ function Jk() {
     } }), Object.defineProperty(t, c, l);
   } : function(t, r, s, c) {
     c === void 0 && (c = s), t[c] = r[s];
-  }), a = lr && lr.__setModuleDefault || (Object.create ? function(t, r) {
+  }), a = nr && nr.__setModuleDefault || (Object.create ? function(t, r) {
     Object.defineProperty(t, "default", { enumerable: !0, value: r });
   } : function(t, r) {
     t.default = r;
-  }), o = lr && lr.__importStar || function(t) {
+  }), o = nr && nr.__importStar || function(t) {
     if (t && t.__esModule) return t;
     var r = {};
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(lr, "__esModule", { value: !0 }), lr.GuidelinePropositionInspection = void 0;
+  Object.defineProperty(nr, "__esModule", { value: !0 }), nr.MessageGenerationInspection = void 0;
   const n = o(B()), i = bc();
-  return lr.GuidelinePropositionInspection = n.serialization.object({
+  return nr.MessageGenerationInspection = n.serialization.object({
+    generation: i.GenerationInfo,
+    messages: n.serialization.list(n.serialization.string().optional())
+  }), nr;
+}
+var or = {}, sr = {}, cr = {}, gb;
+function Jk() {
+  if (gb) return cr;
+  gb = 1;
+  var e = cr && cr.__createBinding || (Object.create ? function(t, r, s, c) {
+    c === void 0 && (c = s);
+    var l = Object.getOwnPropertyDescriptor(r, s);
+    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
+      return r[s];
+    } }), Object.defineProperty(t, c, l);
+  } : function(t, r, s, c) {
+    c === void 0 && (c = s), t[c] = r[s];
+  }), a = cr && cr.__setModuleDefault || (Object.create ? function(t, r) {
+    Object.defineProperty(t, "default", { enumerable: !0, value: r });
+  } : function(t, r) {
+    t.default = r;
+  }), o = cr && cr.__importStar || function(t) {
+    if (t && t.__esModule) return t;
+    var r = {};
+    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
+    return a(r, t), r;
+  };
+  Object.defineProperty(cr, "__esModule", { value: !0 }), cr.GuidelinePropositionInspection = void 0;
+  const n = o(B()), i = bc();
+  return cr.GuidelinePropositionInspection = n.serialization.object({
     totalDuration: n.serialization.property("total_duration", n.serialization.number()),
     batches: n.serialization.list(i.GenerationInfo)
-  }), lr;
+  }), cr;
 }
 var yb;
 function e0() {
-  if (yb) return cr;
+  if (yb) return sr;
   yb = 1;
-  var e = cr && cr.__createBinding || (Object.create ? function(r, s, c, l) {
+  var e = sr && sr.__createBinding || (Object.create ? function(r, s, c, l) {
     l === void 0 && (l = c);
     var g = Object.getOwnPropertyDescriptor(s, c);
     (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
@@ -8044,27 +8044,59 @@ function e0() {
     } }), Object.defineProperty(r, l, g);
   } : function(r, s, c, l) {
     l === void 0 && (l = c), r[l] = s[c];
-  }), a = cr && cr.__setModuleDefault || (Object.create ? function(r, s) {
+  }), a = sr && sr.__setModuleDefault || (Object.create ? function(r, s) {
     Object.defineProperty(r, "default", { enumerable: !0, value: s });
   } : function(r, s) {
     r.default = s;
-  }), o = cr && cr.__importStar || function(r) {
+  }), o = sr && sr.__importStar || function(r) {
     if (r && r.__esModule) return r;
     var s = {};
     if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
     return a(s, r), s;
   };
-  Object.defineProperty(cr, "__esModule", { value: !0 }), cr.PreparationIterationGenerations = void 0;
+  Object.defineProperty(sr, "__esModule", { value: !0 }), sr.PreparationIterationGenerations = void 0;
   const n = o(B()), i = Jk(), t = bc();
-  return cr.PreparationIterationGenerations = n.serialization.object({
+  return sr.PreparationIterationGenerations = n.serialization.object({
     guidelineProposition: n.serialization.property("guideline_proposition", i.GuidelinePropositionInspection),
     toolCalls: n.serialization.property("tool_calls", n.serialization.list(t.GenerationInfo))
-  }), cr;
+  }), sr;
 }
-var ur = {}, hb;
+var lr = {}, hb;
 function t0() {
-  if (hb) return ur;
+  if (hb) return lr;
   hb = 1;
+  var e = lr && lr.__createBinding || (Object.create ? function(i, t, r, s) {
+    s === void 0 && (s = r);
+    var c = Object.getOwnPropertyDescriptor(t, r);
+    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
+      return t[r];
+    } }), Object.defineProperty(i, s, c);
+  } : function(i, t, r, s) {
+    s === void 0 && (s = r), i[s] = t[r];
+  }), a = lr && lr.__setModuleDefault || (Object.create ? function(i, t) {
+    Object.defineProperty(i, "default", { enumerable: !0, value: t });
+  } : function(i, t) {
+    i.default = t;
+  }), o = lr && lr.__importStar || function(i) {
+    if (i && i.__esModule) return i;
+    var t = {};
+    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
+    return a(t, i), t;
+  };
+  Object.defineProperty(lr, "__esModule", { value: !0 }), lr.GuidelineProposition = void 0;
+  const n = o(B());
+  return lr.GuidelineProposition = n.serialization.object({
+    guidelineId: n.serialization.property("guideline_id", n.serialization.string()),
+    condition: n.serialization.string(),
+    action: n.serialization.string(),
+    score: n.serialization.number(),
+    rationale: n.serialization.string()
+  }), lr;
+}
+var ur = {}, _b;
+function Nd() {
+  if (_b) return ur;
+  _b = 1;
   var e = ur && ur.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -8083,20 +8115,111 @@ function t0() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(ur, "__esModule", { value: !0 }), ur.GuidelineProposition = void 0;
+  Object.defineProperty(ur, "__esModule", { value: !0 }), ur.Term = void 0;
   const n = o(B());
-  return ur.GuidelineProposition = n.serialization.object({
-    guidelineId: n.serialization.property("guideline_id", n.serialization.string()),
-    condition: n.serialization.string(),
-    action: n.serialization.string(),
-    score: n.serialization.number(),
-    rationale: n.serialization.string()
+  return ur.Term = n.serialization.object({
+    id: n.serialization.string(),
+    name: n.serialization.string(),
+    description: n.serialization.string(),
+    synonyms: n.serialization.list(n.serialization.string()).optional()
   }), ur;
 }
-var fr = {}, _b;
-function Nd() {
-  if (_b) return fr;
-  _b = 1;
+var bb;
+function r0() {
+  if (bb) return or;
+  bb = 1;
+  var e = or && or.__createBinding || (Object.create ? function(l, g, d, u) {
+    u === void 0 && (u = d);
+    var p = Object.getOwnPropertyDescriptor(g, d);
+    (!p || ("get" in p ? !g.__esModule : p.writable || p.configurable)) && (p = { enumerable: !0, get: function() {
+      return g[d];
+    } }), Object.defineProperty(l, u, p);
+  } : function(l, g, d, u) {
+    u === void 0 && (u = d), l[u] = g[d];
+  }), a = or && or.__setModuleDefault || (Object.create ? function(l, g) {
+    Object.defineProperty(l, "default", { enumerable: !0, value: g });
+  } : function(l, g) {
+    l.default = g;
+  }), o = or && or.__importStar || function(l) {
+    if (l && l.__esModule) return l;
+    var g = {};
+    if (l != null) for (var d in l) d !== "default" && Object.prototype.hasOwnProperty.call(l, d) && e(g, l, d);
+    return a(g, l), g;
+  };
+  Object.defineProperty(or, "__esModule", { value: !0 }), or.PreparationIteration = void 0;
+  const n = o(B()), i = e0(), t = t0(), r = Ad(), s = Nd(), c = Lk();
+  return or.PreparationIteration = n.serialization.object({
+    generations: i.PreparationIterationGenerations,
+    guidelinePropositions: n.serialization.property("guideline_propositions", n.serialization.list(t.GuidelineProposition)),
+    toolCalls: n.serialization.property("tool_calls", n.serialization.list(r.ToolCall)),
+    terms: n.serialization.list(s.Term),
+    contextVariables: n.serialization.property("context_variables", n.serialization.list(c.ContextVariableAndValue))
+  }), or;
+}
+var mb;
+function n0() {
+  if (mb) return er;
+  mb = 1;
+  var e = er && er.__createBinding || (Object.create ? function(s, c, l, g) {
+    g === void 0 && (g = l);
+    var d = Object.getOwnPropertyDescriptor(c, l);
+    (!d || ("get" in d ? !c.__esModule : d.writable || d.configurable)) && (d = { enumerable: !0, get: function() {
+      return c[l];
+    } }), Object.defineProperty(s, g, d);
+  } : function(s, c, l, g) {
+    g === void 0 && (g = l), s[g] = c[l];
+  }), a = er && er.__setModuleDefault || (Object.create ? function(s, c) {
+    Object.defineProperty(s, "default", { enumerable: !0, value: c });
+  } : function(s, c) {
+    s.default = c;
+  }), o = er && er.__importStar || function(s) {
+    if (s && s.__esModule) return s;
+    var c = {};
+    if (s != null) for (var l in s) l !== "default" && Object.prototype.hasOwnProperty.call(s, l) && e(c, s, l);
+    return a(c, s), c;
+  };
+  Object.defineProperty(er, "__esModule", { value: !0 }), er.EventTrace = void 0;
+  const n = o(B()), i = Ad(), t = Zk(), r = r0();
+  return er.EventTrace = n.serialization.object({
+    toolCalls: n.serialization.property("tool_calls", n.serialization.list(i.ToolCall)),
+    messageGenerations: n.serialization.property("message_generations", n.serialization.list(t.MessageGenerationInspection)),
+    preparationIterations: n.serialization.property("preparation_iterations", n.serialization.list(r.PreparationIteration))
+  }), er;
+}
+var vb;
+function pz() {
+  if (vb) return Jt;
+  vb = 1;
+  var e = Jt && Jt.__createBinding || (Object.create ? function(r, s, c, l) {
+    l === void 0 && (l = c);
+    var g = Object.getOwnPropertyDescriptor(s, c);
+    (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
+      return s[c];
+    } }), Object.defineProperty(r, l, g);
+  } : function(r, s, c, l) {
+    l === void 0 && (l = c), r[l] = s[c];
+  }), a = Jt && Jt.__setModuleDefault || (Object.create ? function(r, s) {
+    Object.defineProperty(r, "default", { enumerable: !0, value: s });
+  } : function(r, s) {
+    r.default = s;
+  }), o = Jt && Jt.__importStar || function(r) {
+    if (r && r.__esModule) return r;
+    var s = {};
+    if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
+    return a(s, r), s;
+  };
+  Object.defineProperty(Jt, "__esModule", { value: !0 }), Jt.EventInspectionResult = void 0;
+  const n = o(B()), i = xd(), t = n0();
+  return Jt.EventInspectionResult = n.serialization.object({
+    sessionId: n.serialization.property("session_id", n.serialization.string()),
+    event: i.Event,
+    trace: t.EventTrace.optional()
+  }), Jt;
+}
+var fr = {}, wb;
+function a0() {
+  if (wb) return fr;
+  wb = 1;
   var e = fr && fr.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -8115,141 +8238,18 @@ function Nd() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(fr, "__esModule", { value: !0 }), fr.Term = void 0;
+  Object.defineProperty(fr, "__esModule", { value: !0 }), fr.GuidelineConnectionAddition = void 0;
   const n = o(B());
-  return fr.Term = n.serialization.object({
-    id: n.serialization.string(),
-    name: n.serialization.string(),
-    description: n.serialization.string(),
-    synonyms: n.serialization.list(n.serialization.string()).optional()
-  }), fr;
-}
-var bb;
-function r0() {
-  if (bb) return sr;
-  bb = 1;
-  var e = sr && sr.__createBinding || (Object.create ? function(l, g, d, u) {
-    u === void 0 && (u = d);
-    var p = Object.getOwnPropertyDescriptor(g, d);
-    (!p || ("get" in p ? !g.__esModule : p.writable || p.configurable)) && (p = { enumerable: !0, get: function() {
-      return g[d];
-    } }), Object.defineProperty(l, u, p);
-  } : function(l, g, d, u) {
-    u === void 0 && (u = d), l[u] = g[d];
-  }), a = sr && sr.__setModuleDefault || (Object.create ? function(l, g) {
-    Object.defineProperty(l, "default", { enumerable: !0, value: g });
-  } : function(l, g) {
-    l.default = g;
-  }), o = sr && sr.__importStar || function(l) {
-    if (l && l.__esModule) return l;
-    var g = {};
-    if (l != null) for (var d in l) d !== "default" && Object.prototype.hasOwnProperty.call(l, d) && e(g, l, d);
-    return a(g, l), g;
-  };
-  Object.defineProperty(sr, "__esModule", { value: !0 }), sr.PreparationIteration = void 0;
-  const n = o(B()), i = e0(), t = t0(), r = Ad(), s = Nd(), c = Lk();
-  return sr.PreparationIteration = n.serialization.object({
-    generations: i.PreparationIterationGenerations,
-    guidelinePropositions: n.serialization.property("guideline_propositions", n.serialization.list(t.GuidelineProposition)),
-    toolCalls: n.serialization.property("tool_calls", n.serialization.list(r.ToolCall)),
-    terms: n.serialization.list(s.Term),
-    contextVariables: n.serialization.property("context_variables", n.serialization.list(c.ContextVariableAndValue))
-  }), sr;
-}
-var mb;
-function n0() {
-  if (mb) return tr;
-  mb = 1;
-  var e = tr && tr.__createBinding || (Object.create ? function(s, c, l, g) {
-    g === void 0 && (g = l);
-    var d = Object.getOwnPropertyDescriptor(c, l);
-    (!d || ("get" in d ? !c.__esModule : d.writable || d.configurable)) && (d = { enumerable: !0, get: function() {
-      return c[l];
-    } }), Object.defineProperty(s, g, d);
-  } : function(s, c, l, g) {
-    g === void 0 && (g = l), s[g] = c[l];
-  }), a = tr && tr.__setModuleDefault || (Object.create ? function(s, c) {
-    Object.defineProperty(s, "default", { enumerable: !0, value: c });
-  } : function(s, c) {
-    s.default = c;
-  }), o = tr && tr.__importStar || function(s) {
-    if (s && s.__esModule) return s;
-    var c = {};
-    if (s != null) for (var l in s) l !== "default" && Object.prototype.hasOwnProperty.call(s, l) && e(c, s, l);
-    return a(c, s), c;
-  };
-  Object.defineProperty(tr, "__esModule", { value: !0 }), tr.EventTrace = void 0;
-  const n = o(B()), i = Ad(), t = Zk(), r = r0();
-  return tr.EventTrace = n.serialization.object({
-    toolCalls: n.serialization.property("tool_calls", n.serialization.list(i.ToolCall)),
-    messageGenerations: n.serialization.property("message_generations", n.serialization.list(t.MessageGenerationInspection)),
-    preparationIterations: n.serialization.property("preparation_iterations", n.serialization.list(r.PreparationIteration))
-  }), tr;
-}
-var vb;
-function pz() {
-  if (vb) return er;
-  vb = 1;
-  var e = er && er.__createBinding || (Object.create ? function(r, s, c, l) {
-    l === void 0 && (l = c);
-    var g = Object.getOwnPropertyDescriptor(s, c);
-    (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
-      return s[c];
-    } }), Object.defineProperty(r, l, g);
-  } : function(r, s, c, l) {
-    l === void 0 && (l = c), r[l] = s[c];
-  }), a = er && er.__setModuleDefault || (Object.create ? function(r, s) {
-    Object.defineProperty(r, "default", { enumerable: !0, value: s });
-  } : function(r, s) {
-    r.default = s;
-  }), o = er && er.__importStar || function(r) {
-    if (r && r.__esModule) return r;
-    var s = {};
-    if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
-    return a(s, r), s;
-  };
-  Object.defineProperty(er, "__esModule", { value: !0 }), er.EventInspectionResult = void 0;
-  const n = o(B()), i = xd(), t = n0();
-  return er.EventInspectionResult = n.serialization.object({
-    sessionId: n.serialization.property("session_id", n.serialization.string()),
-    event: i.Event,
-    trace: t.EventTrace.optional()
-  }), er;
-}
-var dr = {}, wb;
-function a0() {
-  if (wb) return dr;
-  wb = 1;
-  var e = dr && dr.__createBinding || (Object.create ? function(i, t, r, s) {
-    s === void 0 && (s = r);
-    var c = Object.getOwnPropertyDescriptor(t, r);
-    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
-      return t[r];
-    } }), Object.defineProperty(i, s, c);
-  } : function(i, t, r, s) {
-    s === void 0 && (s = r), i[s] = t[r];
-  }), a = dr && dr.__setModuleDefault || (Object.create ? function(i, t) {
-    Object.defineProperty(i, "default", { enumerable: !0, value: t });
-  } : function(i, t) {
-    i.default = t;
-  }), o = dr && dr.__importStar || function(i) {
-    if (i && i.__esModule) return i;
-    var t = {};
-    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
-    return a(t, i), t;
-  };
-  Object.defineProperty(dr, "__esModule", { value: !0 }), dr.GuidelineConnectionAddition = void 0;
-  const n = o(B());
-  return dr.GuidelineConnectionAddition = n.serialization.object({
+  return fr.GuidelineConnectionAddition = n.serialization.object({
     source: n.serialization.string(),
     target: n.serialization.string()
-  }), dr;
+  }), fr;
 }
-var pr = {}, gr = {}, kb;
+var dr = {}, pr = {}, kb;
 function mc() {
-  if (kb) return gr;
+  if (kb) return pr;
   kb = 1;
-  var e = gr && gr.__createBinding || (Object.create ? function(i, t, r, s) {
+  var e = pr && pr.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
     (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
@@ -8257,29 +8257,29 @@ function mc() {
     } }), Object.defineProperty(i, s, c);
   } : function(i, t, r, s) {
     s === void 0 && (s = r), i[s] = t[r];
-  }), a = gr && gr.__setModuleDefault || (Object.create ? function(i, t) {
+  }), a = pr && pr.__setModuleDefault || (Object.create ? function(i, t) {
     Object.defineProperty(i, "default", { enumerable: !0, value: t });
   } : function(i, t) {
     i.default = t;
-  }), o = gr && gr.__importStar || function(i) {
+  }), o = pr && pr.__importStar || function(i) {
     if (i && i.__esModule) return i;
     var t = {};
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(gr, "__esModule", { value: !0 }), gr.Guideline = void 0;
+  Object.defineProperty(pr, "__esModule", { value: !0 }), pr.Guideline = void 0;
   const n = o(B());
-  return gr.Guideline = n.serialization.object({
+  return pr.Guideline = n.serialization.object({
     id: n.serialization.string(),
     condition: n.serialization.string(),
     action: n.serialization.string()
-  }), gr;
+  }), pr;
 }
 var Eb;
 function i0() {
-  if (Eb) return pr;
+  if (Eb) return dr;
   Eb = 1;
-  var e = pr && pr.__createBinding || (Object.create ? function(t, r, s, c) {
+  var e = dr && dr.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
     (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -8287,29 +8287,118 @@ function i0() {
     } }), Object.defineProperty(t, c, l);
   } : function(t, r, s, c) {
     c === void 0 && (c = s), t[c] = r[s];
-  }), a = pr && pr.__setModuleDefault || (Object.create ? function(t, r) {
+  }), a = dr && dr.__setModuleDefault || (Object.create ? function(t, r) {
     Object.defineProperty(t, "default", { enumerable: !0, value: r });
   } : function(t, r) {
     t.default = r;
-  }), o = pr && pr.__importStar || function(t) {
+  }), o = dr && dr.__importStar || function(t) {
     if (t && t.__esModule) return t;
     var r = {};
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(pr, "__esModule", { value: !0 }), pr.GuidelineConnection = void 0;
+  Object.defineProperty(dr, "__esModule", { value: !0 }), dr.GuidelineConnection = void 0;
   const n = o(B()), i = mc();
-  return pr.GuidelineConnection = n.serialization.object({
+  return dr.GuidelineConnection = n.serialization.object({
     id: n.serialization.string(),
     source: i.Guideline,
     target: i.Guideline,
     indirect: n.serialization.boolean()
-  }), pr;
+  }), dr;
 }
-var yr = {}, Ob;
+var gr = {}, Ob;
 function o0() {
-  if (Ob) return yr;
+  if (Ob) return gr;
   Ob = 1;
+  var e = gr && gr.__createBinding || (Object.create ? function(t, r, s, c) {
+    c === void 0 && (c = s);
+    var l = Object.getOwnPropertyDescriptor(r, s);
+    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
+      return r[s];
+    } }), Object.defineProperty(t, c, l);
+  } : function(t, r, s, c) {
+    c === void 0 && (c = s), t[c] = r[s];
+  }), a = gr && gr.__setModuleDefault || (Object.create ? function(t, r) {
+    Object.defineProperty(t, "default", { enumerable: !0, value: r });
+  } : function(t, r) {
+    t.default = r;
+  }), o = gr && gr.__importStar || function(t) {
+    if (t && t.__esModule) return t;
+    var r = {};
+    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
+    return a(r, t), r;
+  };
+  Object.defineProperty(gr, "__esModule", { value: !0 }), gr.GuidelineConnectionUpdateParams = void 0;
+  const n = o(B()), i = a0();
+  return gr.GuidelineConnectionUpdateParams = n.serialization.object({
+    add: n.serialization.list(i.GuidelineConnectionAddition).optional(),
+    remove: n.serialization.list(n.serialization.string()).optional()
+  }), gr;
+}
+var yr = {}, hr = {}, _r = {}, Sb;
+function s0() {
+  if (Sb) return _r;
+  Sb = 1;
+  var e = _r && _r.__createBinding || (Object.create ? function(t, r, s, c) {
+    c === void 0 && (c = s);
+    var l = Object.getOwnPropertyDescriptor(r, s);
+    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
+      return r[s];
+    } }), Object.defineProperty(t, c, l);
+  } : function(t, r, s, c) {
+    c === void 0 && (c = s), t[c] = r[s];
+  }), a = _r && _r.__setModuleDefault || (Object.create ? function(t, r) {
+    Object.defineProperty(t, "default", { enumerable: !0, value: r });
+  } : function(t, r) {
+    t.default = r;
+  }), o = _r && _r.__importStar || function(t) {
+    if (t && t.__esModule) return t;
+    var r = {};
+    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
+    return a(r, t), r;
+  };
+  Object.defineProperty(_r, "__esModule", { value: !0 }), _r.GuidelineToolAssociation = void 0;
+  const n = o(B()), i = Yi();
+  return _r.GuidelineToolAssociation = n.serialization.object({
+    id: n.serialization.string(),
+    guidelineId: n.serialization.property("guideline_id", n.serialization.string()),
+    toolId: n.serialization.property("tool_id", i.ToolId)
+  }), _r;
+}
+var Pb;
+function c0() {
+  if (Pb) return hr;
+  Pb = 1;
+  var e = hr && hr.__createBinding || (Object.create ? function(s, c, l, g) {
+    g === void 0 && (g = l);
+    var d = Object.getOwnPropertyDescriptor(c, l);
+    (!d || ("get" in d ? !c.__esModule : d.writable || d.configurable)) && (d = { enumerable: !0, get: function() {
+      return c[l];
+    } }), Object.defineProperty(s, g, d);
+  } : function(s, c, l, g) {
+    g === void 0 && (g = l), s[g] = c[l];
+  }), a = hr && hr.__setModuleDefault || (Object.create ? function(s, c) {
+    Object.defineProperty(s, "default", { enumerable: !0, value: c });
+  } : function(s, c) {
+    s.default = c;
+  }), o = hr && hr.__importStar || function(s) {
+    if (s && s.__esModule) return s;
+    var c = {};
+    if (s != null) for (var l in s) l !== "default" && Object.prototype.hasOwnProperty.call(s, l) && e(c, s, l);
+    return a(c, s), c;
+  };
+  Object.defineProperty(hr, "__esModule", { value: !0 }), hr.GuidelineWithConnectionsAndToolAssociations = void 0;
+  const n = o(B()), i = mc(), t = i0(), r = s0();
+  return hr.GuidelineWithConnectionsAndToolAssociations = n.serialization.object({
+    guideline: i.Guideline,
+    connections: n.serialization.list(t.GuidelineConnection),
+    toolAssociations: n.serialization.property("tool_associations", n.serialization.list(r.GuidelineToolAssociation))
+  }), hr;
+}
+var Rb;
+function gz() {
+  if (Rb) return yr;
+  Rb = 1;
   var e = yr && yr.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
@@ -8328,17 +8417,16 @@ function o0() {
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(yr, "__esModule", { value: !0 }), yr.GuidelineConnectionUpdateParams = void 0;
-  const n = o(B()), i = a0();
-  return yr.GuidelineConnectionUpdateParams = n.serialization.object({
-    add: n.serialization.list(i.GuidelineConnectionAddition).optional(),
-    remove: n.serialization.list(n.serialization.string()).optional()
+  Object.defineProperty(yr, "__esModule", { value: !0 }), yr.GuidelineCreationResult = void 0;
+  const n = o(B()), i = c0();
+  return yr.GuidelineCreationResult = n.serialization.object({
+    items: n.serialization.list(i.GuidelineWithConnectionsAndToolAssociations)
   }), yr;
 }
-var hr = {}, _r = {}, br = {}, Sb;
-function s0() {
-  if (Sb) return br;
-  Sb = 1;
+var br = {}, zb;
+function l0() {
+  if (zb) return br;
+  zb = 1;
   var e = br && br.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
@@ -8357,106 +8445,18 @@ function s0() {
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(br, "__esModule", { value: !0 }), br.GuidelineToolAssociation = void 0;
+  Object.defineProperty(br, "__esModule", { value: !0 }), br.GuidelineToolAssociationUpdateParams = void 0;
   const n = o(B()), i = Yi();
-  return br.GuidelineToolAssociation = n.serialization.object({
-    id: n.serialization.string(),
-    guidelineId: n.serialization.property("guideline_id", n.serialization.string()),
-    toolId: n.serialization.property("tool_id", i.ToolId)
-  }), br;
-}
-var Pb;
-function c0() {
-  if (Pb) return _r;
-  Pb = 1;
-  var e = _r && _r.__createBinding || (Object.create ? function(s, c, l, g) {
-    g === void 0 && (g = l);
-    var d = Object.getOwnPropertyDescriptor(c, l);
-    (!d || ("get" in d ? !c.__esModule : d.writable || d.configurable)) && (d = { enumerable: !0, get: function() {
-      return c[l];
-    } }), Object.defineProperty(s, g, d);
-  } : function(s, c, l, g) {
-    g === void 0 && (g = l), s[g] = c[l];
-  }), a = _r && _r.__setModuleDefault || (Object.create ? function(s, c) {
-    Object.defineProperty(s, "default", { enumerable: !0, value: c });
-  } : function(s, c) {
-    s.default = c;
-  }), o = _r && _r.__importStar || function(s) {
-    if (s && s.__esModule) return s;
-    var c = {};
-    if (s != null) for (var l in s) l !== "default" && Object.prototype.hasOwnProperty.call(s, l) && e(c, s, l);
-    return a(c, s), c;
-  };
-  Object.defineProperty(_r, "__esModule", { value: !0 }), _r.GuidelineWithConnectionsAndToolAssociations = void 0;
-  const n = o(B()), i = mc(), t = i0(), r = s0();
-  return _r.GuidelineWithConnectionsAndToolAssociations = n.serialization.object({
-    guideline: i.Guideline,
-    connections: n.serialization.list(t.GuidelineConnection),
-    toolAssociations: n.serialization.property("tool_associations", n.serialization.list(r.GuidelineToolAssociation))
-  }), _r;
-}
-var Rb;
-function gz() {
-  if (Rb) return hr;
-  Rb = 1;
-  var e = hr && hr.__createBinding || (Object.create ? function(t, r, s, c) {
-    c === void 0 && (c = s);
-    var l = Object.getOwnPropertyDescriptor(r, s);
-    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
-      return r[s];
-    } }), Object.defineProperty(t, c, l);
-  } : function(t, r, s, c) {
-    c === void 0 && (c = s), t[c] = r[s];
-  }), a = hr && hr.__setModuleDefault || (Object.create ? function(t, r) {
-    Object.defineProperty(t, "default", { enumerable: !0, value: r });
-  } : function(t, r) {
-    t.default = r;
-  }), o = hr && hr.__importStar || function(t) {
-    if (t && t.__esModule) return t;
-    var r = {};
-    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
-    return a(r, t), r;
-  };
-  Object.defineProperty(hr, "__esModule", { value: !0 }), hr.GuidelineCreationResult = void 0;
-  const n = o(B()), i = c0();
-  return hr.GuidelineCreationResult = n.serialization.object({
-    items: n.serialization.list(i.GuidelineWithConnectionsAndToolAssociations)
-  }), hr;
-}
-var mr = {}, zb;
-function l0() {
-  if (zb) return mr;
-  zb = 1;
-  var e = mr && mr.__createBinding || (Object.create ? function(t, r, s, c) {
-    c === void 0 && (c = s);
-    var l = Object.getOwnPropertyDescriptor(r, s);
-    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
-      return r[s];
-    } }), Object.defineProperty(t, c, l);
-  } : function(t, r, s, c) {
-    c === void 0 && (c = s), t[c] = r[s];
-  }), a = mr && mr.__setModuleDefault || (Object.create ? function(t, r) {
-    Object.defineProperty(t, "default", { enumerable: !0, value: r });
-  } : function(t, r) {
-    t.default = r;
-  }), o = mr && mr.__importStar || function(t) {
-    if (t && t.__esModule) return t;
-    var r = {};
-    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
-    return a(r, t), r;
-  };
-  Object.defineProperty(mr, "__esModule", { value: !0 }), mr.GuidelineToolAssociationUpdateParams = void 0;
-  const n = o(B()), i = Yi();
-  return mr.GuidelineToolAssociationUpdateParams = n.serialization.object({
+  return br.GuidelineToolAssociationUpdateParams = n.serialization.object({
     add: n.serialization.list(i.ToolId).optional(),
     remove: n.serialization.list(i.ToolId).optional()
-  }), mr;
+  }), br;
 }
-var vr = {}, wr = {}, kr = {}, Cb;
+var mr = {}, vr = {}, wr = {}, Cb;
 function u0() {
-  if (Cb) return kr;
+  if (Cb) return wr;
   Cb = 1;
-  var e = kr && kr.__createBinding || (Object.create ? function(i, t, r, s) {
+  var e = wr && wr.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
     (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
@@ -8464,54 +8464,24 @@ function u0() {
     } }), Object.defineProperty(i, s, c);
   } : function(i, t, r, s) {
     s === void 0 && (s = r), i[s] = t[r];
-  }), a = kr && kr.__setModuleDefault || (Object.create ? function(i, t) {
+  }), a = wr && wr.__setModuleDefault || (Object.create ? function(i, t) {
     Object.defineProperty(i, "default", { enumerable: !0, value: t });
   } : function(i, t) {
     i.default = t;
-  }), o = kr && kr.__importStar || function(i) {
+  }), o = wr && wr.__importStar || function(i) {
     if (i && i.__esModule) return i;
     var t = {};
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(kr, "__esModule", { value: !0 }), kr.ValidationErrorLocItem = void 0;
+  Object.defineProperty(wr, "__esModule", { value: !0 }), wr.ValidationErrorLocItem = void 0;
   const n = o(B());
-  return kr.ValidationErrorLocItem = n.serialization.undiscriminatedUnion([n.serialization.string(), n.serialization.number()]), kr;
+  return wr.ValidationErrorLocItem = n.serialization.undiscriminatedUnion([n.serialization.string(), n.serialization.number()]), wr;
 }
 var Tb;
 function f0() {
-  if (Tb) return wr;
+  if (Tb) return vr;
   Tb = 1;
-  var e = wr && wr.__createBinding || (Object.create ? function(t, r, s, c) {
-    c === void 0 && (c = s);
-    var l = Object.getOwnPropertyDescriptor(r, s);
-    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
-      return r[s];
-    } }), Object.defineProperty(t, c, l);
-  } : function(t, r, s, c) {
-    c === void 0 && (c = s), t[c] = r[s];
-  }), a = wr && wr.__setModuleDefault || (Object.create ? function(t, r) {
-    Object.defineProperty(t, "default", { enumerable: !0, value: r });
-  } : function(t, r) {
-    t.default = r;
-  }), o = wr && wr.__importStar || function(t) {
-    if (t && t.__esModule) return t;
-    var r = {};
-    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
-    return a(r, t), r;
-  };
-  Object.defineProperty(wr, "__esModule", { value: !0 }), wr.ValidationError = void 0;
-  const n = o(B()), i = u0();
-  return wr.ValidationError = n.serialization.object({
-    loc: n.serialization.list(i.ValidationErrorLocItem),
-    msg: n.serialization.string(),
-    type: n.serialization.string()
-  }), wr;
-}
-var Mb;
-function yz() {
-  if (Mb) return vr;
-  Mb = 1;
   var e = vr && vr.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
@@ -8530,16 +8500,72 @@ function yz() {
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(vr, "__esModule", { value: !0 }), vr.HttpValidationError = void 0;
-  const n = o(B()), i = f0();
-  return vr.HttpValidationError = n.serialization.object({
-    detail: n.serialization.list(i.ValidationError).optional()
+  Object.defineProperty(vr, "__esModule", { value: !0 }), vr.ValidationError = void 0;
+  const n = o(B()), i = u0();
+  return vr.ValidationError = n.serialization.object({
+    loc: n.serialization.list(i.ValidationErrorLocItem),
+    msg: n.serialization.string(),
+    type: n.serialization.string()
   }), vr;
 }
-var Er = {}, jb;
+var Mb;
+function yz() {
+  if (Mb) return mr;
+  Mb = 1;
+  var e = mr && mr.__createBinding || (Object.create ? function(t, r, s, c) {
+    c === void 0 && (c = s);
+    var l = Object.getOwnPropertyDescriptor(r, s);
+    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
+      return r[s];
+    } }), Object.defineProperty(t, c, l);
+  } : function(t, r, s, c) {
+    c === void 0 && (c = s), t[c] = r[s];
+  }), a = mr && mr.__setModuleDefault || (Object.create ? function(t, r) {
+    Object.defineProperty(t, "default", { enumerable: !0, value: r });
+  } : function(t, r) {
+    t.default = r;
+  }), o = mr && mr.__importStar || function(t) {
+    if (t && t.__esModule) return t;
+    var r = {};
+    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
+    return a(r, t), r;
+  };
+  Object.defineProperty(mr, "__esModule", { value: !0 }), mr.HttpValidationError = void 0;
+  const n = o(B()), i = f0();
+  return mr.HttpValidationError = n.serialization.object({
+    detail: n.serialization.list(i.ValidationError).optional()
+  }), mr;
+}
+var kr = {}, jb;
 function hz() {
-  if (jb) return Er;
+  if (jb) return kr;
   jb = 1;
+  var e = kr && kr.__createBinding || (Object.create ? function(i, t, r, s) {
+    s === void 0 && (s = r);
+    var c = Object.getOwnPropertyDescriptor(t, r);
+    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
+      return t[r];
+    } }), Object.defineProperty(i, s, c);
+  } : function(i, t, r, s) {
+    s === void 0 && (s = r), i[s] = t[r];
+  }), a = kr && kr.__setModuleDefault || (Object.create ? function(i, t) {
+    Object.defineProperty(i, "default", { enumerable: !0, value: t });
+  } : function(i, t) {
+    i.default = t;
+  }), o = kr && kr.__importStar || function(i) {
+    if (i && i.__esModule) return i;
+    var t = {};
+    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
+    return a(t, i), t;
+  };
+  Object.defineProperty(kr, "__esModule", { value: !0 }), kr.Moderation = void 0;
+  const n = o(B());
+  return kr.Moderation = n.serialization.enum_(["auto", "paranoid", "none"]), kr;
+}
+var Er = {}, xb;
+function d0() {
+  if (xb) return Er;
+  xb = 1;
   var e = Er && Er.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -8558,14 +8584,17 @@ function hz() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Er, "__esModule", { value: !0 }), Er.Moderation = void 0;
+  Object.defineProperty(Er, "__esModule", { value: !0 }), Er.OpenApiServiceParams = void 0;
   const n = o(B());
-  return Er.Moderation = n.serialization.enum_(["auto", "paranoid", "none"]), Er;
+  return Er.OpenApiServiceParams = n.serialization.object({
+    url: n.serialization.string(),
+    source: n.serialization.string()
+  }), Er;
 }
-var Or = {}, xb;
-function d0() {
-  if (xb) return Or;
-  xb = 1;
+var Or = {}, Ab;
+function p0() {
+  if (Ab) return Or;
+  Ab = 1;
   var e = Or && Or.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -8584,46 +8613,17 @@ function d0() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Or, "__esModule", { value: !0 }), Or.OpenApiServiceParams = void 0;
+  Object.defineProperty(Or, "__esModule", { value: !0 }), Or.SdkServiceParams = void 0;
   const n = o(B());
-  return Or.OpenApiServiceParams = n.serialization.object({
-    url: n.serialization.string(),
-    source: n.serialization.string()
+  return Or.SdkServiceParams = n.serialization.object({
+    url: n.serialization.string()
   }), Or;
 }
-var Sr = {}, Ab;
-function p0() {
-  if (Ab) return Sr;
-  Ab = 1;
-  var e = Sr && Sr.__createBinding || (Object.create ? function(i, t, r, s) {
-    s === void 0 && (s = r);
-    var c = Object.getOwnPropertyDescriptor(t, r);
-    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
-      return t[r];
-    } }), Object.defineProperty(i, s, c);
-  } : function(i, t, r, s) {
-    s === void 0 && (s = r), i[s] = t[r];
-  }), a = Sr && Sr.__setModuleDefault || (Object.create ? function(i, t) {
-    Object.defineProperty(i, "default", { enumerable: !0, value: t });
-  } : function(i, t) {
-    i.default = t;
-  }), o = Sr && Sr.__importStar || function(i) {
-    if (i && i.__esModule) return i;
-    var t = {};
-    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
-    return a(t, i), t;
-  };
-  Object.defineProperty(Sr, "__esModule", { value: !0 }), Sr.SdkServiceParams = void 0;
-  const n = o(B());
-  return Sr.SdkServiceParams = n.serialization.object({
-    url: n.serialization.string()
-  }), Sr;
-}
-var Pr = {}, Rr = {}, Nb;
+var Sr = {}, Pr = {}, Nb;
 function Id() {
-  if (Nb) return Rr;
+  if (Nb) return Pr;
   Nb = 1;
-  var e = Rr && Rr.__createBinding || (Object.create ? function(i, t, r, s) {
+  var e = Pr && Pr.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
     (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
@@ -8631,24 +8631,50 @@ function Id() {
     } }), Object.defineProperty(i, s, c);
   } : function(i, t, r, s) {
     s === void 0 && (s = r), i[s] = t[r];
-  }), a = Rr && Rr.__setModuleDefault || (Object.create ? function(i, t) {
+  }), a = Pr && Pr.__setModuleDefault || (Object.create ? function(i, t) {
     Object.defineProperty(i, "default", { enumerable: !0, value: t });
   } : function(i, t) {
     i.default = t;
-  }), o = Rr && Rr.__importStar || function(i) {
+  }), o = Pr && Pr.__importStar || function(i) {
     if (i && i.__esModule) return i;
     var t = {};
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Rr, "__esModule", { value: !0 }), Rr.ToolServiceKindDto = void 0;
+  Object.defineProperty(Pr, "__esModule", { value: !0 }), Pr.ToolServiceKindDto = void 0;
   const n = o(B());
-  return Rr.ToolServiceKindDto = n.serialization.enum_(["sdk", "openapi"]), Rr;
+  return Pr.ToolServiceKindDto = n.serialization.enum_(["sdk", "openapi"]), Pr;
 }
-var zr = {}, Cr = {}, Tr = {}, Ib;
+var Rr = {}, zr = {}, Cr = {}, Ib;
 function g0() {
-  if (Ib) return Tr;
+  if (Ib) return Cr;
   Ib = 1;
+  var e = Cr && Cr.__createBinding || (Object.create ? function(i, t, r, s) {
+    s === void 0 && (s = r);
+    var c = Object.getOwnPropertyDescriptor(t, r);
+    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
+      return t[r];
+    } }), Object.defineProperty(i, s, c);
+  } : function(i, t, r, s) {
+    s === void 0 && (s = r), i[s] = t[r];
+  }), a = Cr && Cr.__setModuleDefault || (Object.create ? function(i, t) {
+    Object.defineProperty(i, "default", { enumerable: !0, value: t });
+  } : function(i, t) {
+    i.default = t;
+  }), o = Cr && Cr.__importStar || function(i) {
+    if (i && i.__esModule) return i;
+    var t = {};
+    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
+    return a(t, i), t;
+  };
+  Object.defineProperty(Cr, "__esModule", { value: !0 }), Cr.ToolParameterTypeDto = void 0;
+  const n = o(B());
+  return Cr.ToolParameterTypeDto = n.serialization.enum_(["string", "number", "integer", "boolean"]), Cr;
+}
+var Tr = {}, Db;
+function y0() {
+  if (Db) return Tr;
+  Db = 1;
   var e = Tr && Tr.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -8667,15 +8693,141 @@ function g0() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Tr, "__esModule", { value: !0 }), Tr.ToolParameterTypeDto = void 0;
+  Object.defineProperty(Tr, "__esModule", { value: !0 }), Tr.ToolParameterDtoEnumItem = void 0;
   const n = o(B());
-  return Tr.ToolParameterTypeDto = n.serialization.enum_(["string", "number", "integer", "boolean"]), Tr;
+  return Tr.ToolParameterDtoEnumItem = n.serialization.undiscriminatedUnion([n.serialization.string(), n.serialization.number()]), Tr;
 }
-var Mr = {}, Db;
-function y0() {
-  if (Db) return Mr;
-  Db = 1;
-  var e = Mr && Mr.__createBinding || (Object.create ? function(i, t, r, s) {
+var Ub;
+function h0() {
+  if (Ub) return zr;
+  Ub = 1;
+  var e = zr && zr.__createBinding || (Object.create ? function(r, s, c, l) {
+    l === void 0 && (l = c);
+    var g = Object.getOwnPropertyDescriptor(s, c);
+    (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
+      return s[c];
+    } }), Object.defineProperty(r, l, g);
+  } : function(r, s, c, l) {
+    l === void 0 && (l = c), r[l] = s[c];
+  }), a = zr && zr.__setModuleDefault || (Object.create ? function(r, s) {
+    Object.defineProperty(r, "default", { enumerable: !0, value: s });
+  } : function(r, s) {
+    r.default = s;
+  }), o = zr && zr.__importStar || function(r) {
+    if (r && r.__esModule) return r;
+    var s = {};
+    if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
+    return a(s, r), s;
+  };
+  Object.defineProperty(zr, "__esModule", { value: !0 }), zr.ToolParameter = void 0;
+  const n = o(B()), i = g0(), t = y0();
+  return zr.ToolParameter = n.serialization.object({
+    type: i.ToolParameterTypeDto,
+    description: n.serialization.string().optional(),
+    enum: n.serialization.list(t.ToolParameterDtoEnumItem).optional()
+  }), zr;
+}
+var Lb;
+function _0() {
+  if (Lb) return Rr;
+  Lb = 1;
+  var e = Rr && Rr.__createBinding || (Object.create ? function(t, r, s, c) {
+    c === void 0 && (c = s);
+    var l = Object.getOwnPropertyDescriptor(r, s);
+    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
+      return r[s];
+    } }), Object.defineProperty(t, c, l);
+  } : function(t, r, s, c) {
+    c === void 0 && (c = s), t[c] = r[s];
+  }), a = Rr && Rr.__setModuleDefault || (Object.create ? function(t, r) {
+    Object.defineProperty(t, "default", { enumerable: !0, value: r });
+  } : function(t, r) {
+    t.default = r;
+  }), o = Rr && Rr.__importStar || function(t) {
+    if (t && t.__esModule) return t;
+    var r = {};
+    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
+    return a(r, t), r;
+  };
+  Object.defineProperty(Rr, "__esModule", { value: !0 }), Rr.Tool = void 0;
+  const n = o(B()), i = h0();
+  return Rr.Tool = n.serialization.object({
+    creationUtc: n.serialization.property("creation_utc", n.serialization.date()),
+    name: n.serialization.string(),
+    description: n.serialization.string(),
+    parameters: n.serialization.record(n.serialization.string(), i.ToolParameter),
+    required: n.serialization.list(n.serialization.string())
+  }), Rr;
+}
+var Bb;
+function b0() {
+  if (Bb) return Sr;
+  Bb = 1;
+  var e = Sr && Sr.__createBinding || (Object.create ? function(r, s, c, l) {
+    l === void 0 && (l = c);
+    var g = Object.getOwnPropertyDescriptor(s, c);
+    (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
+      return s[c];
+    } }), Object.defineProperty(r, l, g);
+  } : function(r, s, c, l) {
+    l === void 0 && (l = c), r[l] = s[c];
+  }), a = Sr && Sr.__setModuleDefault || (Object.create ? function(r, s) {
+    Object.defineProperty(r, "default", { enumerable: !0, value: s });
+  } : function(r, s) {
+    r.default = s;
+  }), o = Sr && Sr.__importStar || function(r) {
+    if (r && r.__esModule) return r;
+    var s = {};
+    if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
+    return a(s, r), s;
+  };
+  Object.defineProperty(Sr, "__esModule", { value: !0 }), Sr.Service = void 0;
+  const n = o(B()), i = Id(), t = _0();
+  return Sr.Service = n.serialization.object({
+    name: n.serialization.string(),
+    kind: i.ToolServiceKindDto,
+    url: n.serialization.string(),
+    tools: n.serialization.list(t.Tool).optional()
+  }), Sr;
+}
+var Mr = {}, $b;
+function m0() {
+  if ($b) return Mr;
+  $b = 1;
+  var e = Mr && Mr.__createBinding || (Object.create ? function(t, r, s, c) {
+    c === void 0 && (c = s);
+    var l = Object.getOwnPropertyDescriptor(r, s);
+    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
+      return r[s];
+    } }), Object.defineProperty(t, c, l);
+  } : function(t, r, s, c) {
+    c === void 0 && (c = s), t[c] = r[s];
+  }), a = Mr && Mr.__setModuleDefault || (Object.create ? function(t, r) {
+    Object.defineProperty(t, "default", { enumerable: !0, value: r });
+  } : function(t, r) {
+    t.default = r;
+  }), o = Mr && Mr.__importStar || function(t) {
+    if (t && t.__esModule) return t;
+    var r = {};
+    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
+    return a(r, t), r;
+  };
+  Object.defineProperty(Mr, "__esModule", { value: !0 }), Mr.Session = void 0;
+  const n = o(B()), i = Dk();
+  return Mr.Session = n.serialization.object({
+    id: n.serialization.string(),
+    agentId: n.serialization.property("agent_id", n.serialization.string()),
+    customerId: n.serialization.property("customer_id", n.serialization.string()),
+    creationUtc: n.serialization.property("creation_utc", n.serialization.date()),
+    title: n.serialization.string().optional(),
+    consumptionOffsets: n.serialization.property("consumption_offsets", i.ConsumptionOffsets)
+  }), Mr;
+}
+var jr = {}, Fb;
+function v0() {
+  if (Fb) return jr;
+  Fb = 1;
+  var e = jr && jr.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
     (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
@@ -8683,150 +8835,28 @@ function y0() {
     } }), Object.defineProperty(i, s, c);
   } : function(i, t, r, s) {
     s === void 0 && (s = r), i[s] = t[r];
-  }), a = Mr && Mr.__setModuleDefault || (Object.create ? function(i, t) {
+  }), a = jr && jr.__setModuleDefault || (Object.create ? function(i, t) {
     Object.defineProperty(i, "default", { enumerable: !0, value: t });
   } : function(i, t) {
     i.default = t;
-  }), o = Mr && Mr.__importStar || function(i) {
+  }), o = jr && jr.__importStar || function(i) {
     if (i && i.__esModule) return i;
     var t = {};
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Mr, "__esModule", { value: !0 }), Mr.ToolParameterDtoEnumItem = void 0;
+  Object.defineProperty(jr, "__esModule", { value: !0 }), jr.Tag = void 0;
   const n = o(B());
-  return Mr.ToolParameterDtoEnumItem = n.serialization.undiscriminatedUnion([n.serialization.string(), n.serialization.number()]), Mr;
-}
-var Ub;
-function h0() {
-  if (Ub) return Cr;
-  Ub = 1;
-  var e = Cr && Cr.__createBinding || (Object.create ? function(r, s, c, l) {
-    l === void 0 && (l = c);
-    var g = Object.getOwnPropertyDescriptor(s, c);
-    (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
-      return s[c];
-    } }), Object.defineProperty(r, l, g);
-  } : function(r, s, c, l) {
-    l === void 0 && (l = c), r[l] = s[c];
-  }), a = Cr && Cr.__setModuleDefault || (Object.create ? function(r, s) {
-    Object.defineProperty(r, "default", { enumerable: !0, value: s });
-  } : function(r, s) {
-    r.default = s;
-  }), o = Cr && Cr.__importStar || function(r) {
-    if (r && r.__esModule) return r;
-    var s = {};
-    if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
-    return a(s, r), s;
-  };
-  Object.defineProperty(Cr, "__esModule", { value: !0 }), Cr.ToolParameter = void 0;
-  const n = o(B()), i = g0(), t = y0();
-  return Cr.ToolParameter = n.serialization.object({
-    type: i.ToolParameterTypeDto,
-    description: n.serialization.string().optional(),
-    enum: n.serialization.list(t.ToolParameterDtoEnumItem).optional()
-  }), Cr;
-}
-var Lb;
-function _0() {
-  if (Lb) return zr;
-  Lb = 1;
-  var e = zr && zr.__createBinding || (Object.create ? function(t, r, s, c) {
-    c === void 0 && (c = s);
-    var l = Object.getOwnPropertyDescriptor(r, s);
-    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
-      return r[s];
-    } }), Object.defineProperty(t, c, l);
-  } : function(t, r, s, c) {
-    c === void 0 && (c = s), t[c] = r[s];
-  }), a = zr && zr.__setModuleDefault || (Object.create ? function(t, r) {
-    Object.defineProperty(t, "default", { enumerable: !0, value: r });
-  } : function(t, r) {
-    t.default = r;
-  }), o = zr && zr.__importStar || function(t) {
-    if (t && t.__esModule) return t;
-    var r = {};
-    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
-    return a(r, t), r;
-  };
-  Object.defineProperty(zr, "__esModule", { value: !0 }), zr.Tool = void 0;
-  const n = o(B()), i = h0();
-  return zr.Tool = n.serialization.object({
-    creationUtc: n.serialization.property("creation_utc", n.serialization.date()),
-    name: n.serialization.string(),
-    description: n.serialization.string(),
-    parameters: n.serialization.record(n.serialization.string(), i.ToolParameter),
-    required: n.serialization.list(n.serialization.string())
-  }), zr;
-}
-var Bb;
-function b0() {
-  if (Bb) return Pr;
-  Bb = 1;
-  var e = Pr && Pr.__createBinding || (Object.create ? function(r, s, c, l) {
-    l === void 0 && (l = c);
-    var g = Object.getOwnPropertyDescriptor(s, c);
-    (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
-      return s[c];
-    } }), Object.defineProperty(r, l, g);
-  } : function(r, s, c, l) {
-    l === void 0 && (l = c), r[l] = s[c];
-  }), a = Pr && Pr.__setModuleDefault || (Object.create ? function(r, s) {
-    Object.defineProperty(r, "default", { enumerable: !0, value: s });
-  } : function(r, s) {
-    r.default = s;
-  }), o = Pr && Pr.__importStar || function(r) {
-    if (r && r.__esModule) return r;
-    var s = {};
-    if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
-    return a(s, r), s;
-  };
-  Object.defineProperty(Pr, "__esModule", { value: !0 }), Pr.Service = void 0;
-  const n = o(B()), i = Id(), t = _0();
-  return Pr.Service = n.serialization.object({
-    name: n.serialization.string(),
-    kind: i.ToolServiceKindDto,
-    url: n.serialization.string(),
-    tools: n.serialization.list(t.Tool).optional()
-  }), Pr;
-}
-var jr = {}, $b;
-function m0() {
-  if ($b) return jr;
-  $b = 1;
-  var e = jr && jr.__createBinding || (Object.create ? function(t, r, s, c) {
-    c === void 0 && (c = s);
-    var l = Object.getOwnPropertyDescriptor(r, s);
-    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
-      return r[s];
-    } }), Object.defineProperty(t, c, l);
-  } : function(t, r, s, c) {
-    c === void 0 && (c = s), t[c] = r[s];
-  }), a = jr && jr.__setModuleDefault || (Object.create ? function(t, r) {
-    Object.defineProperty(t, "default", { enumerable: !0, value: r });
-  } : function(t, r) {
-    t.default = r;
-  }), o = jr && jr.__importStar || function(t) {
-    if (t && t.__esModule) return t;
-    var r = {};
-    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
-    return a(r, t), r;
-  };
-  Object.defineProperty(jr, "__esModule", { value: !0 }), jr.Session = void 0;
-  const n = o(B()), i = Dk();
-  return jr.Session = n.serialization.object({
+  return jr.Tag = n.serialization.object({
     id: n.serialization.string(),
-    agentId: n.serialization.property("agent_id", n.serialization.string()),
-    customerId: n.serialization.property("customer_id", n.serialization.string()),
     creationUtc: n.serialization.property("creation_utc", n.serialization.date()),
-    title: n.serialization.string().optional(),
-    consumptionOffsets: n.serialization.property("consumption_offsets", i.ConsumptionOffsets)
+    name: n.serialization.string()
   }), jr;
 }
-var xr = {}, Fb;
-function v0() {
-  if (Fb) return xr;
-  Fb = 1;
+var xr = {}, qb;
+function w0() {
+  if (qb) return xr;
+  qb = 1;
   var e = xr && xr.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -8845,45 +8875,15 @@ function v0() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(xr, "__esModule", { value: !0 }), xr.Tag = void 0;
+  Object.defineProperty(xr, "__esModule", { value: !0 }), xr.UtteranceReasonDto = void 0;
   const n = o(B());
-  return xr.Tag = n.serialization.object({
-    id: n.serialization.string(),
-    creationUtc: n.serialization.property("creation_utc", n.serialization.date()),
-    name: n.serialization.string()
-  }), xr;
+  return xr.UtteranceReasonDto = n.serialization.enum_(["buy_time", "follow_up"]), xr;
 }
-var Ar = {}, qb;
-function w0() {
-  if (qb) return Ar;
-  qb = 1;
-  var e = Ar && Ar.__createBinding || (Object.create ? function(i, t, r, s) {
-    s === void 0 && (s = r);
-    var c = Object.getOwnPropertyDescriptor(t, r);
-    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
-      return t[r];
-    } }), Object.defineProperty(i, s, c);
-  } : function(i, t, r, s) {
-    s === void 0 && (s = r), i[s] = t[r];
-  }), a = Ar && Ar.__setModuleDefault || (Object.create ? function(i, t) {
-    Object.defineProperty(i, "default", { enumerable: !0, value: t });
-  } : function(i, t) {
-    i.default = t;
-  }), o = Ar && Ar.__importStar || function(i) {
-    if (i && i.__esModule) return i;
-    var t = {};
-    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
-    return a(t, i), t;
-  };
-  Object.defineProperty(Ar, "__esModule", { value: !0 }), Ar.UtteranceReasonDto = void 0;
-  const n = o(B());
-  return Ar.UtteranceReasonDto = n.serialization.enum_(["buy_time", "follow_up"]), Ar;
-}
-var Nr = {}, Gb;
+var Ar = {}, Gb;
 function k0() {
-  if (Gb) return Nr;
+  if (Gb) return Ar;
   Gb = 1;
-  var e = Nr && Nr.__createBinding || (Object.create ? function(t, r, s, c) {
+  var e = Ar && Ar.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
     (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -8891,22 +8891,22 @@ function k0() {
     } }), Object.defineProperty(t, c, l);
   } : function(t, r, s, c) {
     c === void 0 && (c = s), t[c] = r[s];
-  }), a = Nr && Nr.__setModuleDefault || (Object.create ? function(t, r) {
+  }), a = Ar && Ar.__setModuleDefault || (Object.create ? function(t, r) {
     Object.defineProperty(t, "default", { enumerable: !0, value: r });
   } : function(t, r) {
     t.default = r;
-  }), o = Nr && Nr.__importStar || function(t) {
+  }), o = Ar && Ar.__importStar || function(t) {
     if (t && t.__esModule) return t;
     var r = {};
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(Nr, "__esModule", { value: !0 }), Nr.UtteranceRequest = void 0;
+  Object.defineProperty(Ar, "__esModule", { value: !0 }), Ar.UtteranceRequest = void 0;
   const n = o(B()), i = w0();
-  return Nr.UtteranceRequest = n.serialization.object({
+  return Ar.UtteranceRequest = n.serialization.object({
     action: n.serialization.string(),
     reason: i.UtteranceReasonDto
-  }), Nr;
+  }), Ar;
 }
 var Vb;
 function _z() {
@@ -8925,11 +8925,11 @@ function _z() {
     Object.defineProperty(e, "__esModule", { value: !0 }), o(jk(), e), o(Ak(), e), o(xk(), e), o(Ik(), e), o(Nk(), e), o(Dk(), e), o(Uk(), e), o(Lk(), e), o(zd(), e), o(fz(), e), o(Bk(), e), o($k(), e), o(Fk(), e), o(qk(), e), o(dz(), e), o(Gk(), e), o(xd(), e), o(pz(), e), o(jd(), e), o(Md(), e), o(n0(), e), o(bc(), e), o(a0(), e), o(i0(), e), o(o0(), e), o(_c(), e), o(gz(), e), o(mc(), e), o(Hk(), e), o(Kk(), e), o(Wk(), e), o(t0(), e), o(Jk(), e), o(s0(), e), o(l0(), e), o(c0(), e), o(yz(), e), o(Td(), e), o(Xk(), e), o(Zk(), e), o(hz(), e), o(d0(), e), o(Cd(), e), o(Vk(), e), o(r0(), e), o(e0(), e), o(p0(), e), o(b0(), e), o(m0(), e), o(v0(), e), o(Nd(), e), o(Ad(), e), o(_0(), e), o(Yi(), e), o(y0(), e), o(h0(), e), o(g0(), e), o(Yk(), e), o(Id(), e), o(Qk(), e), o(w0(), e), o(k0(), e), o(u0(), e), o(f0(), e);
   }(ii)), ii;
 }
-var Ir = {}, oi = {}, Dr = {}, Ur = {}, Wb;
+var Nr = {}, oi = {}, Ir = {}, Dr = {}, Wb;
 function bz() {
-  if (Wb) return Ur;
+  if (Wb) return Dr;
   Wb = 1;
-  var e = Ur && Ur.__createBinding || (Object.create ? function(t, r, s, c) {
+  var e = Dr && Dr.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
     (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -8937,24 +8937,54 @@ function bz() {
     } }), Object.defineProperty(t, c, l);
   } : function(t, r, s, c) {
     c === void 0 && (c = s), t[c] = r[s];
-  }), a = Ur && Ur.__setModuleDefault || (Object.create ? function(t, r) {
+  }), a = Dr && Dr.__setModuleDefault || (Object.create ? function(t, r) {
     Object.defineProperty(t, "default", { enumerable: !0, value: r });
   } : function(t, r) {
     t.default = r;
-  }), o = Ur && Ur.__importStar || function(t) {
+  }), o = Dr && Dr.__importStar || function(t) {
     if (t && t.__esModule) return t;
     var r = {};
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(Ur, "__esModule", { value: !0 }), Ur.Response = void 0;
+  Object.defineProperty(Dr, "__esModule", { value: !0 }), Dr.Response = void 0;
   const n = o(B()), i = jk();
-  return Ur.Response = n.serialization.list(i.Agent), Ur;
+  return Dr.Response = n.serialization.list(i.Agent), Dr;
 }
-var Ju = {}, Lr = {}, Kb;
+var Ju = {}, Ur = {}, Kb;
 function mz() {
-  if (Kb) return Lr;
+  if (Kb) return Ur;
   Kb = 1;
+  var e = Ur && Ur.__createBinding || (Object.create ? function(i, t, r, s) {
+    s === void 0 && (s = r);
+    var c = Object.getOwnPropertyDescriptor(t, r);
+    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
+      return t[r];
+    } }), Object.defineProperty(i, s, c);
+  } : function(i, t, r, s) {
+    s === void 0 && (s = r), i[s] = t[r];
+  }), a = Ur && Ur.__setModuleDefault || (Object.create ? function(i, t) {
+    Object.defineProperty(i, "default", { enumerable: !0, value: t });
+  } : function(i, t) {
+    i.default = t;
+  }), o = Ur && Ur.__importStar || function(i) {
+    if (i && i.__esModule) return i;
+    var t = {};
+    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
+    return a(t, i), t;
+  };
+  Object.defineProperty(Ur, "__esModule", { value: !0 }), Ur.AgentCreationParams = void 0;
+  const n = o(B());
+  return Ur.AgentCreationParams = n.serialization.object({
+    name: n.serialization.string(),
+    description: n.serialization.string().optional(),
+    maxEngineIterations: n.serialization.property("max_engine_iterations", n.serialization.number().optional())
+  }), Ur;
+}
+var Lr = {}, Hb;
+function vz() {
+  if (Hb) return Lr;
+  Hb = 1;
   var e = Lr && Lr.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -8973,43 +9003,13 @@ function mz() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Lr, "__esModule", { value: !0 }), Lr.AgentCreationParams = void 0;
+  Object.defineProperty(Lr, "__esModule", { value: !0 }), Lr.AgentUpdateParams = void 0;
   const n = o(B());
-  return Lr.AgentCreationParams = n.serialization.object({
-    name: n.serialization.string(),
-    description: n.serialization.string().optional(),
-    maxEngineIterations: n.serialization.property("max_engine_iterations", n.serialization.number().optional())
-  }), Lr;
-}
-var Br = {}, Hb;
-function vz() {
-  if (Hb) return Br;
-  Hb = 1;
-  var e = Br && Br.__createBinding || (Object.create ? function(i, t, r, s) {
-    s === void 0 && (s = r);
-    var c = Object.getOwnPropertyDescriptor(t, r);
-    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
-      return t[r];
-    } }), Object.defineProperty(i, s, c);
-  } : function(i, t, r, s) {
-    s === void 0 && (s = r), i[s] = t[r];
-  }), a = Br && Br.__setModuleDefault || (Object.create ? function(i, t) {
-    Object.defineProperty(i, "default", { enumerable: !0, value: t });
-  } : function(i, t) {
-    i.default = t;
-  }), o = Br && Br.__importStar || function(i) {
-    if (i && i.__esModule) return i;
-    var t = {};
-    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
-    return a(t, i), t;
-  };
-  Object.defineProperty(Br, "__esModule", { value: !0 }), Br.AgentUpdateParams = void 0;
-  const n = o(B());
-  return Br.AgentUpdateParams = n.serialization.object({
+  return Lr.AgentUpdateParams = n.serialization.object({
     name: n.serialization.string().optional(),
     description: n.serialization.string().optional(),
     maxEngineIterations: n.serialization.property("max_engine_iterations", n.serialization.number().optional())
-  }), Br;
+  }), Lr;
 }
 var Xb;
 function E0() {
@@ -9028,7 +9028,7 @@ function E0() {
 var Yb;
 function wz() {
   return Yb || (Yb = 1, function(e) {
-    var a = Dr && Dr.__createBinding || (Object.create ? function(t, r, s, c) {
+    var a = Ir && Ir.__createBinding || (Object.create ? function(t, r, s, c) {
       c === void 0 && (c = s);
       var l = Object.getOwnPropertyDescriptor(r, s);
       (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -9036,20 +9036,20 @@ function wz() {
       } }), Object.defineProperty(t, c, l);
     } : function(t, r, s, c) {
       c === void 0 && (c = s), t[c] = r[s];
-    }), o = Dr && Dr.__setModuleDefault || (Object.create ? function(t, r) {
+    }), o = Ir && Ir.__setModuleDefault || (Object.create ? function(t, r) {
       Object.defineProperty(t, "default", { enumerable: !0, value: r });
     } : function(t, r) {
       t.default = r;
-    }), n = Dr && Dr.__importStar || function(t) {
+    }), n = Ir && Ir.__importStar || function(t) {
       if (t && t.__esModule) return t;
       var r = {};
       if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && a(r, t, s);
       return o(r, t), r;
-    }, i = Dr && Dr.__exportStar || function(t, r) {
+    }, i = Ir && Ir.__exportStar || function(t, r) {
       for (var s in t) s !== "default" && !Object.prototype.hasOwnProperty.call(r, s) && a(r, t, s);
     };
     Object.defineProperty(e, "__esModule", { value: !0 }), e.list = void 0, e.list = n(bz()), i(E0(), e);
-  }(Dr)), Dr;
+  }(Ir)), Ir;
 }
 var Qb;
 function kz() {
@@ -9068,10 +9068,36 @@ function kz() {
     Object.defineProperty(e, "__esModule", { value: !0 }), o(wz(), e);
   }(oi)), oi;
 }
-var si = {}, $r = {}, Fr = {}, Zb;
+var si = {}, Br = {}, $r = {}, Zb;
 function Ez() {
-  if (Zb) return Fr;
+  if (Zb) return $r;
   Zb = 1;
+  var e = $r && $r.__createBinding || (Object.create ? function(t, r, s, c) {
+    c === void 0 && (c = s);
+    var l = Object.getOwnPropertyDescriptor(r, s);
+    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
+      return r[s];
+    } }), Object.defineProperty(t, c, l);
+  } : function(t, r, s, c) {
+    c === void 0 && (c = s), t[c] = r[s];
+  }), a = $r && $r.__setModuleDefault || (Object.create ? function(t, r) {
+    Object.defineProperty(t, "default", { enumerable: !0, value: r });
+  } : function(t, r) {
+    t.default = r;
+  }), o = $r && $r.__importStar || function(t) {
+    if (t && t.__esModule) return t;
+    var r = {};
+    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
+    return a(r, t), r;
+  };
+  Object.defineProperty($r, "__esModule", { value: !0 }), $r.Response = void 0;
+  const n = o(B()), i = mc();
+  return $r.Response = n.serialization.list(i.Guideline), $r;
+}
+var ef = {}, Fr = {}, Jb;
+function Oz() {
+  if (Jb) return Fr;
+  Jb = 1;
   var e = Fr && Fr.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
@@ -9090,43 +9116,17 @@ function Ez() {
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(Fr, "__esModule", { value: !0 }), Fr.Response = void 0;
-  const n = o(B()), i = mc();
-  return Fr.Response = n.serialization.list(i.Guideline), Fr;
-}
-var ef = {}, qr = {}, Jb;
-function Oz() {
-  if (Jb) return qr;
-  Jb = 1;
-  var e = qr && qr.__createBinding || (Object.create ? function(t, r, s, c) {
-    c === void 0 && (c = s);
-    var l = Object.getOwnPropertyDescriptor(r, s);
-    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
-      return r[s];
-    } }), Object.defineProperty(t, c, l);
-  } : function(t, r, s, c) {
-    c === void 0 && (c = s), t[c] = r[s];
-  }), a = qr && qr.__setModuleDefault || (Object.create ? function(t, r) {
-    Object.defineProperty(t, "default", { enumerable: !0, value: r });
-  } : function(t, r) {
-    t.default = r;
-  }), o = qr && qr.__importStar || function(t) {
-    if (t && t.__esModule) return t;
-    var r = {};
-    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
-    return a(r, t), r;
-  };
-  Object.defineProperty(qr, "__esModule", { value: !0 }), qr.GuidelineCreationParams = void 0;
+  Object.defineProperty(Fr, "__esModule", { value: !0 }), Fr.GuidelineCreationParams = void 0;
   const n = o(B()), i = Td();
-  return qr.GuidelineCreationParams = n.serialization.object({
+  return Fr.GuidelineCreationParams = n.serialization.object({
     invoices: n.serialization.list(i.Invoice)
-  }), qr;
+  }), Fr;
 }
-var Gr = {}, em;
+var qr = {}, em;
 function Sz() {
-  if (em) return Gr;
+  if (em) return qr;
   em = 1;
-  var e = Gr && Gr.__createBinding || (Object.create ? function(r, s, c, l) {
+  var e = qr && qr.__createBinding || (Object.create ? function(r, s, c, l) {
     l === void 0 && (l = c);
     var g = Object.getOwnPropertyDescriptor(s, c);
     (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
@@ -9134,22 +9134,22 @@ function Sz() {
     } }), Object.defineProperty(r, l, g);
   } : function(r, s, c, l) {
     l === void 0 && (l = c), r[l] = s[c];
-  }), a = Gr && Gr.__setModuleDefault || (Object.create ? function(r, s) {
+  }), a = qr && qr.__setModuleDefault || (Object.create ? function(r, s) {
     Object.defineProperty(r, "default", { enumerable: !0, value: s });
   } : function(r, s) {
     r.default = s;
-  }), o = Gr && Gr.__importStar || function(r) {
+  }), o = qr && qr.__importStar || function(r) {
     if (r && r.__esModule) return r;
     var s = {};
     if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
     return a(s, r), s;
   };
-  Object.defineProperty(Gr, "__esModule", { value: !0 }), Gr.GuidelineUpdateParams = void 0;
+  Object.defineProperty(qr, "__esModule", { value: !0 }), qr.GuidelineUpdateParams = void 0;
   const n = o(B()), i = o0(), t = l0();
-  return Gr.GuidelineUpdateParams = n.serialization.object({
+  return qr.GuidelineUpdateParams = n.serialization.object({
     connections: i.GuidelineConnectionUpdateParams.optional(),
     toolAssociations: n.serialization.property("tool_associations", t.GuidelineToolAssociationUpdateParams.optional())
-  }), Gr;
+  }), qr;
 }
 var tm;
 function O0() {
@@ -9168,7 +9168,7 @@ function O0() {
 var rm;
 function Pz() {
   return rm || (rm = 1, function(e) {
-    var a = $r && $r.__createBinding || (Object.create ? function(t, r, s, c) {
+    var a = Br && Br.__createBinding || (Object.create ? function(t, r, s, c) {
       c === void 0 && (c = s);
       var l = Object.getOwnPropertyDescriptor(r, s);
       (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -9176,20 +9176,20 @@ function Pz() {
       } }), Object.defineProperty(t, c, l);
     } : function(t, r, s, c) {
       c === void 0 && (c = s), t[c] = r[s];
-    }), o = $r && $r.__setModuleDefault || (Object.create ? function(t, r) {
+    }), o = Br && Br.__setModuleDefault || (Object.create ? function(t, r) {
       Object.defineProperty(t, "default", { enumerable: !0, value: r });
     } : function(t, r) {
       t.default = r;
-    }), n = $r && $r.__importStar || function(t) {
+    }), n = Br && Br.__importStar || function(t) {
       if (t && t.__esModule) return t;
       var r = {};
       if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && a(r, t, s);
       return o(r, t), r;
-    }, i = $r && $r.__exportStar || function(t, r) {
+    }, i = Br && Br.__exportStar || function(t, r) {
       for (var s in t) s !== "default" && !Object.prototype.hasOwnProperty.call(r, s) && a(r, t, s);
     };
     Object.defineProperty(e, "__esModule", { value: !0 }), e.list = void 0, e.list = n(Ez()), i(O0(), e);
-  }($r)), $r;
+  }(Br)), Br;
 }
 var nm;
 function Rz() {
@@ -9208,11 +9208,11 @@ function Rz() {
     Object.defineProperty(e, "__esModule", { value: !0 }), o(Pz(), e);
   }(si)), si;
 }
-var ci = {}, Vr = {}, Wr = {}, am;
+var ci = {}, Gr = {}, Vr = {}, am;
 function zz() {
-  if (am) return Wr;
+  if (am) return Vr;
   am = 1;
-  var e = Wr && Wr.__createBinding || (Object.create ? function(t, r, s, c) {
+  var e = Vr && Vr.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
     (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -9220,24 +9220,54 @@ function zz() {
     } }), Object.defineProperty(t, c, l);
   } : function(t, r, s, c) {
     c === void 0 && (c = s), t[c] = r[s];
-  }), a = Wr && Wr.__setModuleDefault || (Object.create ? function(t, r) {
+  }), a = Vr && Vr.__setModuleDefault || (Object.create ? function(t, r) {
     Object.defineProperty(t, "default", { enumerable: !0, value: r });
   } : function(t, r) {
     t.default = r;
-  }), o = Wr && Wr.__importStar || function(t) {
+  }), o = Vr && Vr.__importStar || function(t) {
     if (t && t.__esModule) return t;
     var r = {};
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(Wr, "__esModule", { value: !0 }), Wr.Response = void 0;
+  Object.defineProperty(Vr, "__esModule", { value: !0 }), Vr.Response = void 0;
   const n = o(B()), i = Nd();
-  return Wr.Response = n.serialization.list(i.Term), Wr;
+  return Vr.Response = n.serialization.list(i.Term), Vr;
 }
-var tf = {}, Kr = {}, im;
+var tf = {}, Wr = {}, im;
 function Cz() {
-  if (im) return Kr;
+  if (im) return Wr;
   im = 1;
+  var e = Wr && Wr.__createBinding || (Object.create ? function(i, t, r, s) {
+    s === void 0 && (s = r);
+    var c = Object.getOwnPropertyDescriptor(t, r);
+    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
+      return t[r];
+    } }), Object.defineProperty(i, s, c);
+  } : function(i, t, r, s) {
+    s === void 0 && (s = r), i[s] = t[r];
+  }), a = Wr && Wr.__setModuleDefault || (Object.create ? function(i, t) {
+    Object.defineProperty(i, "default", { enumerable: !0, value: t });
+  } : function(i, t) {
+    i.default = t;
+  }), o = Wr && Wr.__importStar || function(i) {
+    if (i && i.__esModule) return i;
+    var t = {};
+    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
+    return a(t, i), t;
+  };
+  Object.defineProperty(Wr, "__esModule", { value: !0 }), Wr.TermCreationParams = void 0;
+  const n = o(B());
+  return Wr.TermCreationParams = n.serialization.object({
+    name: n.serialization.string(),
+    description: n.serialization.string(),
+    synonyms: n.serialization.list(n.serialization.string()).optional()
+  }), Wr;
+}
+var Kr = {}, om;
+function Tz() {
+  if (om) return Kr;
+  om = 1;
   var e = Kr && Kr.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -9256,43 +9286,13 @@ function Cz() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Kr, "__esModule", { value: !0 }), Kr.TermCreationParams = void 0;
+  Object.defineProperty(Kr, "__esModule", { value: !0 }), Kr.TermUpdateParams = void 0;
   const n = o(B());
-  return Kr.TermCreationParams = n.serialization.object({
-    name: n.serialization.string(),
-    description: n.serialization.string(),
-    synonyms: n.serialization.list(n.serialization.string()).optional()
-  }), Kr;
-}
-var Hr = {}, om;
-function Tz() {
-  if (om) return Hr;
-  om = 1;
-  var e = Hr && Hr.__createBinding || (Object.create ? function(i, t, r, s) {
-    s === void 0 && (s = r);
-    var c = Object.getOwnPropertyDescriptor(t, r);
-    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
-      return t[r];
-    } }), Object.defineProperty(i, s, c);
-  } : function(i, t, r, s) {
-    s === void 0 && (s = r), i[s] = t[r];
-  }), a = Hr && Hr.__setModuleDefault || (Object.create ? function(i, t) {
-    Object.defineProperty(i, "default", { enumerable: !0, value: t });
-  } : function(i, t) {
-    i.default = t;
-  }), o = Hr && Hr.__importStar || function(i) {
-    if (i && i.__esModule) return i;
-    var t = {};
-    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
-    return a(t, i), t;
-  };
-  Object.defineProperty(Hr, "__esModule", { value: !0 }), Hr.TermUpdateParams = void 0;
-  const n = o(B());
-  return Hr.TermUpdateParams = n.serialization.object({
+  return Kr.TermUpdateParams = n.serialization.object({
     name: n.serialization.string().optional(),
     description: n.serialization.string().optional(),
     synonyms: n.serialization.list(n.serialization.string()).optional()
-  }), Hr;
+  }), Kr;
 }
 var sm;
 function S0() {
@@ -9311,7 +9311,7 @@ function S0() {
 var cm;
 function Mz() {
   return cm || (cm = 1, function(e) {
-    var a = Vr && Vr.__createBinding || (Object.create ? function(t, r, s, c) {
+    var a = Gr && Gr.__createBinding || (Object.create ? function(t, r, s, c) {
       c === void 0 && (c = s);
       var l = Object.getOwnPropertyDescriptor(r, s);
       (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -9319,20 +9319,20 @@ function Mz() {
       } }), Object.defineProperty(t, c, l);
     } : function(t, r, s, c) {
       c === void 0 && (c = s), t[c] = r[s];
-    }), o = Vr && Vr.__setModuleDefault || (Object.create ? function(t, r) {
+    }), o = Gr && Gr.__setModuleDefault || (Object.create ? function(t, r) {
       Object.defineProperty(t, "default", { enumerable: !0, value: r });
     } : function(t, r) {
       t.default = r;
-    }), n = Vr && Vr.__importStar || function(t) {
+    }), n = Gr && Gr.__importStar || function(t) {
       if (t && t.__esModule) return t;
       var r = {};
       if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && a(r, t, s);
       return o(r, t), r;
-    }, i = Vr && Vr.__exportStar || function(t, r) {
+    }, i = Gr && Gr.__exportStar || function(t, r) {
       for (var s in t) s !== "default" && !Object.prototype.hasOwnProperty.call(r, s) && a(r, t, s);
     };
     Object.defineProperty(e, "__esModule", { value: !0 }), e.listTerms = void 0, e.listTerms = n(zz()), i(S0(), e);
-  }(Vr)), Vr;
+  }(Gr)), Gr;
 }
 var lm;
 function jz() {
@@ -9351,10 +9351,36 @@ function jz() {
     Object.defineProperty(e, "__esModule", { value: !0 }), o(Mz(), e);
   }(ci)), ci;
 }
-var li = {}, Xr = {}, Yr = {}, um;
+var li = {}, Hr = {}, Xr = {}, um;
 function xz() {
-  if (um) return Yr;
+  if (um) return Xr;
   um = 1;
+  var e = Xr && Xr.__createBinding || (Object.create ? function(t, r, s, c) {
+    c === void 0 && (c = s);
+    var l = Object.getOwnPropertyDescriptor(r, s);
+    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
+      return r[s];
+    } }), Object.defineProperty(t, c, l);
+  } : function(t, r, s, c) {
+    c === void 0 && (c = s), t[c] = r[s];
+  }), a = Xr && Xr.__setModuleDefault || (Object.create ? function(t, r) {
+    Object.defineProperty(t, "default", { enumerable: !0, value: r });
+  } : function(t, r) {
+    t.default = r;
+  }), o = Xr && Xr.__importStar || function(t) {
+    if (t && t.__esModule) return t;
+    var r = {};
+    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
+    return a(r, t), r;
+  };
+  Object.defineProperty(Xr, "__esModule", { value: !0 }), Xr.Response = void 0;
+  const n = o(B()), i = zd();
+  return Xr.Response = n.serialization.list(i.ContextVariable), Xr;
+}
+var rf = {}, Yr = {}, fm;
+function Az() {
+  if (fm) return Yr;
+  fm = 1;
   var e = Yr && Yr.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
@@ -9373,14 +9399,19 @@ function xz() {
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(Yr, "__esModule", { value: !0 }), Yr.Response = void 0;
-  const n = o(B()), i = zd();
-  return Yr.Response = n.serialization.list(i.ContextVariable), Yr;
+  Object.defineProperty(Yr, "__esModule", { value: !0 }), Yr.ContextVariableCreationParams = void 0;
+  const n = o(B()), i = Yi();
+  return Yr.ContextVariableCreationParams = n.serialization.object({
+    name: n.serialization.string(),
+    description: n.serialization.string().optional(),
+    toolId: n.serialization.property("tool_id", i.ToolId.optional()),
+    freshnessRules: n.serialization.property("freshness_rules", n.serialization.string().optional())
+  }), Yr;
 }
-var rf = {}, Qr = {}, fm;
-function Az() {
-  if (fm) return Qr;
-  fm = 1;
+var Qr = {}, dm;
+function Nz() {
+  if (dm) return Qr;
+  dm = 1;
   var e = Qr && Qr.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
@@ -9399,51 +9430,20 @@ function Az() {
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(Qr, "__esModule", { value: !0 }), Qr.ContextVariableCreationParams = void 0;
+  Object.defineProperty(Qr, "__esModule", { value: !0 }), Qr.ContextVariableUpdateParams = void 0;
   const n = o(B()), i = Yi();
-  return Qr.ContextVariableCreationParams = n.serialization.object({
-    name: n.serialization.string(),
+  return Qr.ContextVariableUpdateParams = n.serialization.object({
+    name: n.serialization.string().optional(),
     description: n.serialization.string().optional(),
     toolId: n.serialization.property("tool_id", i.ToolId.optional()),
     freshnessRules: n.serialization.property("freshness_rules", n.serialization.string().optional())
   }), Qr;
 }
-var Zr = {}, dm;
-function Nz() {
-  if (dm) return Zr;
-  dm = 1;
-  var e = Zr && Zr.__createBinding || (Object.create ? function(t, r, s, c) {
-    c === void 0 && (c = s);
-    var l = Object.getOwnPropertyDescriptor(r, s);
-    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
-      return r[s];
-    } }), Object.defineProperty(t, c, l);
-  } : function(t, r, s, c) {
-    c === void 0 && (c = s), t[c] = r[s];
-  }), a = Zr && Zr.__setModuleDefault || (Object.create ? function(t, r) {
-    Object.defineProperty(t, "default", { enumerable: !0, value: r });
-  } : function(t, r) {
-    t.default = r;
-  }), o = Zr && Zr.__importStar || function(t) {
-    if (t && t.__esModule) return t;
-    var r = {};
-    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
-    return a(r, t), r;
-  };
-  Object.defineProperty(Zr, "__esModule", { value: !0 }), Zr.ContextVariableUpdateParams = void 0;
-  const n = o(B()), i = Yi();
-  return Zr.ContextVariableUpdateParams = n.serialization.object({
-    name: n.serialization.string().optional(),
-    description: n.serialization.string().optional(),
-    toolId: n.serialization.property("tool_id", i.ToolId.optional()),
-    freshnessRules: n.serialization.property("freshness_rules", n.serialization.string().optional())
-  }), Zr;
-}
-var Jr = {}, pm;
+var Zr = {}, pm;
 function Iz() {
-  if (pm) return Jr;
+  if (pm) return Zr;
   pm = 1;
-  var e = Jr && Jr.__createBinding || (Object.create ? function(i, t, r, s) {
+  var e = Zr && Zr.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
     (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
@@ -9451,21 +9451,21 @@ function Iz() {
     } }), Object.defineProperty(i, s, c);
   } : function(i, t, r, s) {
     s === void 0 && (s = r), i[s] = t[r];
-  }), a = Jr && Jr.__setModuleDefault || (Object.create ? function(i, t) {
+  }), a = Zr && Zr.__setModuleDefault || (Object.create ? function(i, t) {
     Object.defineProperty(i, "default", { enumerable: !0, value: t });
   } : function(i, t) {
     i.default = t;
-  }), o = Jr && Jr.__importStar || function(i) {
+  }), o = Zr && Zr.__importStar || function(i) {
     if (i && i.__esModule) return i;
     var t = {};
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(Jr, "__esModule", { value: !0 }), Jr.ContextVariableValueUpdateParams = void 0;
+  Object.defineProperty(Zr, "__esModule", { value: !0 }), Zr.ContextVariableValueUpdateParams = void 0;
   const n = o(B());
-  return Jr.ContextVariableValueUpdateParams = n.serialization.object({
+  return Zr.ContextVariableValueUpdateParams = n.serialization.object({
     data: n.serialization.unknown()
-  }), Jr;
+  }), Zr;
 }
 var gm;
 function P0() {
@@ -9488,7 +9488,7 @@ function P0() {
 var ym;
 function Dz() {
   return ym || (ym = 1, function(e) {
-    var a = Xr && Xr.__createBinding || (Object.create ? function(t, r, s, c) {
+    var a = Hr && Hr.__createBinding || (Object.create ? function(t, r, s, c) {
       c === void 0 && (c = s);
       var l = Object.getOwnPropertyDescriptor(r, s);
       (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -9496,20 +9496,20 @@ function Dz() {
       } }), Object.defineProperty(t, c, l);
     } : function(t, r, s, c) {
       c === void 0 && (c = s), t[c] = r[s];
-    }), o = Xr && Xr.__setModuleDefault || (Object.create ? function(t, r) {
+    }), o = Hr && Hr.__setModuleDefault || (Object.create ? function(t, r) {
       Object.defineProperty(t, "default", { enumerable: !0, value: r });
     } : function(t, r) {
       t.default = r;
-    }), n = Xr && Xr.__importStar || function(t) {
+    }), n = Hr && Hr.__importStar || function(t) {
       if (t && t.__esModule) return t;
       var r = {};
       if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && a(r, t, s);
       return o(r, t), r;
-    }, i = Xr && Xr.__exportStar || function(t, r) {
+    }, i = Hr && Hr.__exportStar || function(t, r) {
       for (var s in t) s !== "default" && !Object.prototype.hasOwnProperty.call(r, s) && a(r, t, s);
     };
     Object.defineProperty(e, "__esModule", { value: !0 }), e.list = void 0, e.list = n(xz()), i(P0(), e);
-  }(Xr)), Xr;
+  }(Hr)), Hr;
 }
 var hm;
 function Uz() {
@@ -9528,10 +9528,36 @@ function Uz() {
     Object.defineProperty(e, "__esModule", { value: !0 }), o(Dz(), e);
   }(li)), li;
 }
-var ui = {}, en = {}, tn = {}, _m;
+var ui = {}, Jr = {}, en = {}, _m;
 function Lz() {
-  if (_m) return tn;
+  if (_m) return en;
   _m = 1;
+  var e = en && en.__createBinding || (Object.create ? function(t, r, s, c) {
+    c === void 0 && (c = s);
+    var l = Object.getOwnPropertyDescriptor(r, s);
+    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
+      return r[s];
+    } }), Object.defineProperty(t, c, l);
+  } : function(t, r, s, c) {
+    c === void 0 && (c = s), t[c] = r[s];
+  }), a = en && en.__setModuleDefault || (Object.create ? function(t, r) {
+    Object.defineProperty(t, "default", { enumerable: !0, value: r });
+  } : function(t, r) {
+    t.default = r;
+  }), o = en && en.__importStar || function(t) {
+    if (t && t.__esModule) return t;
+    var r = {};
+    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
+    return a(r, t), r;
+  };
+  Object.defineProperty(en, "__esModule", { value: !0 }), en.Response = void 0;
+  const n = o(B()), i = m0();
+  return en.Response = n.serialization.list(i.Session), en;
+}
+var tn = {}, bm;
+function Bz() {
+  if (bm) return tn;
+  bm = 1;
   var e = tn && tn.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
@@ -9551,40 +9577,14 @@ function Lz() {
     return a(r, t), r;
   };
   Object.defineProperty(tn, "__esModule", { value: !0 }), tn.Response = void 0;
-  const n = o(B()), i = m0();
-  return tn.Response = n.serialization.list(i.Session), tn;
-}
-var rn = {}, bm;
-function Bz() {
-  if (bm) return rn;
-  bm = 1;
-  var e = rn && rn.__createBinding || (Object.create ? function(t, r, s, c) {
-    c === void 0 && (c = s);
-    var l = Object.getOwnPropertyDescriptor(r, s);
-    (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
-      return r[s];
-    } }), Object.defineProperty(t, c, l);
-  } : function(t, r, s, c) {
-    c === void 0 && (c = s), t[c] = r[s];
-  }), a = rn && rn.__setModuleDefault || (Object.create ? function(t, r) {
-    Object.defineProperty(t, "default", { enumerable: !0, value: r });
-  } : function(t, r) {
-    t.default = r;
-  }), o = rn && rn.__importStar || function(t) {
-    if (t && t.__esModule) return t;
-    var r = {};
-    if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
-    return a(r, t), r;
-  };
-  Object.defineProperty(rn, "__esModule", { value: !0 }), rn.Response = void 0;
   const n = o(B()), i = xd();
-  return rn.Response = n.serialization.list(i.Event), rn;
+  return tn.Response = n.serialization.list(i.Event), tn;
 }
-var nf = {}, nn = {}, mm;
+var nf = {}, rn = {}, mm;
 function $z() {
-  if (mm) return nn;
+  if (mm) return rn;
   mm = 1;
-  var e = nn && nn.__createBinding || (Object.create ? function(i, t, r, s) {
+  var e = rn && rn.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
     (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
@@ -9592,29 +9592,29 @@ function $z() {
     } }), Object.defineProperty(i, s, c);
   } : function(i, t, r, s) {
     s === void 0 && (s = r), i[s] = t[r];
-  }), a = nn && nn.__setModuleDefault || (Object.create ? function(i, t) {
+  }), a = rn && rn.__setModuleDefault || (Object.create ? function(i, t) {
     Object.defineProperty(i, "default", { enumerable: !0, value: t });
   } : function(i, t) {
     i.default = t;
-  }), o = nn && nn.__importStar || function(i) {
+  }), o = rn && rn.__importStar || function(i) {
     if (i && i.__esModule) return i;
     var t = {};
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(nn, "__esModule", { value: !0 }), nn.SessionCreationParams = void 0;
+  Object.defineProperty(rn, "__esModule", { value: !0 }), rn.SessionCreationParams = void 0;
   const n = o(B());
-  return nn.SessionCreationParams = n.serialization.object({
+  return rn.SessionCreationParams = n.serialization.object({
     agentId: n.serialization.property("agent_id", n.serialization.string()),
     customerId: n.serialization.property("customer_id", n.serialization.string().optional()),
     title: n.serialization.string().optional()
-  }), nn;
+  }), rn;
 }
-var an = {}, vm;
+var nn = {}, vm;
 function Fz() {
-  if (vm) return an;
+  if (vm) return nn;
   vm = 1;
-  var e = an && an.__createBinding || (Object.create ? function(t, r, s, c) {
+  var e = nn && nn.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
     (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -9622,28 +9622,28 @@ function Fz() {
     } }), Object.defineProperty(t, c, l);
   } : function(t, r, s, c) {
     c === void 0 && (c = s), t[c] = r[s];
-  }), a = an && an.__setModuleDefault || (Object.create ? function(t, r) {
+  }), a = nn && nn.__setModuleDefault || (Object.create ? function(t, r) {
     Object.defineProperty(t, "default", { enumerable: !0, value: r });
   } : function(t, r) {
     t.default = r;
-  }), o = an && an.__importStar || function(t) {
+  }), o = nn && nn.__importStar || function(t) {
     if (t && t.__esModule) return t;
     var r = {};
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(an, "__esModule", { value: !0 }), an.SessionUpdateParams = void 0;
+  Object.defineProperty(nn, "__esModule", { value: !0 }), nn.SessionUpdateParams = void 0;
   const n = o(B()), i = Uk();
-  return an.SessionUpdateParams = n.serialization.object({
+  return nn.SessionUpdateParams = n.serialization.object({
     consumptionOffsets: n.serialization.property("consumption_offsets", i.ConsumptionOffsetsUpdateParams.optional()),
     title: n.serialization.string().optional()
-  }), an;
+  }), nn;
 }
-var on = {}, wm;
+var an = {}, wm;
 function qz() {
-  if (wm) return on;
+  if (wm) return an;
   wm = 1;
-  var e = on && on.__createBinding || (Object.create ? function(s, c, l, g) {
+  var e = an && an.__createBinding || (Object.create ? function(s, c, l, g) {
     g === void 0 && (g = l);
     var d = Object.getOwnPropertyDescriptor(c, l);
     (!d || ("get" in d ? !c.__esModule : d.writable || d.configurable)) && (d = { enumerable: !0, get: function() {
@@ -9651,24 +9651,24 @@ function qz() {
     } }), Object.defineProperty(s, g, d);
   } : function(s, c, l, g) {
     g === void 0 && (g = l), s[g] = c[l];
-  }), a = on && on.__setModuleDefault || (Object.create ? function(s, c) {
+  }), a = an && an.__setModuleDefault || (Object.create ? function(s, c) {
     Object.defineProperty(s, "default", { enumerable: !0, value: c });
   } : function(s, c) {
     s.default = c;
-  }), o = on && on.__importStar || function(s) {
+  }), o = an && an.__importStar || function(s) {
     if (s && s.__esModule) return s;
     var c = {};
     if (s != null) for (var l in s) l !== "default" && Object.prototype.hasOwnProperty.call(s, l) && e(c, s, l);
     return a(c, s), c;
   };
-  Object.defineProperty(on, "__esModule", { value: !0 }), on.EventCreationParams = void 0;
+  Object.defineProperty(an, "__esModule", { value: !0 }), an.EventCreationParams = void 0;
   const n = o(B()), i = jd(), t = Md(), r = k0();
-  return on.EventCreationParams = n.serialization.object({
+  return an.EventCreationParams = n.serialization.object({
     kind: i.EventKindDto,
     source: t.EventSourceDto,
     message: n.serialization.string().optional(),
     actions: n.serialization.list(r.UtteranceRequest).optional()
-  }), on;
+  }), an;
 }
 var km;
 function R0() {
@@ -9691,7 +9691,7 @@ function R0() {
 var Em;
 function Gz() {
   return Em || (Em = 1, function(e) {
-    var a = en && en.__createBinding || (Object.create ? function(t, r, s, c) {
+    var a = Jr && Jr.__createBinding || (Object.create ? function(t, r, s, c) {
       c === void 0 && (c = s);
       var l = Object.getOwnPropertyDescriptor(r, s);
       (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -9699,20 +9699,20 @@ function Gz() {
       } }), Object.defineProperty(t, c, l);
     } : function(t, r, s, c) {
       c === void 0 && (c = s), t[c] = r[s];
-    }), o = en && en.__setModuleDefault || (Object.create ? function(t, r) {
+    }), o = Jr && Jr.__setModuleDefault || (Object.create ? function(t, r) {
       Object.defineProperty(t, "default", { enumerable: !0, value: r });
     } : function(t, r) {
       t.default = r;
-    }), n = en && en.__importStar || function(t) {
+    }), n = Jr && Jr.__importStar || function(t) {
       if (t && t.__esModule) return t;
       var r = {};
       if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && a(r, t, s);
       return o(r, t), r;
-    }, i = en && en.__exportStar || function(t, r) {
+    }, i = Jr && Jr.__exportStar || function(t, r) {
       for (var s in t) s !== "default" && !Object.prototype.hasOwnProperty.call(r, s) && a(r, t, s);
     };
     Object.defineProperty(e, "__esModule", { value: !0 }), e.listEvents = e.list = void 0, e.list = n(Lz()), e.listEvents = n(Bz()), i(R0(), e);
-  }(en)), en;
+  }(Jr)), Jr;
 }
 var Om;
 function Vz() {
@@ -9731,11 +9731,11 @@ function Vz() {
     Object.defineProperty(e, "__esModule", { value: !0 }), o(Gz(), e);
   }(ui)), ui;
 }
-var fi = {}, sn = {}, cn = {}, Sm;
+var fi = {}, on = {}, sn = {}, Sm;
 function Wz() {
-  if (Sm) return cn;
+  if (Sm) return sn;
   Sm = 1;
-  var e = cn && cn.__createBinding || (Object.create ? function(t, r, s, c) {
+  var e = sn && sn.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
     (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -9743,25 +9743,25 @@ function Wz() {
     } }), Object.defineProperty(t, c, l);
   } : function(t, r, s, c) {
     c === void 0 && (c = s), t[c] = r[s];
-  }), a = cn && cn.__setModuleDefault || (Object.create ? function(t, r) {
+  }), a = sn && sn.__setModuleDefault || (Object.create ? function(t, r) {
     Object.defineProperty(t, "default", { enumerable: !0, value: r });
   } : function(t, r) {
     t.default = r;
-  }), o = cn && cn.__importStar || function(t) {
+  }), o = sn && sn.__importStar || function(t) {
     if (t && t.__esModule) return t;
     var r = {};
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(cn, "__esModule", { value: !0 }), cn.Response = void 0;
+  Object.defineProperty(sn, "__esModule", { value: !0 }), sn.Response = void 0;
   const n = o(B()), i = b0();
-  return cn.Response = n.serialization.list(i.Service), cn;
+  return sn.Response = n.serialization.list(i.Service), sn;
 }
-var af = {}, ln = {}, Pm;
+var af = {}, cn = {}, Pm;
 function Kz() {
-  if (Pm) return ln;
+  if (Pm) return cn;
   Pm = 1;
-  var e = ln && ln.__createBinding || (Object.create ? function(s, c, l, g) {
+  var e = cn && cn.__createBinding || (Object.create ? function(s, c, l, g) {
     g === void 0 && (g = l);
     var d = Object.getOwnPropertyDescriptor(c, l);
     (!d || ("get" in d ? !c.__esModule : d.writable || d.configurable)) && (d = { enumerable: !0, get: function() {
@@ -9769,23 +9769,23 @@ function Kz() {
     } }), Object.defineProperty(s, g, d);
   } : function(s, c, l, g) {
     g === void 0 && (g = l), s[g] = c[l];
-  }), a = ln && ln.__setModuleDefault || (Object.create ? function(s, c) {
+  }), a = cn && cn.__setModuleDefault || (Object.create ? function(s, c) {
     Object.defineProperty(s, "default", { enumerable: !0, value: c });
   } : function(s, c) {
     s.default = c;
-  }), o = ln && ln.__importStar || function(s) {
+  }), o = cn && cn.__importStar || function(s) {
     if (s && s.__esModule) return s;
     var c = {};
     if (s != null) for (var l in s) l !== "default" && Object.prototype.hasOwnProperty.call(s, l) && e(c, s, l);
     return a(c, s), c;
   };
-  Object.defineProperty(ln, "__esModule", { value: !0 }), ln.ServiceUpdateParams = void 0;
+  Object.defineProperty(cn, "__esModule", { value: !0 }), cn.ServiceUpdateParams = void 0;
   const n = o(B()), i = Id(), t = p0(), r = d0();
-  return ln.ServiceUpdateParams = n.serialization.object({
+  return cn.ServiceUpdateParams = n.serialization.object({
     kind: i.ToolServiceKindDto,
     sdk: t.SdkServiceParams.optional(),
     openapi: r.OpenApiServiceParams.optional()
-  }), ln;
+  }), cn;
 }
 var Rm;
 function z0() {
@@ -9800,7 +9800,7 @@ function z0() {
 var zm;
 function Hz() {
   return zm || (zm = 1, function(e) {
-    var a = sn && sn.__createBinding || (Object.create ? function(t, r, s, c) {
+    var a = on && on.__createBinding || (Object.create ? function(t, r, s, c) {
       c === void 0 && (c = s);
       var l = Object.getOwnPropertyDescriptor(r, s);
       (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -9808,20 +9808,20 @@ function Hz() {
       } }), Object.defineProperty(t, c, l);
     } : function(t, r, s, c) {
       c === void 0 && (c = s), t[c] = r[s];
-    }), o = sn && sn.__setModuleDefault || (Object.create ? function(t, r) {
+    }), o = on && on.__setModuleDefault || (Object.create ? function(t, r) {
       Object.defineProperty(t, "default", { enumerable: !0, value: r });
     } : function(t, r) {
       t.default = r;
-    }), n = sn && sn.__importStar || function(t) {
+    }), n = on && on.__importStar || function(t) {
       if (t && t.__esModule) return t;
       var r = {};
       if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && a(r, t, s);
       return o(r, t), r;
-    }, i = sn && sn.__exportStar || function(t, r) {
+    }, i = on && on.__exportStar || function(t, r) {
       for (var s in t) s !== "default" && !Object.prototype.hasOwnProperty.call(r, s) && a(r, t, s);
     };
     Object.defineProperty(e, "__esModule", { value: !0 }), e.list = void 0, e.list = n(Wz()), i(z0(), e);
-  }(sn)), sn;
+  }(on)), on;
 }
 var Cm;
 function Xz() {
@@ -9840,11 +9840,11 @@ function Xz() {
     Object.defineProperty(e, "__esModule", { value: !0 }), o(Hz(), e);
   }(fi)), fi;
 }
-var di = {}, un = {}, fn = {}, Tm;
+var di = {}, ln = {}, un = {}, Tm;
 function Yz() {
-  if (Tm) return fn;
+  if (Tm) return un;
   Tm = 1;
-  var e = fn && fn.__createBinding || (Object.create ? function(t, r, s, c) {
+  var e = un && un.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
     (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -9852,24 +9852,52 @@ function Yz() {
     } }), Object.defineProperty(t, c, l);
   } : function(t, r, s, c) {
     c === void 0 && (c = s), t[c] = r[s];
-  }), a = fn && fn.__setModuleDefault || (Object.create ? function(t, r) {
+  }), a = un && un.__setModuleDefault || (Object.create ? function(t, r) {
     Object.defineProperty(t, "default", { enumerable: !0, value: r });
   } : function(t, r) {
     t.default = r;
-  }), o = fn && fn.__importStar || function(t) {
+  }), o = un && un.__importStar || function(t) {
     if (t && t.__esModule) return t;
     var r = {};
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(fn, "__esModule", { value: !0 }), fn.Response = void 0;
+  Object.defineProperty(un, "__esModule", { value: !0 }), un.Response = void 0;
   const n = o(B()), i = v0();
-  return fn.Response = n.serialization.list(i.Tag), fn;
+  return un.Response = n.serialization.list(i.Tag), un;
 }
-var of = {}, dn = {}, Mm;
+var of = {}, fn = {}, Mm;
 function Qz() {
-  if (Mm) return dn;
+  if (Mm) return fn;
   Mm = 1;
+  var e = fn && fn.__createBinding || (Object.create ? function(i, t, r, s) {
+    s === void 0 && (s = r);
+    var c = Object.getOwnPropertyDescriptor(t, r);
+    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
+      return t[r];
+    } }), Object.defineProperty(i, s, c);
+  } : function(i, t, r, s) {
+    s === void 0 && (s = r), i[s] = t[r];
+  }), a = fn && fn.__setModuleDefault || (Object.create ? function(i, t) {
+    Object.defineProperty(i, "default", { enumerable: !0, value: t });
+  } : function(i, t) {
+    i.default = t;
+  }), o = fn && fn.__importStar || function(i) {
+    if (i && i.__esModule) return i;
+    var t = {};
+    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
+    return a(t, i), t;
+  };
+  Object.defineProperty(fn, "__esModule", { value: !0 }), fn.TagCreationParams = void 0;
+  const n = o(B());
+  return fn.TagCreationParams = n.serialization.object({
+    name: n.serialization.string()
+  }), fn;
+}
+var dn = {}, jm;
+function Zz() {
+  if (jm) return dn;
+  jm = 1;
   var e = dn && dn.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
@@ -9888,39 +9916,11 @@ function Qz() {
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(dn, "__esModule", { value: !0 }), dn.TagCreationParams = void 0;
+  Object.defineProperty(dn, "__esModule", { value: !0 }), dn.TagUpdateParams = void 0;
   const n = o(B());
-  return dn.TagCreationParams = n.serialization.object({
+  return dn.TagUpdateParams = n.serialization.object({
     name: n.serialization.string()
   }), dn;
-}
-var pn = {}, jm;
-function Zz() {
-  if (jm) return pn;
-  jm = 1;
-  var e = pn && pn.__createBinding || (Object.create ? function(i, t, r, s) {
-    s === void 0 && (s = r);
-    var c = Object.getOwnPropertyDescriptor(t, r);
-    (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
-      return t[r];
-    } }), Object.defineProperty(i, s, c);
-  } : function(i, t, r, s) {
-    s === void 0 && (s = r), i[s] = t[r];
-  }), a = pn && pn.__setModuleDefault || (Object.create ? function(i, t) {
-    Object.defineProperty(i, "default", { enumerable: !0, value: t });
-  } : function(i, t) {
-    i.default = t;
-  }), o = pn && pn.__importStar || function(i) {
-    if (i && i.__esModule) return i;
-    var t = {};
-    if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
-    return a(t, i), t;
-  };
-  Object.defineProperty(pn, "__esModule", { value: !0 }), pn.TagUpdateParams = void 0;
-  const n = o(B());
-  return pn.TagUpdateParams = n.serialization.object({
-    name: n.serialization.string()
-  }), pn;
 }
 var xm;
 function C0() {
@@ -9939,7 +9939,7 @@ function C0() {
 var Am;
 function Jz() {
   return Am || (Am = 1, function(e) {
-    var a = un && un.__createBinding || (Object.create ? function(t, r, s, c) {
+    var a = ln && ln.__createBinding || (Object.create ? function(t, r, s, c) {
       c === void 0 && (c = s);
       var l = Object.getOwnPropertyDescriptor(r, s);
       (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -9947,20 +9947,20 @@ function Jz() {
       } }), Object.defineProperty(t, c, l);
     } : function(t, r, s, c) {
       c === void 0 && (c = s), t[c] = r[s];
-    }), o = un && un.__setModuleDefault || (Object.create ? function(t, r) {
+    }), o = ln && ln.__setModuleDefault || (Object.create ? function(t, r) {
       Object.defineProperty(t, "default", { enumerable: !0, value: r });
     } : function(t, r) {
       t.default = r;
-    }), n = un && un.__importStar || function(t) {
+    }), n = ln && ln.__importStar || function(t) {
       if (t && t.__esModule) return t;
       var r = {};
       if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && a(r, t, s);
       return o(r, t), r;
-    }, i = un && un.__exportStar || function(t, r) {
+    }, i = ln && ln.__exportStar || function(t, r) {
       for (var s in t) s !== "default" && !Object.prototype.hasOwnProperty.call(r, s) && a(r, t, s);
     };
     Object.defineProperty(e, "__esModule", { value: !0 }), e.list = void 0, e.list = n(Yz()), i(C0(), e);
-  }(un)), un;
+  }(ln)), ln;
 }
 var Nm;
 function eC() {
@@ -9979,11 +9979,11 @@ function eC() {
     Object.defineProperty(e, "__esModule", { value: !0 }), o(Jz(), e);
   }(di)), di;
 }
-var pi = {}, gn = {}, yn = {}, Im;
+var pi = {}, pn = {}, gn = {}, Im;
 function tC() {
-  if (Im) return yn;
+  if (Im) return gn;
   Im = 1;
-  var e = yn && yn.__createBinding || (Object.create ? function(t, r, s, c) {
+  var e = gn && gn.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
     (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -9991,25 +9991,25 @@ function tC() {
     } }), Object.defineProperty(t, c, l);
   } : function(t, r, s, c) {
     c === void 0 && (c = s), t[c] = r[s];
-  }), a = yn && yn.__setModuleDefault || (Object.create ? function(t, r) {
+  }), a = gn && gn.__setModuleDefault || (Object.create ? function(t, r) {
     Object.defineProperty(t, "default", { enumerable: !0, value: r });
   } : function(t, r) {
     t.default = r;
-  }), o = yn && yn.__importStar || function(t) {
+  }), o = gn && gn.__importStar || function(t) {
     if (t && t.__esModule) return t;
     var r = {};
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(yn, "__esModule", { value: !0 }), yn.Response = void 0;
+  Object.defineProperty(gn, "__esModule", { value: !0 }), gn.Response = void 0;
   const n = o(B()), i = $k();
-  return yn.Response = n.serialization.list(i.Customer), yn;
+  return gn.Response = n.serialization.list(i.Customer), gn;
 }
-var sf = {}, hn = {}, Dm;
+var sf = {}, yn = {}, Dm;
 function rC() {
-  if (Dm) return hn;
+  if (Dm) return yn;
   Dm = 1;
-  var e = hn && hn.__createBinding || (Object.create ? function(i, t, r, s) {
+  var e = yn && yn.__createBinding || (Object.create ? function(i, t, r, s) {
     s === void 0 && (s = r);
     var c = Object.getOwnPropertyDescriptor(t, r);
     (!c || ("get" in c ? !t.__esModule : c.writable || c.configurable)) && (c = { enumerable: !0, get: function() {
@@ -10017,28 +10017,28 @@ function rC() {
     } }), Object.defineProperty(i, s, c);
   } : function(i, t, r, s) {
     s === void 0 && (s = r), i[s] = t[r];
-  }), a = hn && hn.__setModuleDefault || (Object.create ? function(i, t) {
+  }), a = yn && yn.__setModuleDefault || (Object.create ? function(i, t) {
     Object.defineProperty(i, "default", { enumerable: !0, value: t });
   } : function(i, t) {
     i.default = t;
-  }), o = hn && hn.__importStar || function(i) {
+  }), o = yn && yn.__importStar || function(i) {
     if (i && i.__esModule) return i;
     var t = {};
     if (i != null) for (var r in i) r !== "default" && Object.prototype.hasOwnProperty.call(i, r) && e(t, i, r);
     return a(t, i), t;
   };
-  Object.defineProperty(hn, "__esModule", { value: !0 }), hn.CustomerCreationParams = void 0;
+  Object.defineProperty(yn, "__esModule", { value: !0 }), yn.CustomerCreationParams = void 0;
   const n = o(B());
-  return hn.CustomerCreationParams = n.serialization.object({
+  return yn.CustomerCreationParams = n.serialization.object({
     name: n.serialization.string(),
     extra: n.serialization.record(n.serialization.string(), n.serialization.string().optional()).optional()
-  }), hn;
+  }), yn;
 }
-var _n = {}, Um;
+var hn = {}, Um;
 function nC() {
-  if (Um) return _n;
+  if (Um) return hn;
   Um = 1;
-  var e = _n && _n.__createBinding || (Object.create ? function(r, s, c, l) {
+  var e = hn && hn.__createBinding || (Object.create ? function(r, s, c, l) {
     l === void 0 && (l = c);
     var g = Object.getOwnPropertyDescriptor(s, c);
     (!g || ("get" in g ? !s.__esModule : g.writable || g.configurable)) && (g = { enumerable: !0, get: function() {
@@ -10046,23 +10046,23 @@ function nC() {
     } }), Object.defineProperty(r, l, g);
   } : function(r, s, c, l) {
     l === void 0 && (l = c), r[l] = s[c];
-  }), a = _n && _n.__setModuleDefault || (Object.create ? function(r, s) {
+  }), a = hn && hn.__setModuleDefault || (Object.create ? function(r, s) {
     Object.defineProperty(r, "default", { enumerable: !0, value: s });
   } : function(r, s) {
     r.default = s;
-  }), o = _n && _n.__importStar || function(r) {
+  }), o = hn && hn.__importStar || function(r) {
     if (r && r.__esModule) return r;
     var s = {};
     if (r != null) for (var c in r) c !== "default" && Object.prototype.hasOwnProperty.call(r, c) && e(s, r, c);
     return a(s, r), s;
   };
-  Object.defineProperty(_n, "__esModule", { value: !0 }), _n.CustomerUpdateParams = void 0;
+  Object.defineProperty(hn, "__esModule", { value: !0 }), hn.CustomerUpdateParams = void 0;
   const n = o(B()), i = Fk(), t = qk();
-  return _n.CustomerUpdateParams = n.serialization.object({
+  return hn.CustomerUpdateParams = n.serialization.object({
     name: n.serialization.string().optional(),
     extra: i.CustomerExtraUpdateParams.optional(),
     tags: t.CustomerTagUpdateParams.optional()
-  }), _n;
+  }), hn;
 }
 var Lm;
 function T0() {
@@ -10081,7 +10081,7 @@ function T0() {
 var Bm;
 function aC() {
   return Bm || (Bm = 1, function(e) {
-    var a = gn && gn.__createBinding || (Object.create ? function(t, r, s, c) {
+    var a = pn && pn.__createBinding || (Object.create ? function(t, r, s, c) {
       c === void 0 && (c = s);
       var l = Object.getOwnPropertyDescriptor(r, s);
       (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -10089,20 +10089,20 @@ function aC() {
       } }), Object.defineProperty(t, c, l);
     } : function(t, r, s, c) {
       c === void 0 && (c = s), t[c] = r[s];
-    }), o = gn && gn.__setModuleDefault || (Object.create ? function(t, r) {
+    }), o = pn && pn.__setModuleDefault || (Object.create ? function(t, r) {
       Object.defineProperty(t, "default", { enumerable: !0, value: r });
     } : function(t, r) {
       t.default = r;
-    }), n = gn && gn.__importStar || function(t) {
+    }), n = pn && pn.__importStar || function(t) {
       if (t && t.__esModule) return t;
       var r = {};
       if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && a(r, t, s);
       return o(r, t), r;
-    }, i = gn && gn.__exportStar || function(t, r) {
+    }, i = pn && pn.__exportStar || function(t, r) {
       for (var s in t) s !== "default" && !Object.prototype.hasOwnProperty.call(r, s) && a(r, t, s);
     };
     Object.defineProperty(e, "__esModule", { value: !0 }), e.list = void 0, e.list = n(tC()), i(T0(), e);
-  }(gn)), gn;
+  }(pn)), pn;
 }
 var $m;
 function iC() {
@@ -10121,11 +10121,11 @@ function iC() {
     Object.defineProperty(e, "__esModule", { value: !0 }), o(aC(), e);
   }(pi)), pi;
 }
-var gi = {}, yi = {}, cf = {}, bn = {}, Fm;
+var gi = {}, yi = {}, cf = {}, _n = {}, Fm;
 function oC() {
-  if (Fm) return bn;
+  if (Fm) return _n;
   Fm = 1;
-  var e = bn && bn.__createBinding || (Object.create ? function(t, r, s, c) {
+  var e = _n && _n.__createBinding || (Object.create ? function(t, r, s, c) {
     c === void 0 && (c = s);
     var l = Object.getOwnPropertyDescriptor(r, s);
     (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -10133,22 +10133,22 @@ function oC() {
     } }), Object.defineProperty(t, c, l);
   } : function(t, r, s, c) {
     c === void 0 && (c = s), t[c] = r[s];
-  }), a = bn && bn.__setModuleDefault || (Object.create ? function(t, r) {
+  }), a = _n && _n.__setModuleDefault || (Object.create ? function(t, r) {
     Object.defineProperty(t, "default", { enumerable: !0, value: r });
   } : function(t, r) {
     t.default = r;
-  }), o = bn && bn.__importStar || function(t) {
+  }), o = _n && _n.__importStar || function(t) {
     if (t && t.__esModule) return t;
     var r = {};
     if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && e(r, t, s);
     return a(r, t), r;
   };
-  Object.defineProperty(bn, "__esModule", { value: !0 }), bn.EvaluationCreationParams = void 0;
+  Object.defineProperty(_n, "__esModule", { value: !0 }), _n.EvaluationCreationParams = void 0;
   const n = o(B()), i = Cd();
-  return bn.EvaluationCreationParams = n.serialization.object({
+  return _n.EvaluationCreationParams = n.serialization.object({
     agentId: n.serialization.property("agent_id", n.serialization.string()),
     payloads: n.serialization.list(i.Payload)
-  }), bn;
+  }), _n;
 }
 var qm;
 function M0() {
@@ -10197,7 +10197,7 @@ function cC() {
 var Wm;
 function lC() {
   return Wm || (Wm = 1, function(e) {
-    var a = Ir && Ir.__createBinding || (Object.create ? function(t, r, s, c) {
+    var a = Nr && Nr.__createBinding || (Object.create ? function(t, r, s, c) {
       c === void 0 && (c = s);
       var l = Object.getOwnPropertyDescriptor(r, s);
       (!l || ("get" in l ? !r.__esModule : l.writable || l.configurable)) && (l = { enumerable: !0, get: function() {
@@ -10205,20 +10205,20 @@ function lC() {
       } }), Object.defineProperty(t, c, l);
     } : function(t, r, s, c) {
       c === void 0 && (c = s), t[c] = r[s];
-    }), o = Ir && Ir.__setModuleDefault || (Object.create ? function(t, r) {
+    }), o = Nr && Nr.__setModuleDefault || (Object.create ? function(t, r) {
       Object.defineProperty(t, "default", { enumerable: !0, value: r });
     } : function(t, r) {
       t.default = r;
-    }), n = Ir && Ir.__importStar || function(t) {
+    }), n = Nr && Nr.__importStar || function(t) {
       if (t && t.__esModule) return t;
       var r = {};
       if (t != null) for (var s in t) s !== "default" && Object.prototype.hasOwnProperty.call(t, s) && a(r, t, s);
       return o(r, t), r;
-    }, i = Ir && Ir.__exportStar || function(t, r) {
+    }, i = Nr && Nr.__exportStar || function(t, r) {
       for (var s in t) s !== "default" && !Object.prototype.hasOwnProperty.call(r, s) && a(r, t, s);
     };
     Object.defineProperty(e, "__esModule", { value: !0 }), e.evaluations = e.customers = e.tags = e.services = e.sessions = e.contextVariables = e.glossary = e.guidelines = e.agents = void 0, e.agents = n(kz()), e.guidelines = n(Rz()), e.glossary = n(jz()), e.contextVariables = n(Uz()), e.sessions = n(Vz()), e.services = n(Xz()), e.tags = n(eC()), e.customers = n(iC()), i(E0(), e), i(O0(), e), i(S0(), e), i(P0(), e), i(R0(), e), e.evaluations = n(cC()), i(M0(), e), i(z0(), e), i(C0(), e), i(T0(), e);
-  }(Ir)), Ir;
+  }(Nr)), Nr;
 }
 var Km;
 function Kn() {
@@ -17382,14 +17382,14 @@ const nj = "data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%20
   className: i
 }) => {
   const t = aj(), r = n ? "Collapse chat window" : "Expand chat window";
-  return /* @__PURE__ */ yt(
+  return /* @__PURE__ */ mn(
     "header",
     {
       className: `${t.header} ${i || ""}`,
       role: "banner",
       "aria-labelledby": "chat-header-title",
       children: [
-        /* @__PURE__ */ yt("div", { className: t.headerAgentName, id: "chat-header-title", children: [
+        /* @__PURE__ */ mn("div", { className: t.headerAgentName, id: "chat-header-title", children: [
           a || e && /* @__PURE__ */ q("div", { className: t.headerAgentNameInitials, "aria-hidden": "true", children: e?.[0]?.toUpperCase() }),
           e && /* @__PURE__ */ q("div", { children: e })
         ] }),
@@ -32984,12 +32984,12 @@ function fI() {
     "value"
     // common variable name
   ], kn = "keyword";
-  function ht(O, N, H = kn) {
+  function yt(O, N, H = kn) {
     const ue = /* @__PURE__ */ Object.create(null);
     return typeof O == "string" ? ve(H, O.split(" ")) : Array.isArray(O) ? ve(H, O) : Object.keys(O).forEach(function(Me) {
       Object.assign(
         ue,
-        ht(O[Me], N, Me)
+        yt(O[Me], N, Me)
       );
     }), ue;
     function ve(Me, te) {
@@ -33131,7 +33131,7 @@ function fI() {
         fe
       ].forEach((Te) => Te(te, ee)), te.isCompiled = !0;
       let Ae = null;
-      return typeof te.keywords == "object" && te.keywords.$pattern && (te.keywords = Object.assign({}, te.keywords), Ae = te.keywords.$pattern, delete te.keywords.$pattern), Ae = Ae || /\w+/, te.keywords && (te.keywords = ht(te.keywords, O.case_insensitive)), le.keywordPatternRe = N(Ae, !0), ee && (te.begin || (te.begin = /\B|\b/), le.beginRe = N(le.begin), !te.end && !te.endsWithParent && (te.end = /\B|\b/), te.end && (le.endRe = N(le.end)), le.terminatorEnd = d(le.end) || "", te.endsWithParent && ee.terminatorEnd && (le.terminatorEnd += (te.end ? "|" : "") + ee.terminatorEnd)), te.illegal && (le.illegalRe = N(
+      return typeof te.keywords == "object" && te.keywords.$pattern && (te.keywords = Object.assign({}, te.keywords), Ae = te.keywords.$pattern, delete te.keywords.$pattern), Ae = Ae || /\w+/, te.keywords && (te.keywords = yt(te.keywords, O.case_insensitive)), le.keywordPatternRe = N(Ae, !0), ee && (te.begin || (te.begin = /\B|\b/), le.beginRe = N(le.begin), !te.end && !te.endsWithParent && (te.end = /\B|\b/), te.end && (le.endRe = N(le.end)), le.terminatorEnd = d(le.end) || "", te.endsWithParent && ee.terminatorEnd && (le.terminatorEnd += (te.end ? "|" : "") + ee.terminatorEnd)), te.illegal && (le.illegalRe = N(
         /** @type {RegExp | string} */
         te.illegal
       )), te.contains || (te.contains = []), te.contains = [].concat(...te.contains.map(function(Te) {
@@ -33165,7 +33165,7 @@ function fI() {
       super(N), this.name = "HTMLInjectionError", this.html = H;
     }
   }
-  const be = o, Ee = n, Se = Symbol("nomatch"), ye = 7, _t = function(O) {
+  const be = o, Ee = n, Se = Symbol("nomatch"), ye = 7, ht = function(O) {
     const N = /* @__PURE__ */ Object.create(null), H = /* @__PURE__ */ Object.create(null), ue = [];
     let ve = !0;
     const Me = "Could not find the language '{}', did you forget to load/include a language module?", te = { disableAutodetect: !0, name: "Plain text", contains: [] };
@@ -33189,26 +33189,26 @@ function fI() {
       oe += G.parentNode ? G.parentNode.className : "";
       const me = ee.languageDetectRe.exec(oe);
       if (me) {
-        const Re = bt(me[1]);
+        const Re = _t(me[1]);
         return Re || (hs(Me.replace("{}", me[1])), hs("Falling back to no-highlight mode for this block.", G)), Re ? me[1] : "no-highlight";
       }
-      return oe.split(/\s+/).find((Re) => le(Re) || bt(Re));
+      return oe.split(/\s+/).find((Re) => le(Re) || _t(Re));
     }
     function Te(G, oe, me) {
       let Re = "", Le = "";
       typeof oe == "object" ? (Re = G, me = oe.ignoreIllegals, Le = oe.language) : (Zn("10.7.0", "highlight(lang, code, ...args) has been deprecated."), Zn("10.7.0", `Please use highlight(code, options) instead.
 https://github.com/highlightjs/highlight.js/issues/2277`), Le = G, Re = oe), me === void 0 && (me = !0);
-      const mt = {
+      const bt = {
         code: Re,
         language: Le
       };
-      Es("before:highlight", mt);
-      const ta = mt.result ? mt.result : An(mt.language, mt.code, me);
-      return ta.code = mt.code, Es("after:highlight", ta), ta;
+      Es("before:highlight", bt);
+      const ta = bt.result ? bt.result : An(bt.language, bt.code, me);
+      return ta.code = bt.code, Es("after:highlight", ta), ta;
     }
     function An(G, oe, me, Re) {
       const Le = /* @__PURE__ */ Object.create(null);
-      function mt(Z, ie) {
+      function bt(Z, ie) {
         return Z.keywords[ie];
       }
       function ta() {
@@ -33221,7 +33221,7 @@ https://github.com/highlightjs/highlight.js/issues/2277`), Le = G, Re = oe), me 
         let ie = de.keywordPatternRe.exec(ze), _e = "";
         for (; ie; ) {
           _e += ze.substring(Z, ie.index);
-          const Oe = On.case_insensitive ? ie[0].toLowerCase() : ie[0], Ve = mt(de, Oe);
+          const Oe = On.case_insensitive ? ie[0].toLowerCase() : ie[0], Ve = bt(de, Oe);
           if (Ve) {
             const [Nn, oS] = Ve;
             if ($e.addText(_e), _e = "", Le[Oe] = (Le[Oe] || 0) + 1, Le[Oe] <= ye && (Ps += oS), Nn.startsWith("_"))
@@ -33343,7 +33343,7 @@ https://github.com/highlightjs/highlight.js/issues/2277`), Le = G, Re = oe), me 
           throw new Error("potential infinite loop, way more iterations than matches");
         return ze += _e, _e.length;
       }
-      const On = bt(G);
+      const On = _t(G);
       if (!On)
         throw tt(Me.replace("{}", G)), new Error('Unknown language: "' + G + '"');
       const iS = Cc(On);
@@ -33413,20 +33413,20 @@ https://github.com/highlightjs/highlight.js/issues/2277`), Le = G, Re = oe), me 
     }
     function Ci(G, oe) {
       oe = oe || ee.languages || Object.keys(N);
-      const me = ma(G), Re = oe.filter(bt).filter(fp).map(
+      const me = ma(G), Re = oe.filter(_t).filter(fp).map(
         (st) => An(st, G, !1)
       );
       Re.unshift(me);
       const Le = Re.sort((st, En) => {
         if (st.relevance !== En.relevance) return En.relevance - st.relevance;
         if (st.language && En.language) {
-          if (bt(st.language).supersetOf === En.language)
+          if (_t(st.language).supersetOf === En.language)
             return 1;
-          if (bt(En.language).supersetOf === st.language)
+          if (_t(En.language).supersetOf === st.language)
             return -1;
         }
         return 0;
-      }), [mt, ta] = Le, Os = mt;
+      }), [bt, ta] = Le, Os = bt;
       return Os.secondBest = ta, Os;
     }
     function ms(G, oe, me) {
@@ -33502,7 +33502,7 @@ https://github.com/highlightjs/highlight.js/issues/2277`), Le = G, Re = oe), me 
     function Tc() {
       return Object.keys(N);
     }
-    function bt(G) {
+    function _t(G) {
       return G = (G || "").toLowerCase(), N[G] || N[H[G]];
     }
     function up(G, { languageName: oe }) {
@@ -33511,7 +33511,7 @@ https://github.com/highlightjs/highlight.js/issues/2277`), Le = G, Re = oe), me 
       });
     }
     function fp(G) {
-      const oe = bt(G);
+      const oe = _t(G);
       return oe && !oe.disableAutodetect;
     }
     function QO(G) {
@@ -33554,7 +33554,7 @@ https://github.com/highlightjs/highlight.js/issues/2277`), Le = G, Re = oe), me 
       registerLanguage: ea,
       unregisterLanguage: Ti,
       listLanguages: Tc,
-      getLanguage: bt,
+      getLanguage: _t,
       registerAliases: up,
       autoDetection: fp,
       inherit: Ee,
@@ -33574,8 +33574,8 @@ https://github.com/highlightjs/highlight.js/issues/2277`), Le = G, Re = oe), me 
     for (const G in Q)
       typeof Q[G] == "object" && e(Q[G]);
     return Object.assign(O, Q), O;
-  }, rt = _t({});
-  return rt.newInstance = () => _t({}), Nf = rt, rt.HighlightJS = rt, rt.default = rt, Nf;
+  }, rt = ht({});
+  return rt.newInstance = () => ht({}), Nf = rt, rt.HighlightJS = rt, rt.default = rt, Nf;
 }
 var dI = /* @__PURE__ */ fI();
 const pI = /* @__PURE__ */ Hi(dI), nw = {}, gI = "hljs-";
@@ -36234,7 +36234,7 @@ const sw = [
     Vd(g, c);
   }
   return l;
-}, Nne = lS(() => import("./index-EsVtVsbP.js")), Ine = () => {
+}, Nne = lS(() => import("./index-BuOtDz-9.js")), Ine = () => {
   zn(() => {
     Promise.resolve({           });
   }, []);
@@ -36409,14 +36409,14 @@ const sw = [
       className: Be(r.wrapper, i && r.continuationWrapper, t && r.nextSourceSameWrapper, s && r.customerWrapper),
       role: "listitem",
       "aria-labelledby": d,
-      children: /* @__PURE__ */ yt(
+      children: /* @__PURE__ */ mn(
         "div",
         {
           className: Be(r.messageWrapper, t && r.nextSourceSameMessageWrapper, i && r.continuationMessageWrapper, s && r.customerMessageWrapper, n),
           role: "group",
           "aria-label": `Message from ${u}`,
           children: [
-            !s && !i && /* @__PURE__ */ q("div", { className: "message-metadata", children: /* @__PURE__ */ yt("div", { className: r.agentName, id: d, children: [
+            !s && !i && /* @__PURE__ */ q("div", { className: "message-metadata", children: /* @__PURE__ */ mn("div", { className: r.agentName, id: d, children: [
               o || /* @__PURE__ */ q(
                 "div",
                 {
@@ -36536,7 +36536,7 @@ const sw = [
     setTimeout(() => {
       l?.current?.scrollTo({ top: l.current.scrollHeight, behavior: l.current.scrollTop ? "smooth" : "auto" });
     }, 100);
-  }, [e?.length, a]), /* @__PURE__ */ yt(
+  }, [e?.length, a]), /* @__PURE__ */ mn(
     "div",
     {
       className: Be("fixed-scroll", c.messagesArea, t && c.messageAreagExpanded, r?.messagesArea),
@@ -36561,7 +36561,7 @@ const sw = [
             }
           ) }, g.id || d);
         }) }),
-        a && /* @__PURE__ */ yt("div", { className: c.statusInfoWrapper, children: [
+        a && /* @__PURE__ */ mn("div", { className: c.statusInfoWrapper, children: [
           /* @__PURE__ */ q(
             "div",
             {
@@ -36692,7 +36692,7 @@ const Gne = Hn({
   const d = (p) => {
     p.key === "Enter" && !p.shiftKey ? (p.preventDefault(), c?.current?.click()) : p.key === "Enter" && p.shiftKey && p.preventDefault();
   };
-  return /* @__PURE__ */ yt(
+  return /* @__PURE__ */ mn(
     "form",
     {
       ref: g,
@@ -36781,7 +36781,7 @@ const Gne = Hn({
   }
 }), Hne = ({ showInfo: e, className: a }) => {
   const o = Kne();
-  return /* @__PURE__ */ yt("footer", { className: Be(o.bottomLine, a), role: "contentinfo", children: [
+  return /* @__PURE__ */ mn("footer", { className: Be(o.bottomLine, a), role: "contentinfo", children: [
     /* @__PURE__ */ q(
       "div",
       {
@@ -36791,8 +36791,8 @@ const Gne = Hn({
         children: e
       }
     ),
-    /* @__PURE__ */ q("div", { className: o.poweredBy, children: /* @__PURE__ */ yt("div", { className: o.poweredByContainer, children: [
-      "Powered by open-source",
+    /* @__PURE__ */ q("div", { className: o.poweredBy, children: /* @__PURE__ */ mn("div", { className: o.poweredByContainer, children: [
+      "Unterstützt durch open-source",
       /* @__PURE__ */ q("a", { href: "https://parlant.io", target: "_blank", style: { width: "max-content" }, children: /* @__PURE__ */ q(
         "img",
         {
@@ -36915,7 +36915,7 @@ const Gne = Hn({
   const A = () => {
     b(!_), d?.();
   };
-  return /* @__PURE__ */ q("div", { className: Be(y.chatbox, _ && y.expandedChatbox, l?.chatbox), children: !a && !o ? /* @__PURE__ */ q("div", { className: "flex justify-center mt-[20px] h-full text-[20px] font-medium", children: /* @__PURE__ */ q("h1", { children: "Either sessionId or agentId is required" }) }) : /* @__PURE__ */ yt(cS, { children: [
+  return /* @__PURE__ */ q("div", { className: Be(y.chatbox, _ && y.expandedChatbox, l?.chatbox), children: !a && !o ? /* @__PURE__ */ q("div", { className: "flex justify-center mt-[20px] h-full text-[20px] font-medium", children: /* @__PURE__ */ q("h1", { children: "Entweder sessionId oder agentId muss gesetzt sein" }) }) : /* @__PURE__ */ mn(cS, { children: [
     t?.header ? /* @__PURE__ */ q(t.header, { changeIsExpanded: A, agentName: D?.name || n }) : /* @__PURE__ */ q(
       ij,
       {
@@ -39922,13 +39922,10 @@ const Voe = Hn({
     }
     s && await P.sessions.createEvent(Y.id, { kind: "message", message: s, source: "human_agent_on_behalf_of_ai_agent" }), (await P.sessions.createEvent(Y.id, X))?.id && (b(Y.id), f?.(Y.id));
   }, z = d?.popupButton && /* @__PURE__ */ q(d.popupButton, { toggleChatOpen: F }), U = n || _;
-  return /* @__PURE__ */ yt(xS, { client: Woe, children: [
-    /* @__PURE__ */ q("link", { href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap", rel: "stylesheet" }),
-    /* @__PURE__ */ q("span", { className: y.root, children: l ? /* @__PURE__ */ yt(qoe, { open: k || v, onOpenChange: A, children: [
-      /* @__PURE__ */ q(Goe, { ref: m, asChild: !0, children: /* @__PURE__ */ q("div", { children: z || /* @__PURE__ */ q(eO, { onClick: () => F(), className: Be(y.popupButton, p?.popupButton), children: g || /* @__PURE__ */ q(V, { size: 30, color: "white", className: Be(y.iconComponent, p?.popupButtonIcon) }) }) }) }),
-      /* @__PURE__ */ q(YO, { className: Be(y.chatWrapper, E && y.expandedChatWrapper, p?.chatboxWrapper), style: { transformOrigin: M, margin: "0 10px" }, sideOffset: 18, children: /* @__PURE__ */ q(lw, { createSession: $, agentId: o, server: e, float: l, sessionId: U, agentName: i, agentAvatar: t, agentOpeningMessage: s, chatDescription: c, classNames: p, components: d, sendIcon: u, changeIsExpanded: () => R(!E), messages: D, setMessages: J }) })
-    ] }) : /* @__PURE__ */ q("div", { className: Be(y.chatWrapper, E && y.expandedChatWrapper, p?.chatboxWrapper), children: /* @__PURE__ */ q(lw, { createSession: $, agentId: o, server: e, sessionId: U, agentName: i, agentAvatar: t, agentOpeningMessage: s, chatDescription: c, classNames: p, components: d, sendIcon: u, changeIsExpanded: () => R(!E), messages: D, setMessages: J }) }) })
-  ] });
+  return /* @__PURE__ */ q(xS, { client: Woe, children: /* @__PURE__ */ q("span", { className: y.root, children: l ? /* @__PURE__ */ mn(qoe, { open: k || v, onOpenChange: A, children: [
+    /* @__PURE__ */ q(Goe, { ref: m, asChild: !0, children: /* @__PURE__ */ q("div", { children: z || /* @__PURE__ */ q(eO, { onClick: () => F(), className: Be(y.popupButton, p?.popupButton), children: g || /* @__PURE__ */ q(V, { size: 30, color: "white", className: Be(y.iconComponent, p?.popupButtonIcon) }) }) }) }),
+    /* @__PURE__ */ q(YO, { className: Be(y.chatWrapper, E && y.expandedChatWrapper, p?.chatboxWrapper), style: { transformOrigin: M, margin: "0 10px" }, sideOffset: 18, children: /* @__PURE__ */ q(lw, { createSession: $, agentId: o, server: e, float: l, sessionId: U, agentName: i, agentAvatar: t, agentOpeningMessage: s, chatDescription: c, classNames: p, components: d, sendIcon: u, changeIsExpanded: () => R(!E), messages: D, setMessages: J }) })
+  ] }) : /* @__PURE__ */ q("div", { className: Be(y.chatWrapper, E && y.expandedChatWrapper, p?.chatboxWrapper), children: /* @__PURE__ */ q(lw, { createSession: $, agentId: o, server: e, sessionId: U, agentName: i, agentAvatar: t, agentOpeningMessage: s, chatDescription: c, classNames: p, components: d, sendIcon: u, changeIsExpanded: () => R(!E), messages: D, setMessages: J }) }) }) });
 };
 export {
   ise as C,
@@ -39956,4 +39953,4 @@ export {
   lE as v,
   Zoe as w
 };
-//# sourceMappingURL=index-DfYdf6Is.js.map
+//# sourceMappingURL=index-FyoJcMta.js.map
