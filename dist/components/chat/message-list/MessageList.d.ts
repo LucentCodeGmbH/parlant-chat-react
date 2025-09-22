@@ -16,7 +16,7 @@ interface MessageListProps {
         agentMessage?: string;
         chatDescription?: string;
     };
-    chatDescription?: string;
+    chatDescription?: JSX.Element;
     isExpanded?: boolean;
 }
 declare const MessageList: ({ messages, showInfo, agentName, agentAvatar, components, isExpanded, classNames, chatDescription, }: MessageListProps) => JSX.Element;

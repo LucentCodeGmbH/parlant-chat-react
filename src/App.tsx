@@ -64,7 +64,7 @@ export interface ChatProps {
 	sessionId?: string;
 	agentName?: string;
 	agentAvatar?: JSX.Element;
-	chatDescription?: string;
+	chatDescription?: JSX.Element;
 	float?: boolean;
 	onPopupButtonClick?: () => void;
 	agentOpeningMessage?: string;
