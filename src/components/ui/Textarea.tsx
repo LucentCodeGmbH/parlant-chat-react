@@ -13,7 +13,6 @@ const useStyles = createUseStyles({
     paddingInline: '0.75rem',
     paddingBlock: '0.5rem',
     fontSize: '0.875rem',
-    fontFamily: 'Inter !important',
     outline: 'none',
   }
 });

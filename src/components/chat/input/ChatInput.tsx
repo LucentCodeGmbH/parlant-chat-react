@@ -44,7 +44,6 @@ const useStyles = createUseStyles({
     minHeight: 'unset',
     padding: '0',
     whiteSpace: 'nowrap',
-    fontFamily: 'Inter',
     fontSize: '1rem',
     lineHeight: '52px',
     backgroundColor: 'white',
@@ -139,7 +138,7 @@ const ChatInput = ({
       <Textarea
         role="textbox"
         ref={textareaRef}
-        placeholder="Message..."
+        placeholder="Nachricht..."
         value={message}
         onKeyDown={handleTextareaKeydown}
         onChange={(e) => setMessage(e.target.value)}

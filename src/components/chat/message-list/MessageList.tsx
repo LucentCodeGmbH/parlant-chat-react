@@ -21,7 +21,7 @@ interface MessageListProps {
     agentMessage?: string;
     chatDescription?: string;
   };
-  chatDescription?: string;
+  chatDescription?: JSX.Element;
   isExpanded?: boolean;
 }
 

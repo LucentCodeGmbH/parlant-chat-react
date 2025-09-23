@@ -11,7 +11,6 @@ import ChatHeader from '@/components/chat/header/ChatHeader';
 import MessageList from '@/components/chat/message-list/MessageList';
 import ChatInput from '@/components/chat/input/ChatInput';
 import ChatFooter from '@/components/chat/footer/ChatFooter';
-import { messageSound } from '@/utils/utils';
 
 const useStyles = createUseStyles({
 	chatbox: {
@@ -19,7 +18,6 @@ const useStyles = createUseStyles({
 		height: 'min(48.75rem,70vh)',
 		borderRadius: '20px',
 		display: 'flex',
-		fontFamily: 'Inter',
 		flexDirection: 'column',
 		transition: 'all 0.3s ease-in-out',
 		width: '27.75rem',
@@ -140,7 +138,6 @@ const Chat = ({server, sessionId, agentId, agentName, agentAvatar, components, a
 		
 		if (sessionId) {
 			await parlantClient.sessions.createEvent(sessionId, message);
-			// messageSound();
 		} else createSession(message);
 	};
 
@@ -180,18 +177,15 @@ const Chat = ({server, sessionId, agentId, agentName, agentAvatar, components, a
 			}
 
 			const newMessages = mergedMessages.filter((message): message is MessageInterface => !!message);
-			// if (currentMessages.length && newMessages.length > currentMessages.length && newMessages[newMessages.length - 1].source === 'ai_agent') {
-			// 	messageSound(true);
-			// }
 			return newMessages;
 		});
 
 		const lastStatusEventStatus = (lastStatusEvent?.data as StatusEventData)?.status;
 		setShowInfo(
 			!!messages.length && lastStatusEventStatus === 'processing'
-				? `${(lastStatusEvent?.data as any)?.data?.stage || 'Thinking'}...`
+				? `${(lastStatusEvent?.data as any)?.data?.stage || 'Denkt nach'}...`
 				: lastStatusEventStatus === 'typing'
-				? 'Typing...'
+				? 'Tippt...'
 				: ''
 		);
 	}, [data, pendingMessage, withStatusMessages, correlationsMap]);
@@ -209,7 +203,7 @@ const Chat = ({server, sessionId, agentId, agentName, agentAvatar, components, a
 		<div className={clsx(classes.chatbox, isExpanded && classes.expandedChatbox, classNames?.chatbox)}>
 			{(!sessionId && !agentId) ? 
 			<div className='flex justify-center mt-[20px] h-full text-[20px] font-medium'>
-				<h1>Either sessionId or agentId is required</h1>
+				<h1>Entweder sessionId oder agentId muss gesetzt sein</h1>
 			</div>
 			:
 			<>
@@ -238,10 +232,6 @@ const Chat = ({server, sessionId, agentId, agentName, agentAvatar, components, a
 				className={classNames?.textarea}
 				float={float}
 				focusTrigger={isExpanded}
-			/>
-			<ChatFooter
-				showInfo={showInfo}
-				className={classNames?.bottomLine}
 			/>
 			</>}
 		</div>

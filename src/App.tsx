@@ -12,11 +12,9 @@ import clsx from 'clsx';
 import { COLORS } from '@/theme';
 import { ParlantClient } from 'parlant-client';
 import { EventCreationParams } from 'parlant-client/src/api';
-import { messageSound } from './utils/utils';
 
 const useStyles = createUseStyles({
 	root: {
-		fontFamily: 'Inter',
 		'& .fixed-scroll': {
 			scrollbarWidth: 'thin',
 			scrollbarColor: '#ebecf0 transparent',
@@ -66,7 +64,7 @@ export interface ChatProps {
 	sessionId?: string;
 	agentName?: string;
 	agentAvatar?: JSX.Element;
-	chatDescription?: string;
+	chatDescription?: JSX.Element;
 	float?: boolean;
 	onPopupButtonClick?: () => void;
 	agentOpeningMessage?: string;
@@ -161,7 +159,6 @@ const Chatbox = ({server, titleFn, agentId, sessionId, agentName, agentAvatar, o
 			setSessionIdToUse(newSession.id);
 			onSessionCreated?.(newSession.id);
 		}
-		// messageSound();
 	}
 
 	const PopupButtonComponent = components?.popupButton && <components.popupButton toggleChatOpen={toggleChat} />;
@@ -169,7 +166,6 @@ const Chatbox = ({server, titleFn, agentId, sessionId, agentName, agentAvatar, o
 
 	return (
 		<QueryClientProvider client={queryClient}>
-			<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 			<span className={classes.root}>
 				{float ? (
 					<Popover open={open || isClosing} onOpenChange={handleOnOpenChange}>
