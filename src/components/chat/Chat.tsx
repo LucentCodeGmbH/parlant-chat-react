@@ -183,7 +183,7 @@ const Chat = ({server, sessionId, agentId, agentName, agentAvatar, components, a
 		const lastStatusEventStatus = (lastStatusEvent?.data as StatusEventData)?.status;
 		setShowInfo(
 			!!messages.length && lastStatusEventStatus === 'processing'
-				? `${(lastStatusEvent?.data as any)?.data?.stage || 'Thinking'}...`
+				? `${(lastStatusEvent?.data as any)?.data?.stage || 'Denkt nach'}...`
 				: lastStatusEventStatus === 'typing'
 				? 'Tippt...'
 				: ''
@@ -232,10 +232,6 @@ const Chat = ({server, sessionId, agentId, agentName, agentAvatar, components, a
 				className={classNames?.textarea}
 				float={float}
 				focusTrigger={isExpanded}
-			/>
-			<ChatFooter
-				showInfo={showInfo}
-				className={classNames?.bottomLine}
 			/>
 			</>}
 		</div>
