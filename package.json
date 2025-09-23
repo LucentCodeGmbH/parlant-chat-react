@@ -32,7 +32,8 @@
     "preview": "vite preview",
     "lint": "biome check .",
     "format": "biome format .",
-    "ladle": "ladle serve"
+    "ladle": "ladle serve",
+    "prepare": "tsc -b && vite build"
   },
   "dependencies": {
     "@radix-ui/react-popover": "^1.1.7",
