@@ -17,6 +17,7 @@ interface ChatInputProps {
 const useStyles = createUseStyles({
   textareaWrapper: {
     marginInline: '20px',
+    marginBottom: '20px',
     flex: 'none',
     position: 'relative',
     border: `1px solid #EEEEEE`,

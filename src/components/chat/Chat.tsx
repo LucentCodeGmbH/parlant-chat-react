@@ -10,7 +10,6 @@ import clsx from 'clsx';
 import ChatHeader from '@/components/chat/header/ChatHeader';
 import MessageList from '@/components/chat/message-list/MessageList';
 import ChatInput from '@/components/chat/input/ChatInput';
-import ChatFooter from '@/components/chat/footer/ChatFooter';
 
 const useStyles = createUseStyles({
 	chatbox: {
